@@ -1,826 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-06T15:28:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">NerdFactory AI Tech Blog</title><subtitle>Tech Blog Page for Nerd Factory AI</subtitle><entry><title type="html">Post 3</title><link href="http://localhost:4000/category/2/2018/03/02/post-3.html" rel="alternate" type="text/html" title="Post 3" /><published>2018-03-02T03:16:01+09:00</published><updated>2018-03-02T03:16:01+09:00</updated><id>http://localhost:4000/category/2/2018/03/02/post-3</id><content type="html" xml:base="http://localhost:4000/category/2/2018/03/02/post-3.html">&lt;h1 id=&quot;h1-heading-8-&quot;&gt;h1 Heading 8-)&lt;/h1&gt;
-&lt;h2 id=&quot;h2-heading&quot;&gt;h2 Heading&lt;/h2&gt;
-&lt;h3 id=&quot;h3-heading&quot;&gt;h3 Heading&lt;/h3&gt;
-&lt;h4 id=&quot;h4-heading&quot;&gt;h4 Heading&lt;/h4&gt;
-&lt;h5 id=&quot;h5-heading&quot;&gt;h5 Heading&lt;/h5&gt;
-&lt;h6 id=&quot;h6-heading&quot;&gt;h6 Heading&lt;/h6&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-06T16:55:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">NerdFactory AI Tech Blog</title><subtitle>Tech Blog Page for Nerd Factory AI</subtitle><entry><title type="html">EPISODIC CURIOSITY THROUGH REACHABILITY</title><link href="http://localhost:4000/rl/lr/2018/12/02/post-12.html" rel="alternate" type="text/html" title="EPISODIC CURIOSITY THROUGH REACHABILITY" /><published>2018-12-02T03:16:01+09:00</published><updated>2018-12-02T03:16:01+09:00</updated><id>http://localhost:4000/rl/lr/2018/12/02/post-12</id><content type="html" xml:base="http://localhost:4000/rl/lr/2018/12/02/post-12.html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});&lt;/script&gt;
 
-&lt;h2 id=&quot;horizontal-rules&quot;&gt;Horizontal Rules&lt;/h2&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;본 &lt;a href=&quot;https://arxiv.org/abs/1810.02274&quot;&gt;논문&lt;/a&gt;은 DeepMinds와 Google Brain이 함께 호기심에 대해서 연구한 자료입니다.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;typographic-replacements&quot;&gt;Typographic replacements&lt;/h2&gt;
-
-&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;
-
-&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;
-
-&lt;p&gt;test.. test… test….. test?….. test!….&lt;/p&gt;
-
-&lt;p&gt;!!!!!! ???? ,,  – —&lt;/p&gt;
-
-&lt;p&gt;“Smartypants, double quotes” and ‘single quotes’&lt;/p&gt;
-
-&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;Strikethrough&lt;/del&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blockquotes can also be nested…&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;…by using additional greater-than signs right next to each other…&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;…or with spaces between arrows.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
-
-&lt;p&gt;Unordered&lt;/p&gt;
+&lt;h1 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create a list by starting a line with &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Sub-lists are made by indenting 2 spaces:
-    &lt;ul&gt;
-      &lt;li&gt;Marker character change forces new list start:
-        &lt;ul&gt;
-          &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
-          &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
-          &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Very easy!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ordered&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
-  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Integer molestie lorem at massa&lt;/p&gt;
+    &lt;p&gt;많은 Task들은 Sparse한 Reward의 환경을 가지고 있다.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;You can use sequential numbers…&lt;/li&gt;
-  &lt;li&gt;…or keep all the numbers as &lt;code class=&quot;highlighter-rouge&quot;&gt;1.&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Start numbering with offset:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;foo&lt;/li&gt;
-  &lt;li&gt;bar&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;Inline &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Indented code&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Block code “fences”&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Sample text here...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Syntax highlighting&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Option&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;data&lt;/td&gt;
-      &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;engine&lt;/td&gt;
-      &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ext&lt;/td&gt;
-      &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Right aligned columns&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Option&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;data&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;ext&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dev.nodeca.com&quot;&gt;link text&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nodeca.github.io/pica/demo/&quot; title=&quot;title text!&quot;&gt;link with title&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Autoconverted link https://github.com/nodeca/pica (enable linkify to see)&lt;/p&gt;
-
-&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/minion.png&quot; alt=&quot;Minion&quot; /&gt;
-&lt;img src=&quot;https://octodex.github.com/images/stormtroopocat.jpg&quot; alt=&quot;Stormtroopocat&quot; title=&quot;The Stormtroopocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Like links, Images also have a footnote style syntax&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/dojocat.jpg&quot; alt=&quot;Alt text&quot; title=&quot;The Dojocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;With a reference later in the document defining the URL location:&lt;/p&gt;
-
-&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
-
-&lt;p&gt;The killer feature of &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-it&lt;/code&gt; is very effective support of
-&lt;a href=&quot;https://www.npmjs.org/browse/keyword/markdown-it-plugin&quot;&gt;syntax plugins&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;emojies&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji&quot;&gt;Emojies&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:&lt;/p&gt;
-
-  &lt;p&gt;Shortcuts (emoticons): :-) :-( 8-) ;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;see &lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji#change-output&quot;&gt;how to change output&lt;/a&gt; with twemoji.&lt;/p&gt;
-
-&lt;h3 id=&quot;subscript--superscript&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-sub&quot;&gt;Subscript&lt;/a&gt; / &lt;a href=&quot;https://github.com/markdown-it/markdown-it-sup&quot;&gt;Superscript&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;19^th^&lt;/li&gt;
-  &lt;li&gt;H~2~O&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ins&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-ins&quot;&gt;&amp;lt;ins&amp;gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;++Inserted text++&lt;/p&gt;
-
-&lt;h3 id=&quot;mark&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-mark&quot;&gt;&amp;lt;mark&amp;gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;==Marked text==&lt;/p&gt;
-
-&lt;h3 id=&quot;footnotes&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-footnote&quot;&gt;Footnotes&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Footnote 1 link&lt;sup id=&quot;fnref:first&quot;&gt;&lt;a href=&quot;#fn:first&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;Footnote 2 link&lt;sup id=&quot;fnref:second&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;Inline footnote^[Text of inline footnote] definition.&lt;/p&gt;
-
-&lt;p&gt;Duplicated footnote reference&lt;sup id=&quot;fnref:second:1&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;definition-lists&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-deflist&quot;&gt;Definition lists&lt;/a&gt;&lt;/h3&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Term 1&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 1
-with lazy continuation.&lt;/p&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Term 2 with &lt;em&gt;inline markup&lt;/em&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 2&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ some code, part of Definition 2 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;Third paragraph of definition 2.&lt;/p&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;&lt;em&gt;Compact style:&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Term 1
-  ~ Definition 1&lt;/p&gt;
-
-&lt;p&gt;Term 2
-  ~ Definition 2a
-  ~ Definition 2b&lt;/p&gt;
-
-&lt;h3 id=&quot;abbreviations&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-abbr&quot;&gt;Abbreviations&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;This is &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; abbreviation example.&lt;/p&gt;
-
-&lt;p&gt;It converts “&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;”, but keep intact partial entries like “xxxHTMLyyy” and so on.&lt;/p&gt;
-
-&lt;h3 id=&quot;custom-containers&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-container&quot;&gt;Custom containers&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;::: warning
-&lt;em&gt;here be dragons&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:first&quot;&gt;
-      &lt;p&gt;Footnote &lt;strong&gt;can have markup&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;and multiple paragraphs. &lt;a href=&quot;#fnref:first&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:second&quot;&gt;
-      &lt;p&gt;Footnote text. &lt;a href=&quot;#fnref:second&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:second:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading</summary></entry><entry><title type="html">Post 2</title><link href="http://localhost:4000/category/1/2018/02/02/post-2.html" rel="alternate" type="text/html" title="Post 2" /><published>2018-02-02T03:16:01+09:00</published><updated>2018-02-02T03:16:01+09:00</updated><id>http://localhost:4000/category/1/2018/02/02/post-2</id><content type="html" xml:base="http://localhost:4000/category/1/2018/02/02/post-2.html">&lt;h1 id=&quot;h1-heading-8-&quot;&gt;h1 Heading 8-)&lt;/h1&gt;
-&lt;h2 id=&quot;h2-heading&quot;&gt;h2 Heading&lt;/h2&gt;
-&lt;h3 id=&quot;h3-heading&quot;&gt;h3 Heading&lt;/h3&gt;
-&lt;h4 id=&quot;h4-heading&quot;&gt;h4 Heading&lt;/h4&gt;
-&lt;h5 id=&quot;h5-heading&quot;&gt;h5 Heading&lt;/h5&gt;
-&lt;h6 id=&quot;h6-heading&quot;&gt;h6 Heading&lt;/h6&gt;
-
-&lt;h2 id=&quot;horizontal-rules&quot;&gt;Horizontal Rules&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;typographic-replacements&quot;&gt;Typographic replacements&lt;/h2&gt;
-
-&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;
-
-&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;
-
-&lt;p&gt;test.. test… test….. test?….. test!….&lt;/p&gt;
-
-&lt;p&gt;!!!!!! ???? ,,  – —&lt;/p&gt;
-
-&lt;p&gt;“Smartypants, double quotes” and ‘single quotes’&lt;/p&gt;
-
-&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;Strikethrough&lt;/del&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blockquotes can also be nested…&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;…by using additional greater-than signs right next to each other…&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;…or with spaces between arrows.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
-
-&lt;p&gt;Unordered&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Create a list by starting a line with &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Sub-lists are made by indenting 2 spaces:
-    &lt;ul&gt;
-      &lt;li&gt;Marker character change forces new list start:
-        &lt;ul&gt;
-          &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
-          &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
-          &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Very easy!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ordered&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
-  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Integer molestie lorem at massa&lt;/p&gt;
+    &lt;p&gt;이 문제를 풀기 위해서 한 가지 방법은 새로운 state를 발견하는 것에 대한 보너스 점수를 주는 것이다.(Curiosity-driven Exploration by Self-supervised Prediction를 일컫는 것 같네요)&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;You can use sequential numbers…&lt;/li&gt;
-  &lt;li&gt;…or keep all the numbers as &lt;code class=&quot;highlighter-rouge&quot;&gt;1.&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Start numbering with offset:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;foo&lt;/li&gt;
-  &lt;li&gt;bar&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;Inline &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Indented code&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Block code “fences”&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Sample text here...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Syntax highlighting&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Option&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;data&lt;/td&gt;
-      &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;engine&lt;/td&gt;
-      &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ext&lt;/td&gt;
-      &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Right aligned columns&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Option&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;data&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;ext&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dev.nodeca.com&quot;&gt;link text&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nodeca.github.io/pica/demo/&quot; title=&quot;title text!&quot;&gt;link with title&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Autoconverted link https://github.com/nodeca/pica (enable linkify to see)&lt;/p&gt;
-
-&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/minion.png&quot; alt=&quot;Minion&quot; /&gt;
-&lt;img src=&quot;https://octodex.github.com/images/stormtroopocat.jpg&quot; alt=&quot;Stormtroopocat&quot; title=&quot;The Stormtroopocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Like links, Images also have a footnote style syntax&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/dojocat.jpg&quot; alt=&quot;Alt text&quot; title=&quot;The Dojocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;With a reference later in the document defining the URL location:&lt;/p&gt;
-
-&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
-
-&lt;p&gt;The killer feature of &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-it&lt;/code&gt; is very effective support of
-&lt;a href=&quot;https://www.npmjs.org/browse/keyword/markdown-it-plugin&quot;&gt;syntax plugins&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;emojies&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji&quot;&gt;Emojies&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:&lt;/p&gt;
-
-  &lt;p&gt;Shortcuts (emoticons): :-) :-( 8-) ;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;see &lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji#change-output&quot;&gt;how to change output&lt;/a&gt; with twemoji.&lt;/p&gt;
-
-&lt;h3 id=&quot;subscript--superscript&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-sub&quot;&gt;Subscript&lt;/a&gt; / &lt;a href=&quot;https://github.com/markdown-it/markdown-it-sup&quot;&gt;Superscript&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;19^th^&lt;/li&gt;
-  &lt;li&gt;H~2~O&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;ins&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-ins&quot;&gt;&amp;lt;ins&amp;gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;++Inserted text++&lt;/p&gt;
-
-&lt;h3 id=&quot;mark&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-mark&quot;&gt;&amp;lt;mark&amp;gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;==Marked text==&lt;/p&gt;
-
-&lt;h3 id=&quot;footnotes&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-footnote&quot;&gt;Footnotes&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Footnote 1 link&lt;sup id=&quot;fnref:first&quot;&gt;&lt;a href=&quot;#fn:first&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;Footnote 2 link&lt;sup id=&quot;fnref:second&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;Inline footnote^[Text of inline footnote] definition.&lt;/p&gt;
-
-&lt;p&gt;Duplicated footnote reference&lt;sup id=&quot;fnref:second:1&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;definition-lists&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-deflist&quot;&gt;Definition lists&lt;/a&gt;&lt;/h3&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Term 1&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 1
-with lazy continuation.&lt;/p&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Term 2 with &lt;em&gt;inline markup&lt;/em&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 2&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ some code, part of Definition 2 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;Third paragraph of definition 2.&lt;/p&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;&lt;em&gt;Compact style:&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Term 1
-  ~ Definition 1&lt;/p&gt;
-
-&lt;p&gt;Term 2
-  ~ Definition 2a
-  ~ Definition 2b&lt;/p&gt;
-
-&lt;h3 id=&quot;abbreviations&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-abbr&quot;&gt;Abbreviations&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;This is &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; abbreviation example.&lt;/p&gt;
-
-&lt;p&gt;It converts “&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;”, but keep intact partial entries like “xxxHTMLyyy” and so on.&lt;/p&gt;
-
-&lt;h3 id=&quot;custom-containers&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-container&quot;&gt;Custom containers&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;::: warning
-&lt;em&gt;here be dragons&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:first&quot;&gt;
-      &lt;p&gt;Footnote &lt;strong&gt;can have markup&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;and multiple paragraphs. &lt;a href=&quot;#fnref:first&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:second&quot;&gt;
-      &lt;p&gt;Footnote text. &lt;a href=&quot;#fnref:second&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:second:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading</summary></entry><entry><title type="html">Post 1</title><link href="http://localhost:4000/category/1/2018/01/02/post-1.html" rel="alternate" type="text/html" title="Post 1" /><published>2018-01-02T03:16:01+09:00</published><updated>2018-01-02T03:16:01+09:00</updated><id>http://localhost:4000/category/1/2018/01/02/post-1</id><content type="html" xml:base="http://localhost:4000/category/1/2018/01/02/post-1.html">&lt;h1 id=&quot;h1-heading-8-&quot;&gt;h1 Heading 8-)&lt;/h1&gt;
-&lt;h2 id=&quot;h2-heading&quot;&gt;h2 Heading&lt;/h2&gt;
-&lt;h3 id=&quot;h3-heading&quot;&gt;h3 Heading&lt;/h3&gt;
-&lt;h4 id=&quot;h4-heading&quot;&gt;h4 Heading&lt;/h4&gt;
-&lt;h5 id=&quot;h5-heading&quot;&gt;h5 Heading&lt;/h5&gt;
-&lt;h6 id=&quot;h6-heading&quot;&gt;h6 Heading&lt;/h6&gt;
-
-&lt;h2 id=&quot;horizontal-rules&quot;&gt;Horizontal Rules&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;typographic-replacements&quot;&gt;Typographic replacements&lt;/h2&gt;
-
-&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;
-
-&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;
-
-&lt;p&gt;test.. test… test….. test?….. test!….&lt;/p&gt;
-
-&lt;p&gt;!!!!!! ???? ,,  – —&lt;/p&gt;
-
-&lt;p&gt;“Smartypants, double quotes” and ‘single quotes’&lt;/p&gt;
-
-&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;Strikethrough&lt;/del&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blockquotes can also be nested…&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;…by using additional greater-than signs right next to each other…&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;…or with spaces between arrows.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
-
-&lt;p&gt;Unordered&lt;/p&gt;
+&lt;!--more--&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create a list by starting a line with &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Sub-lists are made by indenting 2 spaces:
-    &lt;ul&gt;
-      &lt;li&gt;Marker character change forces new list start:
-        &lt;ul&gt;
-          &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
-          &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
-          &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Very easy!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ordered&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
-  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Integer molestie lorem at massa&lt;/p&gt;
+    &lt;p&gt;많은 현대적 방법들은 surprise를 공식화 하는 것에 집중을 하고 있다. 이것이 미래를 예측하는 것은 아니다. 그래서 이것은 충분히 이해할만한 방법론이지만 완벽하진 않다.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;You can use sequential numbers…&lt;/li&gt;
-  &lt;li&gt;…or keep all the numbers as &lt;code class=&quot;highlighter-rouge&quot;&gt;1.&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Start numbering with offset:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;foo&lt;/li&gt;
-  &lt;li&gt;bar&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;Inline &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Indented code&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Block code “fences”&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Sample text here...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Syntax highlighting&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Option&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;data&lt;/td&gt;
-      &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;engine&lt;/td&gt;
-      &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ext&lt;/td&gt;
-      &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Right aligned columns&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Option&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;data&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;ext&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dev.nodeca.com&quot;&gt;link text&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nodeca.github.io/pica/demo/&quot; title=&quot;title text!&quot;&gt;link with title&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Autoconverted link https://github.com/nodeca/pica (enable linkify to see)&lt;/p&gt;
-
-&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/minion.png&quot; alt=&quot;Minion&quot; /&gt;
-&lt;img src=&quot;https://octodex.github.com/images/stormtroopocat.jpg&quot; alt=&quot;Stormtroopocat&quot; title=&quot;The Stormtroopocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Like links, Images also have a footnote style syntax&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://octodex.github.com/images/dojocat.jpg&quot; alt=&quot;Alt text&quot; title=&quot;The Dojocat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;With a reference later in the document defining the URL location:&lt;/p&gt;
-
-&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
-
-&lt;p&gt;The killer feature of &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-it&lt;/code&gt; is very effective support of
-&lt;a href=&quot;https://www.npmjs.org/browse/keyword/markdown-it-plugin&quot;&gt;syntax plugins&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;emojies&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji&quot;&gt;Emojies&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:&lt;/p&gt;
-
-  &lt;p&gt;Shortcuts (emoticons): :-) :-( 8-) ;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;see &lt;a href=&quot;https://github.com/markdown-it/markdown-it-emoji#change-output&quot;&gt;how to change output&lt;/a&gt; with twemoji.&lt;/p&gt;
-
-&lt;h3 id=&quot;subscript--superscript&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-sub&quot;&gt;Subscript&lt;/a&gt; / &lt;a href=&quot;https://github.com/markdown-it/markdown-it-sup&quot;&gt;Superscript&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;19^th^&lt;/li&gt;
-  &lt;li&gt;H~2~O&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Curiosity에 대한 새로운 정의와 수식을 제안한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;새로운 Curiosity에 대한 예) state의 변화에 대해 다음 state를 예측할 수 있을 때 짧은 스텝만에 새로운 state로 도달할 수 있다면 이것은 진정한 의미의 Curiosity가 아니다. TV를 예로 든다면 버튼을 누르는 action을 했을 때 한 스텝만에 TV의 화면이 바뀌기 때문에 이것은 Curiosity로 지정하지 않는다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;위의 예로 부터 새로운 환경에 도달하는데 까지 걸리는 step의 수를 effort(노력)이라고 하며 오직 이 척도로부터만 Curiosity의 정도가 측정된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이것을 측정하기 위해 neural network를 사용한다: 2개의 observations가 들어가고 두 개의 observations가 몇 스텝의 간격을 가지고 있는지(하나의 observation에서 다른 observation으로 도달하는데 까지 몇 개의 스텝을 소요해야하는지)를 측정.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이를 novelty via reachability라고 일컫는다. 이것에 대한 도식은 아래의 그림.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;ins&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-ins&quot;&gt;&amp;lt;ins&amp;gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/EPISODIC CURIOSITY THROUGH REACHABILITY/image1.png&quot; /&gt;
+&lt;/p&gt;
 
-&lt;p&gt;++Inserted text++&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Practically implemenetation하기 위해서 이미 탐색한 state들을 메모리에 보유하고 있어야 한다. 다음 현재의 observation이 novel하다면(neural network가 출력하는 값, state간의 스텝이 클 경우) 에이전트는 보너스 reward를 받으며 memory에 추가합니다. 이 프로세스가 에피소드가 끝날 때까지 진행합니다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;mark&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-mark&quot;&gt;&amp;lt;mark&amp;gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h1 id=&quot;2-episodic-curiosity&quot;&gt;2. Episodic Curiosity&lt;/h1&gt;
 
-&lt;p&gt;==Marked text==&lt;/p&gt;
+&lt;p&gt;기본적인 환경과 상호작용하는 RL 에이전트를 생각해본다. 이 환경은 sparse하게 reward를 제공하기에 대부분의 time step t에서 reward가 0을 가진다. PPO와 같은 현재 널리 쓰이고 있는 에이전트들은 잘 작동하지 않는다. 우리는 Episodic Curiosity(EC라고 줄임)라는 것을 적용하여 기존의 RL 알고리즘들의 성능을 증폭시킬 수 있는 방법을 제시한다. 우리는 bonus점수 $b_t$를 생성하는 것을 목표로 한다. 그래서 에이전트가 받는 $\hat{r}_t$는 $r_t+b_t$로 한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;footnotes&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-footnote&quot;&gt;Footnotes&lt;/a&gt;&lt;/h3&gt;
+&lt;h1 id=&quot;21-episodic-curiosity-module&quot;&gt;2.1 Episodic Curiosity Module&lt;/h1&gt;
 
-&lt;p&gt;Footnote 1 link&lt;sup id=&quot;fnref:first&quot;&gt;&lt;a href=&quot;#fn:first&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;EC 모듈은 현재 observation $o_t$를 입력으로 하고 reward bonus $b_t$를 출력으로 한다. 이 모듈은 parametric한 부분과 non-parametric한 부분 모두를 포함한다.&lt;/p&gt;
 
-&lt;p&gt;Footnote 2 link&lt;sup id=&quot;fnref:second&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;2개의 parametric 부분을 가지고 있다. 1) embedding network $E : O \rightarrow R^n$ 2) comparator network $C : R^n \times R^n \rightarrow [0, 1]$&lt;/p&gt;
 
-&lt;p&gt;Inline footnote^[Text of inline footnote] definition.&lt;/p&gt;
+&lt;p&gt;2개의 parametric 부분은 reachability network의 한 부분으로써 추론하기 위해 함께 학습한다. 아래의 그림에서 볼 수 있듯이.&lt;/p&gt;
 
-&lt;p&gt;Duplicated footnote reference&lt;sup id=&quot;fnref:second:1&quot;&gt;&lt;a href=&quot;#fn:second&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/EPISODIC CURIOSITY THROUGH REACHABILITY/image2.png&quot; /&gt;
+&lt;/p&gt;
 
-&lt;h3 id=&quot;definition-lists&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-deflist&quot;&gt;Definition lists&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;2개의 non-parameteric 부분은 다음과 같다. 1) episodic memory buffur $M$ 2) reward bonus estination function $B$&lt;/p&gt;
 
-&lt;dl&gt;
-  &lt;dt&gt;Term 1&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 1
-with lazy continuation.&lt;/p&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Term 2 with &lt;em&gt;inline markup&lt;/em&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;Definition 2&lt;/p&gt;
+&lt;p&gt;EC 모듈의 Overview는 아래의 그림과 같다.&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ some code, part of Definition 2 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/EPISODIC CURIOSITY THROUGH REACHABILITY/image3.png&quot; /&gt;
+&lt;/p&gt;
 
-    &lt;p&gt;Third paragraph of definition 2.&lt;/p&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Embedding and comparator networks&lt;/strong&gt; : 두 개의 네트워크는 observation $o_i$로 부터 $o_j$에 도달하는데까지 걸리는 k-step-reachability를 측정하는데 사용되며 이를 수식적으로 표현하면 $R(o_i,o_j)=C(E(o_i), E(o_j))$가 된다. Figure 2에서 볼 수 있듯이 R-network는 logistic regression loss로 학습된 classifier이다. 특정 k 단계안에 $o_i$로부터 $o_j$로 도달할 수 있으면 0을 출력하고 그렇지 않으면 1을 출력한다. 이 네트워크는 R-network로 칭한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Episodic memory&lt;/strong&gt; : 현재의 에피소드에서 과거 observation들의 embedding정보들을 모으는 buffer M(embedding network E로 연산됩니다)가 있다. Memory buffer M은 메모리와 퍼포먼스 이슈를 해결하기 위해 K 사이즈로 제한된다. 매 스텝에서, 현재 obervation의 embedding 정보가 메모리에 저장된다. 만약 K 사이즈가 넘어간다면 메모리에서 무작위로 하나의 embedding 정보를 제거하고 현재 observation의 embedding 정보로 대체한다. 이 방법으로 오래 전 스텝의 정보가 메모리에서 사라지고 새로운 정보로 대체될 것이지만 무작위로 샘플링을 하기에 오래 전의 스텝 정보가 무조건적으로 사라지진 않는다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Reward bonus estimation module&lt;/strong&gt; : 이 모듈의 목적은 현재 observation에 대해서 reachability를 측정하고 현재 메모리 안에 그 정보가 있지 않다면 큰 bonus reward를 할당한다. reachability는 comparator network를 이용하여 현재 메모리 내에 있는 embedding 정보와 비교하는 것으로 측정된다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Compact style:&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;22-bonus-computation-algorithm&quot;&gt;2.2 Bonus Computation Algorithm&lt;/h1&gt;
 
-&lt;p&gt;Term 1
-  ~ Definition 1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;매 스텝에서, embedding network를 이용하여 현재 observation $o$에 대한 embedding vector($e=E(o)$)를 가져온다.
+그 embedding vector($e$)는 메모리 버퍼 $M=&amp;lt;e_1,e_2,…,e_{|M|}&amp;gt;$에 있는 embedding 정보들과 comparator network C를 이용하여 비교한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이 comparator network는 reachability buffer를 $c_i=C(e,e_i)$의 값으로 채운다.
+그리고 reachability buffer안에 있는 모든 $c_i$들을 이용하여 novelty를 측정한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Term 2
-  ~ Definition 2a
-  ~ Definition 2b&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;C(C,e) = F(c_1, ..., c_{|M|})&lt;/script&gt;
 
-&lt;h3 id=&quot;abbreviations&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-abbr&quot;&gt;Abbreviations&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;여기서 F는 어떠한 함수이다. 이론적으로 F=max과 같은 함수를 사용하는 것도 좋은 방법이다. 하지만 이것을 이용하면 parametric embedding과 comparator network에서 outliers가 발생한다. 경험적으로 그 값의 90%를 사용하면 잘 작동한다. Curiosity bonus로 $b = B(M,e) = \alpha(\beta - C(M, e))$ 이며 $\alpha$와 $\beta$는 하이퍼파라미터이다. 본 논문에서는 $\beta=0.5$를 사용했고 그러므로써 $b$는 $[-\dfrac{\alpha}{2}, \dfrac{\alpha}{2}]$의 범위를 가지게 된다. 그리고 $\alpha$는 task의 성격에 따라서 달라진다. bonus reward를 계산하고 난 후 observation embedding이 만약 특정한 값($b_{novelty}$)보다 높다면 memory에 넣는다(메모리, 데이터 중복 등등에 의해서).&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;This is &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; abbreviation example.&lt;/p&gt;
+&lt;h1 id=&quot;23-reachability-network-training&quot;&gt;2.3 Reachability Network Training&lt;/h1&gt;
 
-&lt;p&gt;It converts “&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;”, but keep intact partial entries like “xxxHTMLyyy” and so on.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;만약 Figure 1과 같은 아키텍쳐가 가능하다면, reachability network가 필요하지 않을 것이고 해석적으로 shortest-path algorithm으로 novelty가 계산이 될 수 있다. 하지만 일반적으로 우리는 하나의 경로에 대한 sequence를 얻을 수 있다. 다행히도, 간단한 sequence에 대해서도 training이 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이 방법은 Figure 2에 도식화 되어 있다. 이 방법은 $o_1, …, o_N$ 의 일련의 observations들을 입력으로 가지며 그것들을 쌍으로 가진다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;쌍 $(o_i, o_j)$ 는 $\rvert i-j \rvert$ &amp;lt; $k$ 이면 reachable하다고 판단하고 positive한 값을 가진다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$\rvert i-j \rvert$ &amp;gt; $\gamma k$ 에는 negative한 값을 가진다. 하이퍼 파라미터 $\gamma$ 는 positive와 negative한 값 사이의 gap을 만들어내는데 필요하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;결국 네트워크는 reachability를 계산하기 위해 logistic regression loss를 학습한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>차 금강</name></author><category term="tag 1" /><summary type="html">본 논문은 DeepMinds와 Google Brain이 함께 호기심에 대해서 연구한 자료입니다. 1. Introduction 많은 Task들은 Sparse한 Reward의 환경을 가지고 있다. 이 문제를 풀기 위해서 한 가지 방법은 새로운 state를 발견하는 것에 대한 보너스 점수를 주는 것이다.(Curiosity-driven Exploration by Self-supervised Prediction를 일컫는 것 같네요)</summary></entry><entry><title type="html">Post 11</title><link href="http://localhost:4000/category%201/2018/11/02/post-11.html" rel="alternate" type="text/html" title="Post 11" /><published>2018-11-02T03:16:01+09:00</published><updated>2018-11-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/11/02/post-11</id><content type="html" xml:base="http://localhost:4000/category%201/2018/11/02/post-11.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;custom-containers&quot;&gt;&lt;a href=&quot;https://github.com/markdown-it/markdown-it-container&quot;&gt;Custom containers&lt;/a&gt;&lt;/h3&gt;
+&lt;!--more--&gt;
 
-&lt;p&gt;::: warning
-&lt;em&gt;here be dragons&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:first&quot;&gt;
-      &lt;p&gt;Footnote &lt;strong&gt;can have markup&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
 
-      &lt;p&gt;and multiple paragraphs. &lt;a href=&quot;#fnref:first&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:second&quot;&gt;
-      &lt;p&gt;Footnote text. &lt;a href=&quot;#fnref:second&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:second:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading</summary></entry></feed>
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 10</title><link href="http://localhost:4000/category%201/2018/10/02/post-10.html" rel="alternate" type="text/html" title="Post 10" /><published>2018-10-02T03:16:01+09:00</published><updated>2018-10-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/10/02/post-10</id><content type="html" xml:base="http://localhost:4000/category%201/2018/10/02/post-10.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 9</title><link href="http://localhost:4000/category%201/2018/09/02/post-9.html" rel="alternate" type="text/html" title="Post 9" /><published>2018-09-02T03:16:01+09:00</published><updated>2018-09-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/09/02/post-9</id><content type="html" xml:base="http://localhost:4000/category%201/2018/09/02/post-9.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 8</title><link href="http://localhost:4000/category%201/2018/08/02/post-8.html" rel="alternate" type="text/html" title="Post 8" /><published>2018-08-02T03:16:01+09:00</published><updated>2018-08-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/08/02/post-8</id><content type="html" xml:base="http://localhost:4000/category%201/2018/08/02/post-8.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 7</title><link href="http://localhost:4000/category%201/2018/07/02/post-7.html" rel="alternate" type="text/html" title="Post 7" /><published>2018-07-02T03:16:01+09:00</published><updated>2018-07-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/07/02/post-7</id><content type="html" xml:base="http://localhost:4000/category%201/2018/07/02/post-7.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 6</title><link href="http://localhost:4000/category%201/2018/06/02/post-6.html" rel="alternate" type="text/html" title="Post 6" /><published>2018-06-02T03:16:01+09:00</published><updated>2018-06-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/06/02/post-6</id><content type="html" xml:base="http://localhost:4000/category%201/2018/06/02/post-6.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 5</title><link href="http://localhost:4000/category%201/2018/05/02/post-5.html" rel="alternate" type="text/html" title="Post 5" /><published>2018-05-02T03:16:01+09:00</published><updated>2018-05-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/05/02/post-5</id><content type="html" xml:base="http://localhost:4000/category%201/2018/05/02/post-5.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 4</title><link href="http://localhost:4000/category%201/2018/04/02/post-4.html" rel="alternate" type="text/html" title="Post 4" /><published>2018-04-02T03:16:01+09:00</published><updated>2018-04-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/04/02/post-4</id><content type="html" xml:base="http://localhost:4000/category%201/2018/04/02/post-4.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry><entry><title type="html">Post 3</title><link href="http://localhost:4000/category%201/2018/03/02/post-3.html" rel="alternate" type="text/html" title="Post 3" /><published>2018-03-02T03:16:01+09:00</published><updated>2018-03-02T03:16:01+09:00</updated><id>http://localhost:4000/category%201/2018/03/02/post-3</id><content type="html" xml:base="http://localhost:4000/category%201/2018/03/02/post-3.html">&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;
+
+&lt;p&gt;유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.&lt;/p&gt;</content><author><name>황 종택</name></author><category term="tag 1" /><summary type="html">유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.</summary></entry></feed>

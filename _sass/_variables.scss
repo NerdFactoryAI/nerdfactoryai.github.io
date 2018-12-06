@@ -12,3 +12,30 @@ $container-max-widths: (
   lg: 1199.98px,
   xl: 1200px
 ) !default;
+
+.post-list {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.post-content {
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #737373;
+}
+.post-info {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  color: #737373;
+}
+
+.post-thumbnail {
+  width: 202px;
+  height: 158px;
+  object-fit: contain;
+}
