@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/category/1/2018/01/02/post-1.html</loc>
+<lastmod>2018-01-02T03:16:01+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/category/1/2018/02/02/post-2.html</loc>
+<lastmod>2018-02-02T03:16:01+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/category/2/2018/03/02/post-3.html</loc>
+<lastmod>2018-03-02T03:16:01+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+</urlset>
