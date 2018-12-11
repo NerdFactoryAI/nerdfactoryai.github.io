@@ -9,7 +9,9 @@ title: Nerd Factory AI Tech Blog Title
     <div class="col-lg border-bottom post-list">
       <div class="media">
         <div class="media-body">
-          <h3 class="mt-0 mb-1">{{ post.title }}</h3>
+          <a href="{{ post.url }}">
+            <h3 class="mt-0 mb-1">{{ post.title }}</h3>
+          </a>
           <p class="post-content">{{ post.excerpt }}</p>
           <span class="post-info">{{ post.author }}</span>
           <span class="ml-2 mr-2 post-info">|</span>
