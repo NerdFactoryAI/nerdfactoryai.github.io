@@ -10,19 +10,21 @@ title: Nerd Factory AI Tech Blog Title
       <div class="media">
         <div class="media-body">
           <a href="{{ post.url }}">
-            <h3 class="mt-0 mb-1">{{ post.title }}</h3>
+            <h2 class="mt-0 mb-3">{{ post.title }}</h2>
           </a>
-          <p class="post-content">{{ post.excerpt }}</p>
+          <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 20 }}</p>
           <span class="post-info">{{ post.author }}</span>
           <span class="ml-2 mr-2 post-info">|</span>
           <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
           <span class="ml-2 mr-2 post-info">|</span>
-          <span class="badge badge-secondary">{{ post.categories }}</span>
+          {% for tag in post.tags %}
+            <span class="badge badge-secondary">#{{ tag }}</span>
+          {% endfor %}
         </div>
         {% if post.image %}
-          <img class="ml-3 post-thumbnail" src="{{ post.image }}" alt="썸네일.">
+          <img class="ml-5 post-thumbnail" src="{{ post.image }}" alt="썸네일.">
         {% else %}
-          <img class="ml-3 post-thumbnail" src="/assets/images/thumbnails/empty-1.png" alt="포스트에 이미지가 없습니다.">
+          <img class="ml-5 post-thumbnail" src="/assets/images/thumbnails/empty-1.png" alt="포스트에 이미지가 없습니다.">
         {% endif %}
         
       </div>
