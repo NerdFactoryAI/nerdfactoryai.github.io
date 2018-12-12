@@ -1,0 +1,131 @@
+// Main Banner
+.main-background {
+  background-image: url("/assets/images/main/main-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-left: 0;
+  padding-right: 0;
+}
+.main-background-mask {
+  position: absolute;
+  width: 100%;
+  height: 585px;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to bottom, rgba(66, 89, 117, 0.6), rgba(66, 89, 117, 0.9));
+}
+.main-background-container {
+  height: 585px;
+  padding-top: 250px;
+  color: #ffffff;
+}
+.main-background-separator {
+  border-bottom: 1px solid #ffffff; 
+  width: 60px; 
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+.main-title {
+   font-size: 5em;
+}
+.main-subtitle {
+   font-size: 1.2em;
+}
+
+@media (max-width: 575.98px) {
+  .main-background {
+    height: 380px;
+    background-size: auto 100%;
+  }
+  .main-background-mask {
+    height: 380px;
+  }
+  .main-background-container {
+    padding-top: 135px;
+  }
+  .main-background-separator {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  .main-title {
+    font-size: 2em;
+  }
+  .main-subtitle {
+    font-size: 1em;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  .main-background {
+    height: 380px;
+    background-size: auto 100%;
+  }
+  .main-background-mask {
+    height: 380px;
+  }
+  .main-background-container {
+    padding-top: 135px;
+  }
+  .main-background-separator {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  .main-title {
+    font-size: 2em;
+  }
+  .main-subtitle {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {   
+  .main-background {
+    height: 400px;
+    background-size: auto 100%;
+  }
+  .main-background-mask {
+    height: 400px;
+  }
+  .main-background-container {
+    padding-top: 180px;
+  }
+  .main-title {
+    font-size: 3em;
+  }
+  .main-subtitle {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {   
+  .main-background {
+    height: 585px;
+    background-size: auto 100%;
+  }
+  .main-background-mask {
+    height: 585px;
+  }
+  .main-background-container {
+    padding-top: 250px;
+  }
+  .main-title {
+    font-size: 5em;
+  }
+  .main-subtitle {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1200px) {   
+  .main-background {
+    height: 585px;
+    background-size: 100%;
+  }
+  .main-background-mask {
+    height: 585px;
+  }
+  .main-background-container {
+    padding-top: 250px;
+  }
+  .main-title {
+    font-size: 5em;
+  }
+  .main-subtitle {
+    font-size: 1.2em;
+  }
+}
