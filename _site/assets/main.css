@@ -2513,12 +2513,14 @@ body { font-family: 'Spoqa Han Sans'; }
   .main-background-mask { height: 585px; }
   .main-background-container { padding-top: 250px; }
   .main-title { font-size: 5em; }
-  .main-subtitle { font-size: 1.2em; } }
+  .main-subtitle { font-size: 1.2em; }
+  .main-subtitle-row { width: 550px; } }
 @media (min-width: 1200px) { .main-background { height: 585px; background-size: 100%; }
   .main-background-mask { height: 585px; }
   .main-background-container { padding-top: 250px; }
   .main-title { font-size: 5em; }
-  .main-subtitle { font-size: 1.2em; } }
+  .main-subtitle { font-size: 1.2em; }
+  .main-subtitle-row { width: 550px; } }
 .nerdfactory-footer { display: none; }
 
 .nerdfactory-footer-mobile { display: none; }
