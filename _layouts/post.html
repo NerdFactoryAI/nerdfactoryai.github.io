@@ -10,13 +10,13 @@ layout: contents
     </div>
     <div class="post-header-desc">
       <p class="text-muted">
+        {% for name in page.author %}
+        <span class="post-info">{{ name }} </span>
+        <span class="ml-2 mr-2 post-info">|</span>
+        {% endfor %}
         <time datetime="{{ page.date | date_to_xmlschema }}">
-          {%- assign date_format = "%b %-d, %Y" -%}
-          {{ page.date | date: date_format }}
+          {{ page.date | date: "%Y-%m-%d" }}
         </time>
-        {%- if page.author -%}
-        • {{ page.author }}
-        {%- endif -%}
       </p>
     </div>
   </header>
