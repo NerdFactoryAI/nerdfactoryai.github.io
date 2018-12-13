@@ -13,8 +13,10 @@ title: Nerd Factory AI Tech Blog Title
             <h2 class="mt-0 mb-3">{{ post.title }}</h2>
           </a>
           <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 20 }}</p>
-          <span class="post-info">{{ post.author }}</span>
-          <span class="ml-2 mr-2 post-info">|</span>
+          {% for name in post.author %}
+            <span class="post-info">{{ name }}</span>
+            <span class="ml-2 mr-2 post-info">|</span>
+          {% endfor %}
           <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
           <span class="ml-2 mr-2 post-info">|</span>
           {% for tag in post.tags %}
@@ -53,8 +55,10 @@ title: Nerd Factory AI Tech Blog Title
         <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 20 }}</p>
       </div>
       <div>
-        <span class="post-info">{{ post.author }}</span>
-        <span class="ml-2 mr-2 post-info">|</span>
+        {% for name in post.author %}
+          <span class="post-info">{{ name }}</span>
+          <span class="ml-2 mr-2 post-info">|</span>
+        {% endfor %}
         <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
       </div>
       <div>

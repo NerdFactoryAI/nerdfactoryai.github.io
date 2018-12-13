@@ -3,20 +3,25 @@ layout: contents
 ---
 <article>
 
-  <header>
-    <h1>{{ page.title | escape }}</h1>
-    <p class="text-muted">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {%- assign date_format = "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
+  <header class="post-header">
+    <div class="post-header-line"></div>
+    <div class="post-header-title">
+      <h1>{{ page.title | escape }}</h1>
+    </div>
+    <div class="post-header-desc">
+      <p class="text-muted">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {%- assign date_format = "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%}
         • {{ page.author }}
-      {%- endif -%}
-    </p>
+        {%- endif -%}
+      </p>
+    </div>
   </header>
 
-  <section class="markdown-body" style="margin-top: 100px;">
+  <section class="markdown-body">
     {{ content }}
   </section>
 
