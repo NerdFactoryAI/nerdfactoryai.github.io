@@ -3,6 +3,14 @@
 
 body {
   font-family: 'Spoqa Han Sans';
+  font-weight: 300;
+}
+
+.badge-tag {
+  font-size: 0.7em;
+  font-weight: 300;
+  padding: 7px;
+  background-color: #a7aaad;
 }
 
 // Header
@@ -27,5 +35,7 @@ body {
 .footer {
   color: #ffffff;
   height: 200px;
+  font-size: 1em;
+  font-weight: 300;
   background-color: #132038;
 }

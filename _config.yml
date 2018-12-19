@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 phone: "+82 (042) 827 9715"
 copyright: "Copyright 2018 @ NerdFactory. All Right Reserved."
 name: "NerdFactory"
+
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb

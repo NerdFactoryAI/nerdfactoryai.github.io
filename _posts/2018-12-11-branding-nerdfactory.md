@@ -5,7 +5,7 @@ author: ["백승빈", "리복주"]
 date:   2018-12-10 05:00:01 -0600
 abstract: "브랜딩은 모두가 조금씩 정의하는 바가 다르지만 일반적으로 브랜드는 어떤 경제적인 생산자를 구별하는 지각된 이미지와 경험의 집합이며 보다 좁게는 어떤 상품이나 회사를 나타내는 상표, 표지이다. 숫자, 글자, 글자체, 간략화된 이미지인 로고, 색상, 구호를 포함한다. 라고 정의합니다. 물론 이 일반적인 정의는 켈러(Keller, 1993)가 말하는 브랜드 정의와 가장 유사합니다. 반면 이런 이야기 외에 대가들은 각기 다른 정의를 내리고 있는데 아커(Aaker, 2012)는 자산가치까지 포함해서 브랜드로 보고 있으며 케퍼러(Kapferer, 2012)는 자산 가치가 아닌 인상을 포함하고 있습니다."
 tags: ["너드팩토리", "브랜딩", "History"]
-image: /assets/images/branding-nerdfactory/img2.png
+image: /assets/images/posts/branding-nerdfactory/img2.png
 ---
 
 ## Introduction
@@ -59,23 +59,23 @@ image: /assets/images/branding-nerdfactory/img2.png
 그리고 이를 토대로 키워드를 다시 추출해 너드, 연결, 시스템을 중심으로 떠오르는 이미지들을 그려나갔습니다. 어떤 하나의 공통적인 요소는 결국 노드와 링크처럼 보이는 안경의 모양이었고 이를 추출해 더 우리를 대표하는 그림을 더 잘 어울리게 다시 융합하는 과정을 거쳤습니다. 
 
 {:.center}
-![NERD_pdf](/assets/images/branding-nerdfactory/img1.png)
-*너드팩토리 Brand Identity*
+![NERD_pdf](/assets/images/posts/branding-nerdfactory/img1.png)
+*너드팩토리 Brand Identity 연상 과정*
 
 그리고 드디어 우리의 정체성을 잘 표현하는 심벌이 등장합니다.
 
 {:.center}
-![image-20181207111817634](/assets/images/branding-nerdfactory/img2.png)
+![image-20181207111817634](/assets/images/posts/branding-nerdfactory/img2.png)
 *너드팩토리 Symbol*
 
 {:.center}
-![image-20181207111808268](/assets/images/branding-nerdfactory/img3.png)
+![image-20181207111808268](/assets/images/posts/branding-nerdfactory/img3.png)
 *너드팩토리 Symbol + Brand Name*
 
 그리고 이 과정 중에 너드팩토리를 표현하는 위트와 열린 생각을 표현하는 포인트를 더 넣자는 의견이 나왔고 여러 가지 포인트를 넣어본 결과 여러 가지 혼동되는 이미지를 전달하지 않고 깔끔하고 심플한 초기의 전체 철학은 살리면서 추가 사항이 더 잘 표현된 최종본을 선택했습니다. 
 
 {:.center}
-![IMG_0117](/assets/images/branding-nerdfactory/img4.PNG) 
+![IMG_0117](/assets/images/posts/branding-nerdfactory/img4.PNG) 
 *너드팩토리 Brand Identity 최종본*
 
 이렇게 우리의 브랜드는 이제 시작을 알렸고 그 끝이 대기업이나 유명한 어느 스타트업만큼 되지는 않더라도 우리 너드팩토리는 더 새로운 기술과 제품으로 정보와 사람을 연결하고 그 연결에서 더 유의미한 결과가 나올 때까지 우리가 좋아하는 일을 지금과 변함없이 우스꽝스럽고 괴짜 같이 계속하겠습니다.

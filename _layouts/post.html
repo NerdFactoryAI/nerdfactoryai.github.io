@@ -11,9 +11,13 @@ layout: contents
     <div class="post-header-desc">
       <p class="text-muted">
         {% for name in page.author %}
-        <span class="post-info">{{ name }} </span>
-        <span class="ml-2 mr-2 post-info">|</span>
+          {% if site.data.authors.authors[name] %}
+          <span class="post-info mr-2">{{ site.data.authors.authors[name].kor-name }} </span>
+          {% else %}
+          <span class="post-info mr-2">저자 정보 없음 </span>
+          {% endif %}
         {% endfor %}
+        <span class="mr-2 post-info">|</span>
         <time datetime="{{ page.date | date_to_xmlschema }}">
           {{ page.date | date: "%Y-%m-%d" }}
         </time>

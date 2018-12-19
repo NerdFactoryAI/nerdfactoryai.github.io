@@ -1,0 +1,63 @@
+백승빈:
+  kor-name: "백승빈"
+  eng-name: "Baik Seungbin"
+  graduate: "한국과학기술원 석사"
+  tag: ["올라운드_너드"]
+  email: "david@nerdfactory.ai"
+  photo: "/assets/images/authors/bsb-1.png"
+황종택:
+  kor-name: "황종택"
+  eng-name: "Hwang Jongtaek"
+  graduate: "충남대학교 석사 수료"
+  tag: ["엔지니어링_너드"]
+  email: "sam@nerdfactory.ai"
+  photo: "/assets/images/authors/hjt-1.png"
+이지훈:
+  kor-name: "이지훈"
+  eng-name: "Lee Jihun"
+  graduate: "금오공과대학교 학사"
+  tag: ["개발_너드"]
+  email: "jihun3353@nerdfactory.ai"
+  photo: "/assets/images/authors/ljh-1.png"
+이지원:
+  kor-name: "이지원"
+  eng-name: "Lee Jiwon"
+  graduate: "한남대학교 학사"
+  tag: ["UI_너드"]
+  email: "jiwon@nerdfactory.ai"
+  photo: "/assets/images/authors/ljw-1.png"
+차금강:
+  kor-name: "차금강"
+  eng-name: "Cha Keumgang"
+  graduate: "한국과학기술원 박사과정"
+  tag: ["기계학습_너드"]
+  email: "chagmgang@nerdfactory.ai"
+  photo: "/assets/images/authors/ckg-1.png"
+채영훈:
+  kor-name: "채영훈"
+  eng-name: "Chae Younghun"
+  graduate: "Portland State Univ. 학사"
+  tag: ["마케팅_너드"]
+  email: "matt@nerdfactory.ai"
+  photo: "/assets/images/authors/cyh-1.png"
+조이성:
+  kor-name: "조이성"
+  eng-name: "Cho Isung"
+  graduate: "충남대학교 학사"
+  tag: ["웹프론트엔드_너드"]
+  email: "lucy@nerdfactory.ai"
+  photo: "/assets/images/authors/cis-1.png"
+이수련:
+  kor-name: "이수련"
+  eng-name: "Lee Sooryeon"
+  graduate: "이화여자대학교 학사"
+  tag: ["기계학습_너드"]
+  email: "sooryeon@nerdfactory.ai"
+  photo: "/assets/images/authors/lsr-1.png"
+리복주:
+  kor-name: "리복주"
+  eng-name: "Lee Voczu"
+  graduate: "-"
+  tag: []
+  email: "-"
+  photo: ""

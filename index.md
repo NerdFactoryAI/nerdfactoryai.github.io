@@ -3,6 +3,7 @@ layout: list
 title: Nerd Factory AI Tech Blog Title
 ---
 
+<!-- PC -->
 <div class="container post-list-area">
   {% for post in site.posts %}
   <div class="row">
@@ -12,16 +13,23 @@ title: Nerd Factory AI Tech Blog Title
           <a href="{{ post.url }}">
             <h2 class="mt-0 mb-3">{{ post.title }}</h2>
           </a>
-          <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 20 }}</p>
+          <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 30 }}</p>
+          <p class="mb-1 post-content">
           {% for name in post.author %}
             <span class="post-info">{{ name }}</span>
-            <span class="ml-2 mr-2 post-info">|</span>
+            {% if forloop.last == false %}
+              <span class="ml-2 mr-2 post-info">|</span>
+            {% endif %}
           {% endfor %}
-          <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
-          <span class="ml-2 mr-2 post-info">|</span>
-          {% for tag in post.tags %}
-            <span class="badge badge-secondary">#{{ tag }}</span>
-          {% endfor %}
+          </p>
+          <p class="mb-2 post-content">
+            <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
+          </p>
+          <p class="mb-2 post-content">
+            {% for tag in post.tags %}
+              <span class="badge badge-secondary badge-tag">#{{ tag }}</span>
+            {% endfor %}
+          </p>
         </div>
         {% if post.image %}
           <img class="ml-5 post-thumbnail" src="{{ post.image }}" alt="썸네일.">
@@ -35,16 +43,17 @@ title: Nerd Factory AI Tech Blog Title
   {% endfor %}
 </div>
 
+<!-- Mobile -->
 <div class="container-fluid post-list-area-mobile">
   {% for post in site.posts %}
   <div class="row post-list border-bottom">
-    <div class="col-md">
+    <!-- <div class="col-md">
         {% if post.image %}
           <img class="post-thumbnail" src="{{ post.image }}" alt="썸네일.">
         {% else %}
           <img class="post-thumbnail" src="/assets/images/thumbnails/empty-1.png" alt="포스트에 이미지가 없습니다.">
         {% endif %}
-    </div>
+    </div> -->
     <div class="col-md">
       <div>
         <a href="{{ post.url }}">
@@ -55,16 +64,22 @@ title: Nerd Factory AI Tech Blog Title
         <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 20 }}</p>
       </div>
       <div>
-        {% for name in post.author %}
-          <span class="post-info">{{ name }}</span>
-          <span class="ml-2 mr-2 post-info">|</span>
-        {% endfor %}
-        <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
-      </div>
-      <div>
-        {% for tag in post.tags %}
-          <span class="badge badge-secondary">#{{ tag }}</span>
-        {% endfor %}
+        <p class="mb-1 post-content">
+          {% for name in post.author %}
+            <span class="post-info">{{ name }}</span>
+            {% if forloop.last == false %}
+              <span class="ml-2 mr-2 post-info">|</span>
+            {% endif %}
+          {% endfor %}
+          </p>
+          <p class="mb-2 post-content">
+            <span class="post-info">{{ post.date | date: "%Y-%m-%d" }}</span>
+          </p>
+          <p class="mb-2 post-content">
+            {% for tag in post.tags %}
+              <span class="badge badge-secondary badge-tag">#{{ tag }}</span>
+            {% endfor %}
+          </p>
       </div>
     </div>
   </div>
