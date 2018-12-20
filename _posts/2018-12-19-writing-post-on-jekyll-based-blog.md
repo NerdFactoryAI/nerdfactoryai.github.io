@@ -6,6 +6,7 @@ date:   2018-12-24 05:00:01 -0600
 abstract: ""
 tags: ["Jekyll", "blog", "post", "writers"]
 image: /assets/images/posts/writing-post-on-jekyll-based-blog/jekyll-logo.png
+draft: "yes"
 ---
 
 {:.center}
