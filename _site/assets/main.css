@@ -2763,7 +2763,7 @@ body { font-family: 'Spoqa Han Sans'; font-weight: 300; }
 
 .markdown-body table tr:nth-child(2n) { background-color: #f6f8fa; }
 
-.markdown-body img { margin-left: 20%; margin-right: 20%; max-width: 60%; margin-top: 0; margin-bottom: 0; box-sizing: content-box; background-color: #fff; }
+.markdown-body img { margin-left: 20%; margin-right: 20%; max-width: 60%; min-width: 60%; margin-top: 0; margin-bottom: 0; box-sizing: content-box; background-color: #fff; }
 
 img + em { text-align: center; font-size: .8rem; color: #586069; }
 

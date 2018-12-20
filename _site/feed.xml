@@ -5,9 +5,7 @@
     <description>Tech Blog Page for Nerd Factory AI</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Dec 2018 10:19:14 +0900</pubDate>
-    <lastBuildDate>Wed, 19 Dec 2018 10:19:14 +0900</lastBuildDate>
-    <generator>Jekyll v3.7.4</generator>
+    <pubDate>Thu, 20 Dec 2018 11:39:08 +0900</pubDate>
     
       <item>
         <title>너드팩토리 개발문서의 변천사</title>
@@ -22,11 +20,11 @@
         <link>http://localhost:4000/2018/12/12/nerdfactory-documentation-history.html</link>
         <guid isPermaLink="true">http://localhost:4000/2018/12/12/nerdfactory-documentation-history.html</guid>
         
-        <category>너드팩토리</category>
+        <tag>너드팩토리</tag>
         
-        <category>문서화</category>
+        <tag>문서화</tag>
         
-        <category>개발문서</category>
+        <tag>개발문서</tag>
         
         
       </item>
@@ -132,11 +130,11 @@
         <link>http://localhost:4000/2018/12/10/branding-nerdfactory.html</link>
         <guid isPermaLink="true">http://localhost:4000/2018/12/10/branding-nerdfactory.html</guid>
         
-        <category>너드팩토리</category>
+        <tag>너드팩토리</tag>
         
-        <category>브랜딩</category>
+        <tag>브랜딩</tag>
         
-        <category>History</category>
+        <tag>History</tag>
         
         
       </item>
