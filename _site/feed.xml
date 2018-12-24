@@ -5,7 +5,7 @@
     <description>Tech Blog Page for Nerd Factory AI</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Dec 2018 14:54:09 +0900</pubDate>
+    <pubDate>Mon, 24 Dec 2018 14:03:06 +0900</pubDate>
     
       <item>
         <title>Git 으로 운영중인 Jekyll Blog 에 포스트 작성자로 참여하기</title>
