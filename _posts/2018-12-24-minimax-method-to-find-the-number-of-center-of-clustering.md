@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GAN의 minimax 방법을 이용한 K-means 알고리즘에서의 적절한 clustering"
+title:  "GAN의 minimax 방법을 이용한 K-means 알고리즘에서의 적절한 군집화"
 author: ["차금강"]
 date:   2018-12-24 05:00:01 -0600
-abstract: "일반적으로 K-means 알고리즘을 사용하여 unsupervised clustering을 수행할 때 데이터 사이언티스트는 이미 몇 개의 군집으로 이루어져야 하는지 알고 있어야 하거나, 여러번 시행착오를 통해 군집의 개수를 감각적으로 찾을 수 밖에 없습니다. 이 글에서는 딥러닝의 Generative Model 중 하나인 Generative Adversarial Network에서의 학습 방법에서 영향을 받아 하이퍼파라미터를 조정함으로써 스스로 군집의 개수를 찾는 방법을 제시합니다."
-tags: ["Clustering", "K-means", 'Unsupervised']
+abstract: "일반적으로 K-means 알고리즘을 사용하여 비지도 군집화을 수행할 때 데이터 사이언티스트는 이미 몇 개의 군집으로 이루어져야 하는지 알고 있어야 하거나, 여러번 시행착오를 통해 군집의 개수를 감각적으로 찾을 수 밖에 없습니다. 이 글에서는 딥러닝의 생성 모델 중 하나인 Generative Adversarial Network에서의 학습 방법에서 영향을 받아 하이퍼파라미터를 조정함으로써 스스로 군집의 개수를 찾는 방법을 제시합니다."
+tags: ["군집화", "K-means", '비지도 학습']
 image: /assets/images/posts/minimax-method-to-find-the-number-of-center-of-clustering/image1.png
 draft: "no"
 ---
@@ -14,11 +14,11 @@ draft: "no"
 
 # Abstract
 
-일반적으로 K-means 알고리즘을 사용하여 unsupervised clustering을 수행할 때 데이터 사이언티스트는 이미 몇 개의 군집으로 이루어져야 하는지 알고 있어야 하거나, 여러번 시행착오를 통해 군집의 개수를 감각적으로 찾을 수 밖에 없습니다. 이는 unsupervised clustering의 본질적인 목적이 아니며, 이미 군집의 개수를 알고 있어야한다는 것에서 unsupervised의 의미가 퇴색됩니다. 스스로 이 군집의 개수를 찾아내는 방법을 학습하는 방법을 딥러닝의 Generative Model 중 하나인 Generative Adversarial Network에서의 학습 방법에서 영향을 받아 하이퍼파라미터를 조정함으로써 스스로 군집의 개수를 찾는 방법을 제시합니다.
+일반적으로 K-means 알고리즘을 사용하여 비지도 군집화을 수행할 때 데이터 사이언티스트는 이미 몇 개의 군집으로 이루어져야 하는지 알고 있어야 하거나, 여러번 시행착오를 통해 군집의 개수를 감각적으로 찾을 수 밖에 없습니다. 이는 비지도 군집화의 본질적인 목적이 아니며, 이미 군집의 개수를 알고 있어야한다는 것에서 비지도의 의미가 퇴색됩니다. 스스로 이 군집의 개수를 찾아내는 방법을 학습하는 방법을 딥러닝의 생성 모델 중 하나인 Generative Adversarial Network에서의 학습 방법에서 영향을 받아 하이퍼파라미터를 조정함으로써 스스로 군집의 개수를 찾는 방법을 제시합니다.
 
 # K-means Algorithm
 
-K-means Algorithm은 KNN Clustering과 더불어 데이터를 분석할 때 많이 사용하는 군집 알고리즘입니다. K-means Algorithm의 군집 방법을 간단히 요약하자면 다음과 같습니다. n개의 d-차원 데이터($x_1, x_2, ..., x_n$)들이 주어졌을 때, n 개의 데이터들을 각 집합 내 응집도를 최대로 하는 k 개의 집합 ($S = {S_1, S_2, ..., S_k}$)로 분할하는 알고리즘입니다. 이를 수식으로 표햔하면 아래와 같습니다.
+K-means Algorithm은 KNN 군집화와 더불어 데이터를 분석할 때 많이 사용하는 군집 알고리즘입니다. K-means Algorithm의 군집 방법을 간단히 요약하자면 다음과 같습니다. n개의 d-차원 데이터($x_1, x_2, ..., x_n$)들이 주어졌을 때, n 개의 데이터들을 각 집합 내 응집도를 최대로 하는 k 개의 집합 ($S = {S_1, S_2, ..., S_k}$)로 분할하는 알고리즘입니다. 이를 수식으로 표햔하면 아래와 같습니다.
 
 $$
 argmin_S \Sigma^{k}_{i=0} \Sigma_{x \in S_i} || x - \mu_i||^2
@@ -35,11 +35,11 @@ $$
 * 이상값에 민감하다.
 * 구형이 아닌 크러스터를 찾는 데에는 적절하지 않다.
 
-본 글에서는 첫번째 문제점에 집중하였습니다. NerdFactory에서 연구/개발한 AIVORY에서는 흩어져 있는 사용자들에 대해 영향을 많이 미치는 Cluster의 중심(이하 중심사용자)을 찾아야하는 문제가 있었습니다. 중심사용자를 찾기 위해서 Clustering에 대한 요구가 있었으며 이를 K-means Algorithm으로 해결하였습니다. 하지만 중심사용자의 수를 찾기 위해서는 스스로 군집의 개수인 k를 탐색하는 알고리즘이 필요 했습니다.
+본 글에서는 첫번째 문제점에 집중하였습니다. NerdFactory에서 연구/개발한 AIVORY에서는 흩어져 있는 사용자들에 대해 영향을 많이 미치는 각 군집의 중심(이하 중심사용자)을 찾아야하는 문제가 있었습니다. 중심사용자를 찾기 위해서 군집화에 대한 요구가 있었으며 이를 K-means Algorithm으로 해결하였습니다. 하지만 중심사용자의 수를 찾기 위해서는 스스로 군집의 개수인 k를 탐색하는 알고리즘이 필요 했습니다.
 
 # Methodology
 
-군집의 개수 k를 스스로 찾는 알고리즘을 얻기 위해서는 K-means Algorithm에 대해서 깊게 고찰할 필요가 있습니다. 고찰하는 도중 우리는 다음과 같은 insight를 얻을 수 있었습니다. 만약 실제 군집의 개수가 3인 데이터가 아래와 같이 분포되어 있다고 가정합니다.
+군집의 개수 k를 스스로 찾는 알고리즘을 얻기 위해서는 K-means Algorithm에 대해서 깊게 고찰할 필요가 있습니다. 고찰하는 도중 우리는 다음과 같은 개념를 얻을 수 있었습니다. 만약 실제 군집의 개수가 3인 데이터가 아래와 같이 분포되어 있다고 가정합니다.
 
 {:.center}
 ![image1.png](/assets/images/posts/minimax-method-to-find-the-number-of-center-of-clustering/image1.png)
