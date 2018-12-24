@@ -9,11 +9,7 @@ image: /assets/images/posts/minimax-method-to-find-the-number-of-center-of-clust
 draft: "no"
 ---
 
-<script src="//yihui.name/js/math-code.js"></script>
-<!-- Just one possible MathJax CDN below. You may use others. -->
-<script async
-  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script> <script type="text/javascript" src="http://cdn.mathjax.org/math..."> </script>
 
 {:.center}
 ![concept.png](/assets/images/posts/minimax-method-to-find-the-number-of-center-of-clustering/image1.png)
