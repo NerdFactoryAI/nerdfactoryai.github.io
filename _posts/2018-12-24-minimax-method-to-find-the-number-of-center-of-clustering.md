@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GAN의 minimax 방법을 이용한 K-means 알고리즘에서의 적절한 clustring"
+title:  "GAN의 minimax 방법을 이용한 K-means 알고리즘에서의 적절한 clustering"
 author: ["차금강"]
 date:   2018-12-24 05:00:01 -0600
 abstract: "일반적으로 K-means 알고리즘을 사용하여 unsupervised clustering을 수행할 때 데이터 사이언티스트는 이미 몇 개의 군집으로 이루어져야 하는지 알고 있어야 하거나, 여러번 시행착오를 통해 군집의 개수를 감각적으로 찾을 수 밖에 없습니다. 이 글에서는 딥러닝의 Generative Model 중 하나인 Generative Adversarial Network에서의 학습 방법에서 영향을 받아 하이퍼파라미터를 조정함으로써 스스로 군집의 개수를 찾는 방법을 제시합니다."
