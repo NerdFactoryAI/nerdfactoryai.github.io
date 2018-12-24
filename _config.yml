@@ -22,7 +22,7 @@ copyright: "Copyright 2018 @ NerdFactory. All Right Reserved."
 name: "NerdFactory"
 
 #baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.nerdfactory.ai"
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
