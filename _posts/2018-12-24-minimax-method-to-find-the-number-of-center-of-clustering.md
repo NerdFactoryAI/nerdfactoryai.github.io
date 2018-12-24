@@ -9,15 +9,10 @@ image: /assets/images/posts/minimax-method-to-find-the-number-of-center-of-clust
 draft: "no"
 ---
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/math...">
-</script>
+<script src=’https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 {:.center}
 ![concept.png](/assets/images/posts/minimax-method-to-find-the-number-of-center-of-clustering/image1.png)
-*Static Blog Framework 인 Jekyll 의 로고*
 
 # Abstract
 
