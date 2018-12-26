@@ -48,9 +48,8 @@ layout: contents
           <div class="post-author-info">
             <span>{{ site.data.authors.authors[name].kor-name }}</span><br>
             {% for tag in site.data.authors.authors[name].tag %}
-              <span class="mr-2">{{ tag }}</span>
+              <span class="mr-2">{{ tag }}</span><br>
             {% endfor %}
-            <span class="mr-2">|</span>
             <span class="mr-2">{{ site.data.authors.authors[name].email }}</span>
             
           </div>
