@@ -13,9 +13,15 @@ draft: "no"
 ![concept.png](/assets/images/posts/writing-post-on-jekyll-based-blog/jekyll-logo.png)
 *Static Blog Framework 인 Jekyll 의 로고*
 
+# Revisions
+
+1. 포스트 작성 / 페이지 개발 을 위한 branch 는 origin 에 push 하지 않도록 내용 수정.
+2. develop branch 에 merge 된 수정사항 테스트를 위한 항목 추가.
+3. 결론 추가
+
 # Abstract
 
-최근 IT기업들을 중심으로 자신들의 이야기 또는 기술에 대한 블로그를 운영하는 곳이 과거보다 훨씬 빠르게 증가하고 있습니다. 너드팩토리도 이러한 추세에 따라 우리의 이야기를 담은 블로그를 운영하기로 했습니다. 기성 블로그를 활용하기에는 우리의 괴짜같은 성향을 충분히 담고 있지 못했고 너드팩토리의 구성원 대부분이 IT기술자 임을 고려해 우리에게 편리한 마크다운을 활용해 블로그 글을 작성하고 관리하기로 했습니다. 그리고 이러한 글들을 담을 블로그는 특별히 관리에 큰 노력을 기울이지 않더라도 효율적으로 작동되며 가볍게 최소한의 기능을 충족시켜주는 프레임워크로 결정하기로 했습니다. 생각보다 긴 시간 고민한 끝에 우리는 [github.io](http://github.io) 에서 공식적으로 지원하는 Jekyll 을 도입하기로 했습니다. 이번 포스트는 Github Repository 로 운영중인 블로그에 비개발자도 쉽게 포스트를 작성하는 방법에 대해 이야기해보려고 합니다.
+최근 IT기업들을 중심으로 자신들의 이야기 또는 기술에 대한 블로그를 운영하는 곳이 과거보다 훨씬 빠르게 증가하고 있습니다. 너드팩토리도 이러한 추세에 따라 우리의 이야기를 담은 블로그를 운영하기로 했습니다. 기성 블로그를 활용하기에는 우리의 괴짜같은 성향을 충분히 담고 있지 못했고 너드팩토리의 구성원 대부분이 IT기술자 임을 고려해 우리에게 편리한 마크다운을 활용해 블로그 글을 작성하고 관리하기로 했습니다. 그리고 이러한 글들을 담을 블로그는 특별히 관리에 큰 노력을 기울이지 않더라도 효율적으로 작동되며 가볍게 최소한의 기능을 충족시켜주는 프레임워크로 결정하기로 했습니다. 생각보다 긴 시간 고민한 끝에 우리는 [github.io](http://github.io) 에서 공식적으로 지원하는 Jekyll 을 도입하기로 했습니다. 이번 포스트는 Github Repository 로 운영중인 블로그에 비개발자도 쉽게 포스트를 작성하는 방법에 대해 이야기해보려고 합니다. 본 포스트는 `Mac OSX Mohave` 를 기준으로 작성 되었습니다.
 
 # 마크다운
 
@@ -140,10 +146,7 @@ GIT 은 형상관리를 위해 Branch 라는 개념을 사용합니다. Branch �
     ```shell
     # git branch post/david
     ```
-- 생성한 branch 를 origin repository (github repository) 에 push 합니다.
-    ```shell
-    # git push --set-upstream origin post/sam
-    ```
+- ~~생성한 branch 를 origin repository (github repository) 에 push 합니다.~~ (포스트 작성, 페이지 수정 등을 위한 branch 는 origin 에 push 할 필요가 없어 삭제함.)
 
 ## 포스트 생성 및 작성
 
@@ -221,10 +224,7 @@ Jekyll 에서는 `_posts` 폴더에 마크다운 파일을 추가하는 형태�
   # git commit -m '2018-12-12-nerdfactory-documentation-history.md added'
   ```
 
-- commit 을 push 합니다.
-  ```shell
-  # git push
-  ```
+- ~~commit 을 push 합니다.~~ (포스트 작성, 페이지 수정 등을 위한 branch 는 origin 에 push 할 필요가 없어 삭제함.)
 
 ## 완성된 branch 를 develop branch에 merge
 
@@ -261,3 +261,51 @@ post/sam branch 의 변경이 완료되면 해당 branch 를 상위 branch 인 d
   ```
 
 - 신규 포스트가 develop branch 에 적용 되었음을 branch 관리자(황종택) 에게 통보합니다.
+
+## merge 된 develop branch 에서 작성한 포스트 테스트 하기
+
+현재까지 진행을 마쳤다면 git branch 는 develop 으로 checkout 된 상태 입니다. develop branch 를 master bramch 에 merge 하여 production 에 적용하기 이전에 post가 정상적으로 작성되었는지 테스트를 진행하게 됩니다.
+
+- 개발 환경에서 Jekyll 을 구동하기 위해 Ruby 버전을 확인합니다.
+
+```shell
+# ruby --version
+ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin18]
+```
+
+- ruby가 설치되어 있지 않다면 ruby website의 안내를 통해 ruby를 설치합니다. [Ruby Installation Page Link](https://www.ruby-lang.org/en/documentation/installation/)
+
+- nerdfactory.github.io 가 clone 된 디렉토리로 이동하여 gem bundler 를 설치합니다.
+
+```shell
+# cd nerdfactory.github.io
+# gem install bundler
+```
+
+- bundle 을 설치합니다.
+
+```shell
+# bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies...
+```
+
+- jekyll 개발서버를 실행합니다.
+
+```shell
+# bundle exec jekyll serve
+Configuration file: /Users/jthwang/JekyllProjects/nerdfactoryai.github.io/_config.yml
+            Source: /Users/jthwang/JekyllProjects/nerdfactoryai.github.io
+       Destination: /Users/jthwang/JekyllProjects/nerdfactoryai.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+       Jekyll Feed: Generating feed for posts
+```
+
+- 작성한 포스트를 확인 합니다.
+
+# Conclusion
+
+본 포스트는 서두에서도 언급 햇듯이 Jekyll + Git Repository based Blog 에서의 Post 작성을 비개발자도 쉽게 접근할 수 있도록 설명하고자 했습니다. GIT 의 개념을 익혀야 하고 CLI (Command Line Interface) 를 사용해야 하며 독자의 개발환경에 따라 오류가 발생할 수도 있습니다. 또한 위 방법 외에도 Post 를 작성할 수 있는 다른 방법도 존재합니다. 하지만 본문에서 설명한 내용이 Jekyll 로 작성되어 Github 에서 hosting 되는 수많은 Blog 들의 작동원리를 이해하는데 도움이 되리라 생각합니다. 오류, 문의사항, 토론은 언제든지 환영합니다. 감사합니다.
