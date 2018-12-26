@@ -1,32 +1,139 @@
 ---
 layout: contents
 ---
-<article>
+<div class="container page-content">
+  <article>
 
-  <header class="post-header">
-    <div class="post-header-line"></div>
-    <div class="post-header-title">
-      <h1>{{ page.title | escape }}</h1>
-    </div>
-    <div class="post-header-desc">
-      <p class="text-muted">
-        {% for name in page.author %}
-          {% if site.data.authors.authors[name] %}
-          <span class="post-info mr-2">{{ site.data.authors.authors[name].kor-name }} </span>
+    <header class="post-header">
+      <div class="post-header-line"></div>
+      <div class="post-header-title">
+        <h1>{{ page.title | escape }}</h1>
+      </div>
+      <div class="post-header-desc">
+        <p class="text-muted">
+          {% for name in page.author %}
+            {% if site.data.authors.authors[name] %}
+            <span class="post-info mr-2">{{ site.data.authors.authors[name].kor-name }} </span>
+            {% else %}
+            <span class="post-info mr-2">저자 정보 없음 </span>
+            {% endif %}
+          {% endfor %}
+          <span class="mr-2 post-info">|</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%Y-%m-%d" }}
+          </time>
+        </p>
+      </div>
+    </header>
+
+    <section class="markdown-body">
+      {{ content }}
+    </section>
+
+  </article>
+</div>
+
+<div class="container post-authors-container">
+  <section class="post-authors">
+    <div class="container">
+      {% for name in page.author %}
+      {% if site.data.authors.authors[name] %}
+      <div class="row post-authors-row">
+        <div class="col-lg post-author-col">
+          {% if site.data.authors.authors[name].photo != "" %}
+          <img class="post-author-avatar" src="{{ site.data.authors.authors[name].photo }}" alt="{{ site.data.authors.authors[name].kor-name }}'s Profile Photo">
           {% else %}
-          <span class="post-info mr-2">저자 정보 없음 </span>
+          <img class="post-author-avatar" src="/assets/images/contents/avatar-1.png" alt="Avatar">
           {% endif %}
-        {% endfor %}
-        <span class="mr-2 post-info">|</span>
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date: "%Y-%m-%d" }}
-        </time>
-      </p>
+          <div class="post-author-info">
+            <span>{{ site.data.authors.authors[name].kor-name }}</span><br>
+            {% for tag in site.data.authors.authors[name].tag %}
+              <span class="mr-2">{{ tag }}</span>
+            {% endfor %}
+            <span class="mr-2">|</span>
+            <span class="mr-2">{{ site.data.authors.authors[name].email }}</span>
+            
+          </div>
+          <div class="post-author-link">
+            <!-- <span>작가의 포스트 더 보기 ></span> -->
+          </div>
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
-  </header>
-
-  <section class="markdown-body">
-    {{ content }}
   </section>
+</div>
 
-</article>
+<div class="container-fluid post-footer-container">
+  <section class="post-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          {% if page.previous.url %}
+          <div class="card-post-link" style="background-image: url('{{ page.previous.image }}')">
+            <div class="card-post-link-mask" style="padding: 50px;">
+              <div class="card-post-link-type"><span>이전글</span></div>
+              <div class="card-post-link-title">
+                <a href="{{ page.previous.url }}">{{ page.previous.title | strip_html | truncatewords: 7 }}</a>
+              </div>
+              <div class="card-post-link-info">
+                {% for name in page.previous.author %}
+                {% if site.data.authors.authors[name] %}
+                <span class="mr-3">{{ site.data.authors.authors[name].kor-name }} </span>
+                {% else %}
+                <span class="mr-3">저자 정보 없음 </span>
+                {% endif %}
+                {% endfor %}
+                <span class="mr-3">|</span>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                  {{ page.date | date: "%Y-%m-%d" }}
+                </time>
+              </div>
+            </div>
+          </div>
+          {% else if %}
+          <div class="card-post-link" style="background-image: url('/assets/images/contents/none-thumbnail-img-2.png')">
+            <div class="card-post-link-title" style="padding: 65px;">
+              <span>이전 포스트가 존재하지 않습니다.</span>
+            </div>
+          </div>
+          {% endif %}
+          
+        </div>
+        <div class="col-lg">
+          {% if page.next.url %}
+          <div class="card-post-link" style="background-image: url('{{ page.next.image }}')">
+            <div class="card-post-link-mask" style="padding: 50px;">
+              <div class="card-post-link-type"><span>다음글</span></div>
+              <div class="card-post-link-title">
+                <a href="{{ page.next.url }}">{{ page.next.title | strip_html | truncatewords: 7 }}</a>
+              </div>
+              <div class="card-post-link-info">
+                {% for name in page.next.author %}
+                {% if site.data.authors.authors[name] %}
+                <span class="mr-3">{{ site.data.authors.authors[name].kor-name }} </span>
+                {% else %}
+                <span class="mr-3">저자 정보 없음 </span>
+                {% endif %}
+                {% endfor %}
+                <span class="mr-3">|</span>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                  {{ page.date | date: "%Y-%m-%d" }}
+                </time>
+              </div>
+            </div>
+          </div>
+          {% else if %}
+          <div class="card-post-link" style="background-image: url('/assets/images/contents/none-thumbnail-img-2.png')">
+            <div class="card-post-link-title" style="padding: 65px;">
+              <span>다음 포스트가 존재하지 않습니다.</span>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
