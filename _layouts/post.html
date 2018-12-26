@@ -5,24 +5,8 @@ layout: contents
   <article>
 
     <header class="post-header">
-      <div class="post-header-line"></div>
       <div class="post-header-title">
         <h1>{{ page.title | escape }}</h1>
-      </div>
-      <div class="post-header-desc">
-        <p class="text-muted">
-          {% for name in page.author %}
-            {% if site.data.authors.authors[name] %}
-            <span class="post-info mr-2">{{ site.data.authors.authors[name].kor-name }} </span>
-            {% else %}
-            <span class="post-info mr-2">저자 정보 없음 </span>
-            {% endif %}
-          {% endfor %}
-          <span class="mr-2 post-info">|</span>
-          <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: "%Y-%m-%d" }}
-          </time>
-        </p>
       </div>
     </header>
 
