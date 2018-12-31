@@ -12,13 +12,25 @@ layout: null
     {% for post in site.posts limit:30 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
+        <authors>
+          {% for name in post.author %}
+          {% if site.data.authors.authors[name] %}
+          <author>
+            <name>{{ site.data.authors.authors[name].kor-name }}</name>
+            <image>https://blog.nerdfactory.ai{{ site.data.authors.authors[name].photo }}</image>
+          </author>
+          {% endif %}
+          {% endfor %}
+        </authors>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <tag>{{ tag | xml_escape }}</tag>
-        {% endfor %}
+        <tags>
+          {% for tag in post.tags %}
+          <tag>{{ tag | xml_escape }}</tag>
+          {% endfor %}
+        </tags>
         {% for cat in post.categories %}
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
