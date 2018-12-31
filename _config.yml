@@ -21,7 +21,7 @@ phone: "+82 (042) 827 9715"
 copyright: "Copyright 2018 @ NerdFactory. All Right Reserved."
 name: "NerdFactory"
 
-#baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://blog.nerdfactory.ai"
 url: "https://blog.nerdfactory.ai"
 #twitter_username: jekyllrb
 #github_username:  jekyll
