@@ -22,6 +22,7 @@ layout: null
           {% endif %}
           {% endfor %}
         </authors>
+        <thumbnail>https://blog.nerdfactory.ai{{ post.image }}</thumbnail>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
