@@ -1,32 +1,45 @@
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light nerdfactory-main-nav">
+  <div class="spinner-master">
+    <input type="checkbox" id="spinner-form" />
+    <label for="spinner-form" class="spinner-spin">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+  </div>
   <div class="container">
     <div class="main-logo-img-div">
-      <a class="navbar-brand nerdfactory-main-nav-brand" rel="author" href="{{ "/" | relative_url }}">
-        <img class="main-logo-top" src="/assets/images/bi/logo_text_2.png" alt="">
-      </a>
+      <div class="main-logo-img">
+        <a class="navbar-brand nerdfactory-main-nav-brand" rel="author" href="{{ "/" | relative_url }}">
+          <img class="main-logo-top" src="/assets/images/bi/logo_text_2.png" alt="">
+        </a>
+      </div>
+      <div class="main-logo-text">
+        <span>블로그</span>
+      </div>
     </div>
-    <div class="main-logo-title-div">
-      <span>블로그</span>
-    </div>
-    
-    <!-- <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
-
-    {%- assign page_paths = site.header_pages -%}
-    <ul class="navbar-nav ml-auto">
-      {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
-      {%- if my_page.title -%}
-      <li class="nav-item nerdfactory-main-nav-item">
-        <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+    <!-- <ul class="dropdown">
+      <li><a href="https://nerdfactoryai.github.io/" onclick="window.open(this.href); return false;" class="navi_nerd">기술블로그</a>
       </li>
-      {%- endif -%}
-      {% endfor -%}
-      <!-- <li class="nav-item nerdfactory-main-nav-item">
-        <a class="nav-link" href="#">홈</a>
+      <li><a href="http://aivory.nerdfactory.ai/" onclick="window.open(this.href); return false;" class="navi_contact">AIVORY</a>
       </li>
-      <li class="nav-item nerdfactory-main-nav-item">
-        <a class="nav-link" href="#">너드팩토리</a>
-      </li> -->
     </ul>
-  </div>
+    <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+    <ul class="navbar-nav nav-pc ml-auto">
+      <li class="nav-item nerdfactory-main-nav-item">
+        <a class="nav-link" href="http://nerdfactory.ai/" target="_new">너드팩토리</a>
+      </li>
+      <li class="nav-item nerdfactory-main-nav-item">
+        <a class="nav-link" href="http://aivory.nerdfactory.ai/" target="_new">AIVORY</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-mobile ml-auto">
+      <li class="nav-item nerdfactory-main-nav-item">
+        <a class="nav-link" href="http://nerdfactory.ai/" target="_new">너드팩토리</a>
+      </li>
+      <li class="nav-item nerdfactory-main-nav-item">
+        <a class="nav-link" href="http://aivory.nerdfactory.ai/" target="_new">AIVORY</a>
+      </li>
+    </ul>
 </nav>
