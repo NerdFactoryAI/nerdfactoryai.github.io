@@ -1,5 +1,7 @@
 // Nav
 .nerdfactory-main-nav {
+  -webkit-transition: height 0.5s; /* Safari */
+  transition: height 0.5s;
   height: 100px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -12,7 +14,7 @@
   margin-right: 5px;
 }
 .nerdfactory-main-nav-item {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .main-logo-top {
@@ -22,11 +24,96 @@
   width: 200px;
 }
 .main-logo-img-div {
-
+  font-weight: 500;
 }
 .main-logo-title-div {
-  font-weight: 500;
-  margin-top: 15px;
+}
+.main-logo-img {
+  position: relative;
+  float: left;
+}
+.main-logo-text {
+  position: relative;
+  float: left;
+  margin-top: 26px;
+}
+
+.nav-pc { 
+  display: flex;
+}
+.nav-mobile { 
+  display: none;
+  text-align: right;
+  margin-top: 50px;
+}
+.nav-mobile > li > a { 
+  padding-top: 0px;
+}
+
+.spinner-master input[type=checkbox] { display: none; }
+.spinner-master * {
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.spinner-master {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  margin: 15px;
+  height: 30px;
+  width: 26px;
+  float: right;
+  display: none;
+}
+
+.spinner-master label {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  left: 0;
+}
+
+.spinner-master .spinner {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  padding: 0;
+  background-color: #132038b8;;
+}
+
+.spinner-master .diagonal.part-1 {
+  position: relative;
+  float: right;
+}
+
+.spinner-master .horizontal {
+  position: relative;
+  float: right;
+  margin-top: 4px;
+}
+
+.spinner-master .diagonal.part-2 {
+  position: relative;
+  float: right;
+  margin-top: 4px;
+}
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .horizontal { opacity: 0; }
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-1 {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-top: 10px;
+}
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-2 {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-top: -10px;
 }
 
 // Main Banner
@@ -83,6 +170,33 @@
   }
   .main-subtitle {
     font-size: 1.4em;
+  }
+  .nerdfactory-main-nav-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 5px;
+  }
+  .nerdfactory-main-nav-item {
+    font-size: 0.8em;
+  }
+  .main-logo-top {
+    width: 120px;
+  }
+  .main-logo-title-div {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  .spinner-master {
+    display: block;
+  }
+  .nav-pc { 
+    display: none;
+  }
+  .nav-mobile { 
+    display: none;
+  }
+  .main-logo-text {
+    margin-top: 17px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {  
