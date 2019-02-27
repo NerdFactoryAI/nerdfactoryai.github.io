@@ -5,7 +5,7 @@ author: ["차금강"]
 date:   2019-02-20 05:00:01 -0600
 abstract: "AVIORY는 너드팩토리에서 개발한 인공지능 추천 검색 솔루션입니다. 스스로의 서비스나 플랫폼에서 추천 알고리즘을 개발하고 구현하는데에는 서버의 사양을 포함하여 고려해야될 점이 솔루션에 비해서는 적은게 사실입니다. 기존의 기계학습적, 심층학습적 추천 알고리즘에 대해서 알아보고 솔루션으로써의 문제점을 발견한 후 이를 극복하기 위해 어떠한 방법을 사용하였는지 설명합니다."
 tags: ["추천시스템", "기계학습", "딥러닝", "AIVORY"]
-image: /assets/images/posts/evolution-of-aivory-recommendation/image1.png
+image: /assets/images/posts/evolution-of-aivory-recommendation/Image1.png
 draft: "no"
 ---
 
