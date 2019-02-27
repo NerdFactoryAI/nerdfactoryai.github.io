@@ -283,4 +283,4 @@ $$
 [2] [Cosine Similarity](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84)<br>
 [3] [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf)<br>
 [4] [Word2Vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/)<br>
-[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/evolution-of-aivory-recommendation.html)<br>
+[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/minimax-method-to-find-the-number-of-center-of-clustering.html)<br>
