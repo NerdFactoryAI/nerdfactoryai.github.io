@@ -158,7 +158,7 @@ $$
 현재 상영작인 8개의 영화를 유저에게 추천한다고 가정합니다.
 
 {:.center}
-![image1.png](/assets/images/posts/evolution-of-aivory-recommendation/image1.png)
+![image1.png](/assets/images/posts/evolution-of-aivory-recommendation/Image1.png)
 
 영화 자체의 특성을 만드는데는 여러가지 요소들이 있습니다. 주연배우, 줄거리, 장르, 감독 등이 될 수 있습니다. 이 글에서는 장르를 예로 추천알고리즘을 만들어보겠습니다.
 위의 현재 상영작인 8개의 영화를 장르로 구별해보면 다음과 같이 분류할 수 있습니다.
