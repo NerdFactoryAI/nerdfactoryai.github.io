@@ -6,7 +6,7 @@ date:   2019-02-26 05:00:01 -0600
 abstract: "AIVORY는 너드팩토리에서 개발한 인공지능 추천 검색 솔루션입니다. 이 글에서는 AIVORY에 추가될 유사 이미지 검색 기능의 구현 과정에 대해 다루고 있습니다."
 tags: ["딥러닝", "CNN", "유사 이미지"]
 image: https://drive.google.com/uc?id=1kqU2voLeGz6dNhIK-_y6AdQ6RswHDj9y
-draft: "no"	
+draft: "yes"	
 ---
 
 {:.center}
