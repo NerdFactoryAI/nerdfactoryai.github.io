@@ -10,7 +10,7 @@ draft: "no"
 ---
 
 {:.center}
-![ReactiveX](https://drive.google.com/uc?id=1kqU2voLeGz6dNhIK-_y6AdQ6RswHDj9y)
+![ReactiveX](/assets/images/posts/image-search-ai-based-on-augmented-learning/image1.png)
 
 # Abstract
 
