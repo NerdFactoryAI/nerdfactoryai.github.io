@@ -13,13 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: NerdFactory AI Tech Blog
+title: 너드팩토리 기술 블로그
 email: "contact@nerdfactory.ai"
+image: "https://blog.nerdfactory.ai/assets/images/posts/branding-nerdfactory/img2.png"
 description: >- # this means to ignore newlines until "baseurl:"
-  Tech Blog Page for Nerd Factory AI
+  너드팩토리에서 운영하는 기술블로그 입니다.
 phone: "+82 (042) 827 9715"
 copyright: "Copyright 2018 @ NerdFactory. All Right Reserved."
-name: "NerdFactory"
+name: "너드팩토리"
 
 baseurl: ""
 url: "https://blog.nerdfactory.ai"
