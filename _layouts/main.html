@@ -17,7 +17,7 @@ layout: list
           <p class="mb-3 post-content">{{ post.abstract | strip_html | truncatewords: 30 }}</p>
           <p class="mb-1 post-content">
             {% for name in post.author %}
-            <span class="post-info">{{ name }}</span>
+            <span class="post-info">{{ site.data.authors.authors[name].eng-name }}</span>
             {% if forloop.last == false %}
             <span class="ml-2 mr-2 post-info">|</span>
             {% endif %}
@@ -69,7 +69,7 @@ layout: list
       <div>
         <p class="mb-1 post-content">
           {% for name in post.author %}
-          <span class="post-info">{{ name }}</span>
+          <span class="post-info">{{ site.data.authors.authors[name].eng-name }}</span>
           {% if forloop.last == false %}
           <span class="ml-2 mr-2 post-info">|</span>
           {% endif %}
