@@ -25,12 +25,12 @@ layout: contents
       <div class="row post-authors-row">
         <div class="col-lg post-author-col">
           {% if site.data.authors.authors[name].photo != "" %}
-          <img class="post-author-avatar" src="{{ site.data.authors.authors[name].photo }}" alt="{{ site.data.authors.authors[name].kor-name }}'s Profile Photo">
+          <img class="post-author-avatar" src="{{ site.data.authors.authors[name].photo }}" alt="{{ site.data.authors.authors[name].eng-name }}'s Profile Photo">
           {% else %}
           <img class="post-author-avatar" src="/assets/images/contents/avatar-1.png" alt="Avatar">
           {% endif %}
           <div class="post-author-info">
-            <span>{{ site.data.authors.authors[name].kor-name }}</span><br>
+            <span>{{ site.data.authors.authors[name].eng-name }}</span><br>
             {% for tag in site.data.authors.authors[name].tag %}
               <span class="mr-2">{{ tag }}</span><br>
             {% endfor %}
@@ -64,7 +64,7 @@ layout: contents
               <div class="card-post-link-info">
                 {% for name in page.previous.author %}
                 {% if site.data.authors.authors[name] %}
-                <span class="mr-3">{{ site.data.authors.authors[name].kor-name }} </span>
+                <span class="mr-3">{{ site.data.authors.authors[name].eng-name }} </span>
                 {% else %}
                 <span class="mr-3">저자 정보 없음 </span>
                 {% endif %}
@@ -96,7 +96,7 @@ layout: contents
               <div class="card-post-link-info">
                 {% for name in page.next.author %}
                 {% if site.data.authors.authors[name] %}
-                <span class="mr-3">{{ site.data.authors.authors[name].kor-name }} </span>
+                <span class="mr-3">{{ site.data.authors.authors[name].eng-name }} </span>
                 {% else %}
                 <span class="mr-3">저자 정보 없음 </span>
                 {% endif %}
