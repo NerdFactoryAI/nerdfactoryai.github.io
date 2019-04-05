@@ -7,7 +7,7 @@
   photo: "/assets/images/authors/bsb-1.png"
 황종택:
   kor-name: "황종택"
-  eng-name: "Samuel"
+  eng-name: "Sam"
   graduate: "충남대학교 석사 수료"
   tag: ["Engineering Nerd"]
   email: "sam@nerdfactory.ai"
@@ -35,7 +35,7 @@
   photo: "/assets/images/authors/ckg-1.png"
 채영훈:
   kor-name: "채영훈"
-  eng-name: "Matthew"
+  eng-name: "Matt"
   graduate: "Portland State Univ. 학사"
   tag: ["Marketing Nerd"]
   email: "matt@nerdfactory.ai"
@@ -49,7 +49,7 @@
   photo: "/assets/images/authors/cis-1.png"
 이수련:
   kor-name: "이수련"
-  eng-name: "Tessa"
+  eng-name: "Tess"
   graduate: "이화여자대학교 학사"
   tag: ["Machine Learning Nerd"]
   email: "sooryeon@nerdfactory.ai"
