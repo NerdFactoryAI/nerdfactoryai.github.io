@@ -62,12 +62,12 @@ Zeplin은 하나의 커뮤니케이션 도구의 일종이라고 생각하시면
 참고할 부분
 
 - Photoshop과 Zeplin을 연동할 경우 Photohop cc 2015버전부터 가능합니다.  
-- 먼저 Zeplin을 설치해주세요 (https://zeplin.io/)
-
-1. Photoshop에 파일을 불러와서 이미지에 보이는 것처럼 대지를 설정해줍니다.
+- 먼저 Zeplin을 설치해주세요 [(Zeplin Official Website)](https://zeplin.io/)
 
 {:.center}
 ![img4](/assets/images/posts/sketch-photoshop-zeplin/img4.png)
+
+1. Photoshop에 파일을 불러와서 이미지에 보이는 것처럼 대지를 설정해줍니다.
 
 2. export할 아트 보드(대지)를 선택한 후 Window > Extentions > Zeplin (창 > 확장 > Zeplin)을 클릭하면 아래 이미지의 왼쪽과 같은 형태가 보일 것입니다. (Zeplin을 설치해야 extentions에서 Zeplin이 보입니다.) 
    - 해당 아트 보드(대지)를 클릭한 뒤 화면상에 따로 슬라이스를 해야 하는 아이콘, 이미지 레이어를 선택한 뒤 하단의 Mark as asset을 클릭해주면 선택했던 아이콘, 이미지의 레이어 이름 앞에 -e-가 붙게 되면 export로 따로 설정이 된 것입니다.
@@ -81,12 +81,12 @@ Photoshop은 모든 UI를 한 번에 업로드하기가 어렵고 하나씩 대�
 
 # Sketch  x  Zeplin
 
-1. Sketch에서도 마찬가지로 슬라이스해야 하는 아이콘, 이미지를 우선 선택하여
-   오른쪽 Shadows 아래 있는 MAKE EXPORTABLES를 선택하여 Presets을 생성해 줍니다. 
-   (Sketch에서 기본적으로 제공되는 presets은 ios, android, default을 선택할 수 있고 export 되는 포맷은 png, jpg, tiff, webp, eps, svg, pdf가 있어서 프리셋만 따로 추출도 가능합니다.) 
-
 {:.center}
 ![img6](/assets/images/posts/sketch-photoshop-zeplin/img6.png)
+
+1. Sketch에서도 마찬가지로 슬라이스해야 하는 아이콘, 이미지를 우선 선택하여
+   오른쪽 Shadows 아래 있는 MAKE EXPORTABLES를 선택하여 Presets을 생성해 줍니다. 
+   (Sketch에서 기본적으로 제공되는 presets은 ios, android, default을 선택할 수 있고 export 되는 포맷은 png, jpg, tiff, webp, eps, svg, pdf가 있어서 프리셋만 따로 추출도 가능합니다.)
 
 2. 모든 asset을 export 했다면 zeplin에 업로드해야 하는 모든 화면을 선택한 뒤 탭 바에 있는 Plugins > Zeplin > Export Selected를 선택합니다.
    그러면 아래 이미지처럼 업로드되는 프로젝트 위치를 선택한 뒤 import 하면 됩니다.
@@ -109,7 +109,7 @@ Photoshop과 Sketch를 통해 export된 파일은 업로드한 프로젝트에 �
 ​	그리고 아이콘과 이미지뿐 아니라 배경에 적용된 색상(그라데이션 포함), 폰트 정보(크기, 위치, 굵기, 높이, 자간, 행간)까지 	모두 다 확인할 수 있습니다. (심지어 엄청 긴 글도 바로 복사가 가능해서 귀찮게 타이핑할 일을 없애줘서 좋습니다. good!)
 
 2. 업로드된 화면은 Zeplin의 프로젝트에 함께하는 모든 분들이 바로 확인할 수 있고 아래 이미지처럼 코멘트를 달아 좀 더 즉각적인 피드백이 가능합니다. 
-   그리고 코멘트를 좀 더 실시간으로 하고 싶으신 분들은 Slack(https://slack.com/)이라는 커뮤니케이션 도구(카카오톡, 라인과 같은 채팅 도구)를 활용하면 업로드되는 화면이나 코멘트를 자동 알림으로 하여 바로바로 확인과 작업이 가능합니다.
+   그리고 코멘트를 좀 더 실시간으로 하고 싶으신 분들은 [Slack](https://slack.com/)이라는 커뮤니케이션 도구(카카오톡, 라인과 같은 채팅 도구)를 활용하면 업로드되는 화면이나 코멘트를 자동 알림으로 하여 바로바로 확인과 작업이 가능합니다.
 
 {:.center}
 ![img11](/assets/images/posts/sketch-photoshop-zeplin/img11.png)
