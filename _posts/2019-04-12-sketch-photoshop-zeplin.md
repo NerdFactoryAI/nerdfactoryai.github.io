@@ -2,7 +2,7 @@
 layout: post
 title:  "Sketch와 Photoshop의 Zeplin활용"
 author: ["이지원"]
-date:   2019-03-12 12:53:01 -0600
+date:   2019-04-12 12:53:01 -0600
 abstract: "너드팩토리에서 디자인된 화면을 가지고 다른 분들과 의견을 나눌때 사용되는 Zeplin에 대해 간단한 사용방법과 너드팩토리에서 이루어지는 협업방식에 대해 말씀드리겠습니다."
 tags: ["Zeplin", "Sketch", "Photoshop"]
 image: /assets/images/posts/sketch-photoshop-zeplin/img1.png
