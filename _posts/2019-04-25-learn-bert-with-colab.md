@@ -137,13 +137,16 @@ vcode = getpass.getpass()
 !ls Gdrive
 ```
 
+{:.center}
+![Gdrive_folder_list](/assets/images/posts/learn-bert-with-colab/Gdrive_folder_image.png)
+
 구글 드라이브에 있는 파일과 폴더 리스트가 똑같이 출력되는 것을 확인할 수 있습니다.
 이제 구글 드라이브를 저장소로 자유롭게 접근하며 사용할 수 있습니다.
 
 기본적인 세팅이 완료가 되었습니다. 미리 다운 받아뒀던 BERT 파일들과 KorQuAD 파일들을 구글 드라이브에 옮기도록 하겠습니다.
 
 {:.center}
-![Gdrive_folder_list](/assets/images/posts/learn-bert-with-colab/Gdrive_folder_image.png)
+![Gdrive_folder_list](/assets/images/posts/learn-bert-with-colab/Gdrive_folder_image_in_gdrive.png)
 *구글 드라이브에서 위 그림과 같이 3개의 폴더를 생성해 줍니다. bert_files, korquad_files, pretrained_files*
 
 
