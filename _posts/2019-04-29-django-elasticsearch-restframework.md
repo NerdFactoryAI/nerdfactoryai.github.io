@@ -104,7 +104,7 @@ Elasticsearch는 "Hello to the world"라는 문자열을 ["Hello", "to", "the", 
 
 `search_app` 디렉터리에 `setting_bulk.py` 파일을 생성해서 따로 구현해주었습니다.
 
-```
+```python
 from elasticsearch import Elasticsearch
 import json
 
@@ -160,7 +160,7 @@ es.bulk(body)
 
 클래스 기반 뷰로 API를 작성할 계획이며 GET Method를 통해 요청을 하면 parameter로 전달된 검색어에 해당하는 검색 결과를 응답하도록 해줍니다.
 
-```
+```python
 from rest_framework.views import APIView  
 from rest_framework.response import Response  
 from rest_framework import status  
@@ -199,7 +199,7 @@ class SearchView(APIView):
 
 url의 설정한 시점까지 일치하는 부분을 잘라내고 남은 문자열 부분의 후속 처리를 위해 include된 url 파일 경로`search_app.urls`로 전달합니다.
 
-```
+```python
 # server_project/urls.py
 
 from django.contrib import admin  
@@ -217,7 +217,7 @@ urlpatterns = [
 
 `search_app` 디렉터리에 `urls.py` 파일을 생성하고 url 패턴을 추가해줍니다.
 
-```
+```python
 # search_app/urls.py
 
 from django.urls import path  
@@ -278,7 +278,7 @@ Elasticsearch의 `config` 디렉터리에 저장합니다.
 
 이제 작성한 `사용자 사전`을 nori 형태소 분석기에 적용시킵니다. `setting_bulk.py`의 분석기 설정 부분을 다음과 같이 수정합니다.
 
-```
+```python
 "settings": {
     "index": {
         "analysis": {
