@@ -37,7 +37,7 @@ myvenv\Scripts\activate
 
 pip를 사용해 **django**와 **djangorestframework**를 설치합니다.
 
-```
+```python
 pip install django
 pip install djangorestframework
 ```
@@ -105,53 +105,55 @@ Elasticsearch는 "Hello to the world"라는 문자열을 ["Hello", "to", "the", 
 `search_app` 디렉터리에 `setting_bulk.py` 파일을 생성해서 따로 구현해주었습니다.
 
 ```
-from elasticsearch import Elasticsearch  
-import json  
-  
-es = Elasticsearch()  
-  
-es.indices.create(  
-    index='dictionary',  
-    body={  
-        "settings": {  
-            "index": {  
-                "analysis": {  
-                    "analyzer": {  
-                        "my_analyzer": {  
-                            "type": "custom",  
-                            "tokenizer": "nori_tokenizer" 
-                        }  
-                    }  
-                }  
-            }  
-        },  
-		"mappings": {  
-            "dictionary_datas": {  
-                "properties": {  
-                    "id": {  
-                        "type": "long"  
-                    },  
-				    "title": {  
+from elasticsearch import Elasticsearch
+import json
+
+es = Elasticsearch()
+
+es.indices.create(
+    index='dictionary',
+    body={
+        "settings": {
+            "index": {
+                "analysis": {
+                    "analyzer": {
+                        "my_analyzer": {
+                            "type": "custom",
+                            "tokenizer": "nori_tokenizer"
+                        }
+                    }
+                }
+            }
+        },
+        "mappings": {
+            "dictionary_datas": {
+                "properties": {
+                    "id": {
+                        "type": "long"
+                    },
+                    "title": {
                         "type": "text",
                         "analyzer": "my_analyzer"
-					},  
-				    "content": {  
+                    },
+                    "content": {
                         "type": "text",
                         "analyzer": "my_analyzer"
-				    }  
-                }  
-            }  
-        }  
-    })
-  
-with open("dictionary_data.json", encoding='utf-8') as json_file:  
-    json_data = json.loads(json_file.read())  
-  
-body = ""  
-for i in json_data:  
-    body = body + json.dumps({"index": {"_index": "dictionary", "_type": "dictionary_datas"}}) + '\n' + json.dumps(i, ensure_ascii=False) + '\n'  
-  
-es.bulk(body)  
+                    }
+                }
+            }
+        }
+    }
+)
+
+with open("dictionary_data.json", encoding='utf-8') as json_file:
+    json_data = json.loads(json_file.read())
+
+body = ""
+for i in json_data:
+    body = body + json.dumps({"index": {"_index": "dictionary", "_type": "dictionary_datas"}}) + '\n'
+    body = body + json.dumps(i, ensure_ascii=False) + '\n'
+
+es.bulk(body)
 ```
 
 ## view 구현
@@ -166,31 +168,31 @@ from rest_framework import status
 from elasticsearch import Elasticsearch  
   
   
-class SearchView(APIView):  
-  
-    def get(self, request):  
-            es = Elasticsearch()  
-  
-            # 검색어  
-		    search_word = request.query_params.get('search')  
-  
-            if not search_word:  
-                return Response(status=status.HTTP_400_BAD_REQUEST, data={'message': 'search word param is missing'})  
-  
-            docs = es.search(index='dictionary',  
-							 doc_type='dictionary_datas',  
-							 body={  
-                                 "query": {  
-                                     "multi_match": {  
-                                         "query": search_word,  
-										 "fields": ["title", "content"]  
-                                     }  
-                                 }  
-                             })  
-  
-            data_list = docs['hits']  
-  
-            return Response(data_list)
+class SearchView(APIView):
+
+    def get(self, request):
+        es = Elasticsearch()
+
+        # 검색어
+        search_word = request.query_params.get('search')
+
+        if not search_word:
+            return Response(status=status.HTTP_400_BAD_REQUEST, data={'message': 'search word param is missing'})
+
+        docs = es.search(index='dictionary',
+                         doc_type='dictionary_datas',
+                         body={
+                             "query": {
+                                 "multi_match": {
+                                     "query": search_word,
+                                     "fields": ["title", "content"]
+                                 }
+                             }
+                         })
+
+        data_list = docs['hits']
+
+        return Response(data_list)
 ```
 
 ## url 설정
@@ -277,24 +279,24 @@ Elasticsearch의 `config` 디렉터리에 저장합니다.
 이제 작성한 `사용자 사전`을 nori 형태소 분석기에 적용시킵니다. `setting_bulk.py`의 분석기 설정 부분을 다음과 같이 수정합니다.
 
 ```
-"settings": {  
-    "index": {  
-        "analysis": {  
-            "tokenizer": {  
-                "nori_user_dict": {  
-                    "type": "nori_tokenizer",  
-				    "decompound_mode": "mixed",  
-				    "user_dictionary": "userdict_ko.txt"  
-			    }  
-            },  
-		    "analyzer": {  
-                "my_analyzer": {  
-                    "type": "custom",  
-				    "tokenizer": "nori_user_dict"  
-			    }  
-            }  
-        }  
-    }  
+"settings": {
+    "index": {
+        "analysis": {
+            "tokenizer": {
+                "nori_user_dict": {
+                    "type": "nori_tokenizer",
+                    "decompound_mode": "mixed",
+                    "user_dictionary": "userdict_ko.txt"
+                }
+            },
+            "analyzer": {
+                "my_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "nori_user_dict"
+                }
+            }
+        }
+    }
 }
 ```
 
