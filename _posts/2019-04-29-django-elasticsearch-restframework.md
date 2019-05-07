@@ -37,7 +37,7 @@ myvenv\Scripts\activate
 
 pip를 사용해 **django**와 **djangorestframework**를 설치합니다.
 
-```python
+```
 pip install django
 pip install djangorestframework
 ```
@@ -52,7 +52,9 @@ python manage.py startapp search_app
 
 INSTALLED_APPS에는 현재 Django 인스턴스에 활성화된 모든 Django 애플리케이션의 이름들이 나열되어 있습니다. 애플리케이션은 다수의 프로젝트에서 사용할 수 있으므로 `server_project/settings.py`에서 등록을 해야 합니다. Django REST framework를 사용하기 위해 INSTALLED_APPS에 'rest_framework'를 추가해줍니다. 위에서 만들었던 'search_app'도 추가해줍니다.
 
-```
+```python
+# server_project/settings.py
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -70,6 +72,7 @@ INSTALLED_APPS = [
 '**Elasticsearch와 연동하여 백과사전 검색 기능 구현**'파트는 다음과 같은 순서로 진행됩니다.
 
 - 사전 설치
+- 인덱스 설정 및 생성
 - 데이터 삽입
 - view 구현
 - url 설정
@@ -91,24 +94,41 @@ Elastic에서 개발한 한국어 형태소 분석기 nori를 이용하기 위�
 C:\Users\user\elasticsearch-6.6.2\bin>elasticsearch-plugin install analysis-nori
 ```
 
-## 데이터 삽입
-
-백과사전의 일부를 데이터셋으로 활용하였습니다.
-
-{:.center}
-![](/assets/images/posts/django-elasticsearch-restframework/dictionary_data.jpg)
-*백과사전 데이터셋 JSON파일*
+## 인덱스 설정 및 생성
 
 Elasticsearch는 "Hello to the world"라는 문자열을 ["Hello", "to", "the", "world"]로 토크나이징해서 인덱스하기도 하고 중요한 단어인 ["Hello", "world"]만을 토크나이징해서 인덱스하는 등 유연하게 다양한 방식으로 인덱스를 생성해서 전문 검색에 특히 뛰어납니다.
-이를 활용해 nori 형태소 분석기를 통해 토크나이징하도록 설정하고, 색인 데이터를 어떤 형식으로 정의할지 mapping 설정을 해주어 한국어 백과사전 검색에 적합한 인덱스를 생성합니다. 또한 여러 개의 데이터를 한 번에 Elasticsearch에 삽입하는 방법인 bulk를 사용하여 백과사전 데이터를 Elasticsearch에 삽입합니다.
-
-`search_app` 디렉터리에 `setting_bulk.py` 파일을 생성해서 따로 구현해주었습니다.
+이를 활용해서 한국어 백과사전 검색에 적합한 인덱스를 생성하기 위해 한글 형태소 분석기 nori를 통해 데이터를 토크나이징할 수 있도록 설정합니다. `search_app` 디렉터리에 `setting_bulk.py` 파일을 생성해서 따로 구현해주었습니다.
 
 ```python
+# search_app/setting_bulk.py
+
 from elasticsearch import Elasticsearch
-import json
 
 es = Elasticsearch()
+
+es.indices.create(
+    index='dictionary',
+    body={
+        "settings": {
+            "index": {
+                "analysis": {
+                    "analyzer": {
+                        "my_analyzer": {
+                            "type": "custom",
+                            "tokenizer": "nori_tokenizer"
+                        }
+                    }
+                }
+            }
+        }
+    }
+)
+```
+
+그다음으로는 mapping 설정을 해주어야 합니다. mapping은 관계형 데이터베이스의 schema와 비슷한 개념으로, Elasticsearch의 인덱스에 들어가는 데이터의 타입을 정의하는 것입니다. mapping 설정을 직접 해주지 않아도 Elastic에서 자동으로 mapping이 만들어지지만 사용자의 의도대로 mapping 해줄 것이라는 보장을 받을 수 없습니다. mapping이 잘못된다면 후에 Kibana와 연동할 때도 비효율적이기 때문에 Elastic에서는 mapping을 직접 하는 것을 권장합니다. 각 필드의 타입을 정의하고 위에서 설정해준 분석기 'my_analyzer'로 title과 content를 분석할 수 있도록 설정해줍니다.
+
+```python
+# search_app/setting_bulk.py
 
 es.indices.create(
     index='dictionary',
@@ -144,6 +164,22 @@ es.indices.create(
         }
     }
 )
+```
+
+## 데이터 삽입
+
+백과사전의 일부를 데이터셋으로 활용하였습니다.
+
+{:.center}
+![](/assets/images/posts/django-elasticsearch-restframework/dictionary_data.jpg)
+*백과사전 데이터셋 JSON파일*
+
+여러 개의 데이터를 한 번에 Elasticsearch에 삽입하는 방법인 bulk를 사용하여 백과사전 데이터를 Elasticsearch에 삽입합니다.
+
+```python
+# search_app/setting_bulk.py
+
+import json
 
 with open("dictionary_data.json", encoding='utf-8') as json_file:
     json_data = json.loads(json_file.read())
@@ -161,6 +197,8 @@ es.bulk(body)
 클래스 기반 뷰로 API를 작성할 계획이며 GET Method를 통해 요청을 하면 parameter로 전달된 검색어에 해당하는 검색 결과를 응답하도록 해줍니다.
 
 ```python
+# search_app/views.py
+
 from rest_framework.views import APIView  
 from rest_framework.response import Response  
 from rest_framework import status  
@@ -197,7 +235,7 @@ class SearchView(APIView):
 
 ## url 설정
 
-url의 설정한 시점까지 일치하는 부분을 잘라내고 남은 문자열 부분의 후속 처리를 위해 include된 url 파일 경로`search_app.urls`로 전달합니다.
+url의 설정한 부분까지 잘라내고 남은 문자열 부분의 후속 처리를 위해 `search_app`의 `urls.py`와 연결해줍니다.
 
 ```python
 # server_project/urls.py
@@ -279,6 +317,8 @@ Elasticsearch의 `config` 디렉터리에 저장합니다.
 이제 작성한 `사용자 사전`을 nori 형태소 분석기에 적용시킵니다. `setting_bulk.py`의 분석기 설정 부분을 다음과 같이 수정합니다.
 
 ```python
+# search_app/setting_bulk.py
+
 "settings": {
     "index": {
         "analysis": {
