@@ -71,14 +71,14 @@ INSTALLED_APPS = [
 
 '**Elasticsearch와 연동하여 백과사전 검색 기능 구현**'파트는 다음과 같은 순서로 진행됩니다.
 
-- 사전 설치
+- Python ES API, nori 한글 형태소 분석기 설치
 - 인덱스 설정 및 생성
 - 데이터 삽입
 - view 구현
 - url 설정
 - 검색 결과 확인
 
-## 사전 설치
+## Python ES API, nori 한글 형태소 분석기 설치
 
 Python ES API를 이용하면 Elasticsearch를 편하게 사용할 수 있기 때문에 Python ES API를 설치해줍니다. 이 글에서는 elasticsearch 6.3.1버전을 사용합니다.
 
