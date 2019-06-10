@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "spring MVC에서 JSTL 사용하기"
-author: ["Luke"]
+author: ["luke"]
 date:   2019-05-05 09:56:00 -0600
 abstract: "JSTL과 EL에 대한 설명과 spring에서 활용하는 방법을 알아보기 위해 검색기능과 검색어 유지, 검색내용 출력 등의 검색페이지에서 사용 가능한 기능을 구현해보도록 하겠습니다."
 tags: ["spring", "JSP", "JSTL", "EL","검색페이지"]
