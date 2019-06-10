@@ -65,20 +65,20 @@ chris:
   kor-name: "이정우"
   eng-name: "Chris"
   graduate: "전북대학교 재학"
-  tag: ["Assistance"]
+  tag: ["Machine Learning Assistant"]
   email: "chris.lee.jw93@gmail.com"
   photo: "/assets/images/authors/chris.png"
 jason:
   kor-name: "이정우"
   eng-name: "Jason"
   graduate: "영남대학교 재학"
-  tag: ["Assistance"]
+  tag: ["Software Assistant"]
   email: "wjddn9252@gmail.com"
   photo: "/assets/images/authors/jason.png"
 luke:
   kor-name: "김재원"
   eng-name: "Luke"
   graduate: "배재대학교 재학"
-  tag: ["Assistance"]
+  tag: ["Software Assistant"]
   email: "luke.nerdfactory@gmail.com"
   photo: "/assets/images/authors/luke.png"
