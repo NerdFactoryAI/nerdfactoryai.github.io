@@ -2,35 +2,35 @@
   kor-name: "백승빈"
   eng-name: "David"
   graduate: "한국과학기술원 석사"
-  tag: ["Strategy Nerd"]
+  tag: ["Product Manager"]
   email: "david@nerdfactory.ai"
   photo: "/assets/images/authors/bsb-1.png"
 황종택:
   kor-name: "황종택"
   eng-name: "Sam"
   graduate: "충남대학교 석사 수료"
-  tag: ["Engineering Nerd"]
+  tag: ["Software Engineer"]
   email: "sam@nerdfactory.ai"
   photo: "/assets/images/authors/hjt-1.png"
 이지훈:
   kor-name: "이지훈"
   eng-name: "Allen"
   graduate: "금오공과대학교 학사"
-  tag: ["Development Nerd"]
+  tag: ["Software Engineer"]
   email: "jihun3353@nerdfactory.ai"
   photo: "/assets/images/authors/ljh-1.png"
 이지원:
   kor-name: "이지원"
   eng-name: "Dorothy"
   graduate: "한남대학교 학사"
-  tag: ["User Interface Nerd"]
+  tag: ["Product Designer"]
   email: "jiwon@nerdfactory.ai"
   photo: "/assets/images/authors/ljw-1.png"
 차금강:
   kor-name: "차금강"
   eng-name: "Kevin"
   graduate: "한국과학기술원 박사과정"
-  tag: ["Machine Learning Nerd"]
+  tag: ["Machine Learning Engineer"]
   email: "chagmgang@nerdfactory.ai"
   photo: "/assets/images/authors/ckg-1.png"
 채영훈:
@@ -44,14 +44,14 @@
   kor-name: "조이성"
   eng-name: "Lucy"
   graduate: "충남대학교 학사"
-  tag: ["Web Front-End Nerd"]
+  tag: ["Software Engineer"]
   email: "lucy@nerdfactory.ai"
   photo: "/assets/images/authors/cis-1.png"
 이수련:
   kor-name: "이수련"
   eng-name: "Tess"
   graduate: "이화여자대학교 학사"
-  tag: ["Machine Learning Nerd"]
+  tag: ["Machine Learning Engineer"]
   email: "sooryeon@nerdfactory.ai"
   photo: "/assets/images/authors/lsr-1.png"
 리복주:
