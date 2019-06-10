@@ -158,7 +158,7 @@ ${TEXT}
 JSP 페이지에서 EL 문법으로 TEXT를 출력하도록 작성합니다.
 
 {:.center}
-![img1](/assets/images/posts/spring-mvc-jstl/el_result1.jpg)
+![img1](/assets/images/posts/spring-mvc-jstl/el_result1.JPG)
 
 위 와 같은 결과를 얻을 수 있습니다.
 
@@ -177,7 +177,7 @@ JSP 페이지에서 EL 문법으로 TEXT를 출력하도록 작성합니다.
 ```
 
 {:.center}
-![img1](/assets/images/posts/spring-mvc-jstl/el_result2.jpg)
+![img1](/assets/images/posts/spring-mvc-jstl/el_result2.JPG)
 
 text타입의 검색창을 생성하여 value에 EL로 검색어를 지정해주면 EL의 null을 표시하지 않는 특성 때문에 검색 전에는 검색창이 비어 있고 검색 결과와 함께 검색어가 유지되는 기능을 만들 수 있습니다.
 
