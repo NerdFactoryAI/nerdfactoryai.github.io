@@ -106,5 +106,5 @@ Jason : 너드팩토리의 모든 직원분들에게 정말 많은 것들을 배
 
 {:.center}
 <div class="center">
-  <iframe id="ytplayer" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/NL1yvVVGxRU?origin=http://nerdfactory.ai" frameborder="0"></iframe>
+  <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/NL1yvVVGxRU?origin=http://nerdfactory.ai" frameborder="0"></iframe>
 </div>
