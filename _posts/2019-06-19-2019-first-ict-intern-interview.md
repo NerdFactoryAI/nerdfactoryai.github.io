@@ -105,6 +105,6 @@ Jason : 너드팩토리의 모든 직원분들에게 정말 많은 것들을 배
 ## 너드팩토리는 Chris, Luke, Jason의 더 좋은 내일을 응원합니다! 💪
 
 {:.center}
-<div class="center">
-  <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/NL1yvVVGxRU?origin=http://nerdfactory.ai" frameborder="0" style="max-width: 640px; height: 360px;"></iframe>
+<div>
+  <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/NL1yvVVGxRU?origin=http://nerdfactory.ai" frameborder="0"></iframe>
 </div>
