@@ -5,13 +5,13 @@ author: ["jason"]
 date:   2019-06-19 05:00:01 -0600
 abstract: "너드팩토리에서는 매일 아침 한 자리에 모여서 Daily Scrum을 진행하며 서로 계획을 공유하고 피드백하는 시간을 가지는데 Daily Scrum 시간에 직원분들께서 로그 문제로 이야기하시는 것을 들었습니다. 로그가 그냥 파일에 쌓여서 관리가 안 되고 용량은 계속 증가해서 나중에 서버에도 악영향을 끼칠 것이라는 문제였는데 ELK Stack을 활용하면 이 문제를 해결하는 데에 도움이 되겠다는 생각이 들었습니다. 그래서 현재 상황의 문제점들을 구체적으로 파악하고 ELK Stack의 유용한 기능들의 정보를 수집해 로그 관리 시스템을 구축해보았습니다."
 tags: ["Django", "Elasticsearch", "Logstash", "Kibana", "S3", "로그 관리 시스템"]
-image: /assets/images/posts/ELK-log-management-system/1_elk_stack.jpg
+image: /assets/images/posts/ELK-log-management-system/1_elk_stack.png
 draft: "no"
 
 ---
 
 {:.center}
-![image9](/assets/images/posts/ELK-log-management-system/1_elk_stack.jpg)
+![image9](/assets/images/posts/ELK-log-management-system/1_elk_stack.png)
 
 # Abstract
 너드팩토리에서는 매일 아침 한 자리에 모여서 Daily Scrum을 진행하며 서로 계획을 공유하고 피드백하는 시간을 가지는데 Daily Scrum 시간에 직원분들께서 로그 문제로 이야기하시는 것을 들었습니다. 로그가 그냥 파일에 쌓여서 관리가 안 되고 용량은 계속 증가해서 나중에 서버에도 악영향을 끼칠 것이라는 문제였는데 ELK Stack을 활용하면 이 문제를 해결하는 데에 도움이 되겠다는 생각이 들었습니다. 그래서 현재 상황의 문제점들을 구체적으로 파악하고 ELK Stack의 유용한 기능들의 정보를 수집해 로그 관리 시스템을 구축해보았습니다.
