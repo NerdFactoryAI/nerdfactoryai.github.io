@@ -11,7 +11,7 @@ draft: "no"
 
 {:.center}
 ![img0](/assets/images/posts/nerdfactory-design-agile/0.jpg)
-*이미지 출처: [InnovationLabs](http://www.innovationlabs.org.uk/2013/03/21/iterative-design-works/)*
+*이미지 출처: [InnovationLabs](http://www.innovationlabs.org.uk/2013/03/21/iterative-design-works/){:target="_blank"}{:.markdown-link-caption}*
 
 # 반복적 디자인(Iterative Design)
 
