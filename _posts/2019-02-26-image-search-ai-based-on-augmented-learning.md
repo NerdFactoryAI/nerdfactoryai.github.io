@@ -169,5 +169,5 @@ feature로 추출한 벡터를 저장하기 위해 처음에는 ElasticSearch를
 
 # Reference
 
-[1] [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) <br>
-[2] [딥 러닝을 이용한 영상 인식 기술 동향 -ILSVRC 사례를 중심으로](https://home.chonbuk.ac.kr/_ezaid/board/genBoardRecord.ez?method=download&pfkHomepageNo=1443&fkBoardEntryPkNo=1&attacheFileChoice=1&pkNo=1399)
+[1] [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385){:target="_blank"}{:.markdown-link-body} <br>
+[2] [딥 러닝을 이용한 영상 인식 기술 동향 -ILSVRC 사례를 중심으로](https://home.chonbuk.ac.kr/_ezaid/board/genBoardRecord.ez?method=download&pfkHomepageNo=1443&fkBoardEntryPkNo=1&attacheFileChoice=1&pkNo=1399){:target="_blank"}{:.markdown-link-body}

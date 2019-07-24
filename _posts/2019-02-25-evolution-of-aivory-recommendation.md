@@ -79,7 +79,7 @@ x = [0, 1, 0, 1]\\
 y = [0, 1, 1, 1]\\
 z = [1, 0, 1, 0]
 $$
-각 유서들의 특성을 이용하여 유저들 간의 상관관계를 [코사인 유사도](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84)를 통해 유저 유사도 행렬을 구하면 다음과 같습니다.
+각 유서들의 특성을 이용하여 유저들 간의 상관관계를 [코사인 유사도](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84){:target="_blank"}{:.markdown-link-body}를 통해 유저 유사도 행렬을 구하면 다음과 같습니다.
 
 <center>
     <table>
@@ -186,8 +186,7 @@ $$
 # 사례를 통한 심층학습적 추천 알고리즘
 
 심층학습적 추천 알고리즘에는 기계학습적 추천 알고리즘과는 달리 굉장히 많은 방법론이 있습니다. 위에서 설명한 기계학습적 추천 알고리즘의 방법론을 차용하여 심층학습을 통해 추천 알고리즘을 구성하는 방법 또한 있기 때문입니다. 방대한 심층학습적 추천 알고리즘을 모두 설명할 수는 없기 때문에 여러분들이 인터넷에서 가장 흔히 그리고 쉽게 접할 수 있는 유투브의 추천 알고리즘에 대해 고찰해보겠습니다.
-유투브의 추천 알고리즘은 멀리서 찾지 않아도 됩니다. 구글에 youtube recommendation을 검색하면 논문이 하나 나오게 되는데 제목은 [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf)
-입니다. 
+유투브의 추천 알고리즘은 멀리서 찾지 않아도 됩니다. 구글에 `youtube recommendation`을 검색하면 논문이 하나 나오게 되는데 제목은 [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf){:target="_blank"}{:.markdown-link-body} 입니다. 
 
 위의 논문에서 가장 중요한 그림 하나에 대해서 설명을 드리겠습니다.
 
@@ -241,7 +240,7 @@ $$
 p(w_o|w_i) = \dfrac{exp(v'^{T}_{w_o}v_{w_i})}{\Sigma{exp(v'^{T}_{w}v_{w_i})}}
 $$
 
-위의 수식을 해석하면 다음과 같습니다. 단어$w_i$가 등장하였을때 단어 $w_o$가 등장할 확률입니다. 복잡해 보이지만 굉장히 간단한 식입니다. 더 상세한 설명을 얻고 싶으시면 [Word2vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/)을 검색하시면 됩니다.
+위의 수식을 해석하면 다음과 같습니다. 단어$w_i$가 등장하였을때 단어 $w_o$가 등장할 확률입니다. 복잡해 보이지만 굉장히 간단한 식입니다. 더 상세한 설명을 얻고 싶으시면 [Word2vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/){:target="_blank"}{:.markdown-link-body}을 검색하시면 됩니다.
 왕에서 남자라는 속성을 제거하고 여자라는 속성을 더하면 여왕이라는 것을 사람은 직관적으로 이해할 수 있습니다. Word2Vec의 방법론을 이용하면 직관으로 얻을 수 있는 결과를 얻을 수 있습니다.
 
 {:.center}
@@ -262,7 +261,7 @@ $$
 {:.center}
 ![image2.png](/assets/images/posts/evolution-of-aivory-recommendation/image5.png)
 
-예를 들어 위 특징 공간에서 추천하고자 하는 유저가 초록색 점으로 가정한다면 그 대표자는 빨간색 점으로 생각할 수 있습니다. 만약이 대표자를 찾기 위해서 비지도 분류 알고리즘을 사용할 수 있습니다. 그 중 대표적인 K-means 알고리즘을 생각할 수 있습니다. 하지만 K-means 알고리즘은 분류하고자 하는 클래스의 개수를 사용자가 지정을 해주어야 합니다. 하지만 우리는 유저들이 얼마나 많은 카테고리를 가지고 있는지를 알 수가 없습니다. 이러한 문제점을 해결하기 위해서 자체 개발한 [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/evolution-of-aivory-recommendation.html)을 이용하여 유저를 비지도적으로 분류하며 그 중점을 찾습니다. 이렇게 찾은 중점과 가장 가까운 유저를 그 군집을 대표하는 대표자라고 할 수 있습니다. 이제 대표자를 찾았으니 대표자와 추천할 유저의 패턴을 찾아 추천을 하게 됩니다.
+예를 들어 위 특징 공간에서 추천하고자 하는 유저가 초록색 점으로 가정한다면 그 대표자는 빨간색 점으로 생각할 수 있습니다. 만약이 대표자를 찾기 위해서 비지도 분류 알고리즘을 사용할 수 있습니다. 그 중 대표적인 K-means 알고리즘을 생각할 수 있습니다. 하지만 K-means 알고리즘은 분류하고자 하는 클래스의 개수를 사용자가 지정을 해주어야 합니다. 하지만 우리는 유저들이 얼마나 많은 카테고리를 가지고 있는지를 알 수가 없습니다. 이러한 문제점을 해결하기 위해서 자체 개발한 [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/evolution-of-aivory-recommendation.html){:target="_blank"}{:.markdown-link-body}을 이용하여 유저를 비지도적으로 분류하며 그 중점을 찾습니다. 이렇게 찾은 중점과 가장 가까운 유저를 그 군집을 대표하는 대표자라고 할 수 있습니다. 이제 대표자를 찾았으니 대표자와 추천할 유저의 패턴을 찾아 추천을 하게 됩니다.
 
 ## Find Patterns between User and Representative
 
@@ -275,12 +274,12 @@ $$
 # 마치며
 
 이 글은 추천 알고리즘에 대한 기계학습적 방법, 심층학습적 방법을 살펴본 후 솔루션으로 제공하는데 있어 기계학습적, 심층학습적 방법을 그대로 사용하기에는 여러가지 문제점이 있음을 알 수 있었습니다. 하지만 AIVORY는 알고리즘을 자체 개발하여 언급된 문제점을 해결하였으며 기존의 추천 알고리즘들와 궤를 달리하는 새로운 추천 알고리즘을 구성하였습니다.
-[새로운 추천 알고리즘을 탑재한 인공지능 추천 검색 솔루션 AIVORY](http://aivory.nerdfactory.ai/)에 대해서 더 자세히 알고 싶으시면 링크를 통해 홈페이지로 접속해보세요. 감사합니다.
+[새로운 추천 알고리즘을 탑재한 인공지능 추천 검색 솔루션 AIVORY](http://aivory.nerdfactory.ai/){:target="_blank"}{:.markdown-link-body}에 대해서 더 자세히 알고 싶으시면 링크를 통해 홈페이지로 접속해보세요. 감사합니다.
 
 # Reference
 
-[1] [Collaborative Filtering](https://ko.wikipedia.org/wiki/%ED%98%91%EC%97%85_%ED%95%84%ED%84%B0%EB%A7%81)<br>
-[2] [Cosine Similarity](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84)<br>
-[3] [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf)<br>
-[4] [Word2Vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/)<br>
-[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/minimax-method-to-find-the-number-of-center-of-clustering.html)<br>
+[1] [Collaborative Filtering](https://ko.wikipedia.org/wiki/%ED%98%91%EC%97%85_%ED%95%84%ED%84%B0%EB%A7%81){:target="_blank"}{:.markdown-link-body}<br>
+[2] [Cosine Similarity](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84){:target="_blank"}{:.markdown-link-body}<br>
+[3] [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf){:target="_blank"}{:.markdown-link-body}<br>
+[4] [Word2Vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/){:target="_blank"}{:.markdown-link-body}<br>
+[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/minimax-method-to-find-the-number-of-center-of-clustering.html){:target="_blank"}{:.markdown-link-body}

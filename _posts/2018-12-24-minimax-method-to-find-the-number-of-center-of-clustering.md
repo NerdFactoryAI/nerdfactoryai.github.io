@@ -24,11 +24,11 @@ $$
 argmin_S \Sigma^{k}_{i=0} \Sigma_{x \in S_i} || x - \mu_i||^2
 $$
 
-본 글은 K-means Algorithm에 대해 고찰하는 내용이 아니므로 위의 수식에 대해 알고 싶으시면 [Wikipedia](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)에서 볼 수 있습니다.
+본 글은 K-means Algorithm에 대해 고찰하는 내용이 아니므로 위의 수식에 대해 알고 싶으시면 [Wikipedia](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98){:target="_blank"}{:.markdown-link-body}에서 볼 수 있습니다.
 
 # Problem
 
-[Wikipedia](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)에서는 K-means Algorithm에 대해 다음과 같은 한계점을 가지고 있다고 설명합니다.
+[Wikipedia](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98){:target="_blank"}{:.markdown-link-body}에서는 K-means Algorithm에 대해 다음과 같은 한계점을 가지고 있다고 설명합니다.
 
 * 클러스터 개수 k 값을 입력 파라미터로 지정해주어야 한다.
 * 알고리즘의 에러 수렴이 전역 최솟값이 아닌 지역 최솟값으로 수렴할 가능성이 있다.
@@ -153,4 +153,4 @@ L1: 90.7930659288961 L2: 1853.7375084125592 L1+L2: 972.2652871707277 k: 10
 
 # Reference
 
-[1] https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
+[1] [k-평균 알고리즘](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98){:target="_blank"}{:.markdown-link-body}

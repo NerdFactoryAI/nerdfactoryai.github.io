@@ -47,7 +47,7 @@ Chris : 자연어 처리 분야에서 유명한 인공지능 모델인 BERT 모�
 ![image3](/assets/images/posts/2019-first-ict-intern-interview/image3.jpg)
 *Chris가 진행하는 랩미팅 : BERT와 언어학*
 
-▶︎ ['구글 Colab을 이용한 BERT-Base Model 학습하기'블로그 글 바로가기](<https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html>)
+['구글 Colab을 이용한 BERT-Base Model 학습하기'블로그 글 바로가기](https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html){:target="_blank"}{:.markdown-link-body}
 
 Luke : 저는 인턴십 기간 동안 새로운 프로그래밍 언어를 도전하는 것보다는 사용할 줄 아는 프로그래밍 언어를 조금 더 활용해 보고 싶었고 그래서 가장 많이 사용해본 언어인 JAVA를 이용한 업무를 시작하게 되었습니다. 첫 프로젝트로 Jason과 협업하여 검색 페이지를 제작하였습니다. 다른 Assi와 협업으로 검색페이지를 만들면서 공동작업의 어려움등을 어느정도 알 수 있었고  spring MVC로  AIVORY데모페이지를 제작하면서 기존에 만들던 DB에서 직접 데이터를 받아와 한 파일 내에서 처리하고 출력하던 단순한 구조의 프로그램보다 한단계 수준 높은 프로그래밍을 체험해 볼 수 있었으며 다양한 기능이 구현되어있는 API를 활용해 볼 수 있는 좋은 경험이 되었습니다.
 
@@ -55,7 +55,7 @@ Luke : 저는 인턴십 기간 동안 새로운 프로그래밍 언어를 도전
 ![image4](/assets/images/posts/2019-first-ict-intern-interview/image4.jpg)
 *Luke가 진행하는 랩미팅 : 전자 정부 프레임워크와 spring*
 
-▶︎ ['spring MVC에서 JSTL 사용하기' 블로그 글 바로가기](<https://blog.nerdfactory.ai/2019/05/05/spring-mvc-jstl.html>)
+['spring MVC에서 JSTL 사용하기' 블로그 글 바로가기](https://blog.nerdfactory.ai/2019/05/05/spring-mvc-jstl.html){:target="_blank"}{:.markdown-link-body}
 
 Jason : 너드팩토리에서 서버 구축 및 운용, AWS 관리, 로그 관리 시스템 구축 등의 업무를 수행했습니다. 기존에 서비스되고 있는 프로젝트에 사용자 사전 기능을 추가해 시대에 따라 생성되는 신조어에 대한 검색을 돕도록 하였습니다. 검색서버를 구축해 검색테스트를 진행하였고 Luke님과 협업하여 검색 페이지를 제작하였습니다. 또한, 데일리스크럼 시간에 로그 관리가 안 되고 로그파일 용량이 계속 증가해서 문제가 발생한다는 이야기를 듣고 Elastic의 ELK스택을 활용하여 로그 관리 시스템을 구축하는 업무를 수행하였습니다. 이번 인턴십을 진행하면서 협업을 통해 각자 역할과 책임의 중요성을 배웠고 현재 서비스의 문제점을 파악해 좀 더 효율적인 서비스로 개선하는 과정에서 유지보수의 중요성 또한 배울 수 있었습니다.
 
@@ -63,7 +63,7 @@ Jason : 너드팩토리에서 서버 구축 및 운용, AWS 관리, 로그 관�
 ![image5](/assets/images/posts/2019-first-ict-intern-interview/image5.jpg)
 *Jason이 진행하는 랩미팅 : ELK스택을 활용한 로그 관리 시스템 구축하기*
 
-▶︎ ['Python, Django, Elasticsearch를 사용해서 검색엔진 구축하기' 블로그 글 바로가기](<https://blog.nerdfactory.ai/2019/04/29/django-elasticsearch-restframework.html>)
+['Python, Django, Elasticsearch를 사용해서 검색엔진 구축하기' 블로그 글 바로가기](https://blog.nerdfactory.ai/2019/04/29/django-elasticsearch-restframework.html){:target="_blank"}{:.markdown-link-body}
 
 ## Q. 인턴십을 통해 느낀점은 무엇인가요?
 

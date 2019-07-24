@@ -62,7 +62,7 @@ Zeplin은 하나의 커뮤니케이션 도구의 일종이라고 생각하시면
 참고할 부분
 
 - Photoshop과 Zeplin을 연동할 경우 Photohop cc 2015버전부터 가능합니다.  
-- 먼저 Zeplin을 설치해주세요 [(Zeplin Official Website)](https://zeplin.io/)
+- 먼저 Zeplin을 설치해주세요 [Zeplin Official Website](https://zeplin.io/){:target="_blank"}{:.markdown-link-body}
 
 {:.center}
 ![img4](/assets/images/posts/sketch-photoshop-zeplin/img4.png)

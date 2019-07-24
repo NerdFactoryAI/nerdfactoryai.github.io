@@ -21,7 +21,7 @@ draft: "no"
 
 # Abstract
 
-최근 IT기업들을 중심으로 자신들의 이야기 또는 기술에 대한 블로그를 운영하는 곳이 과거보다 훨씬 빠르게 증가하고 있습니다. 너드팩토리도 이러한 추세에 따라 우리의 이야기를 담은 블로그를 운영하기로 했습니다. 기성 블로그를 활용하기에는 우리의 괴짜같은 성향을 충분히 담고 있지 못했고 너드팩토리의 구성원 대부분이 IT기술자 임을 고려해 우리에게 편리한 마크다운을 활용해 블로그 글을 작성하고 관리하기로 했습니다. 그리고 이러한 글들을 담을 블로그는 특별히 관리에 큰 노력을 기울이지 않더라도 효율적으로 작동되며 가볍게 최소한의 기능을 충족시켜주는 프레임워크로 결정하기로 했습니다. 생각보다 긴 시간 고민한 끝에 우리는 [github.io](http://github.io) 에서 공식적으로 지원하는 Jekyll 을 도입하기로 했습니다. 이번 포스트는 Github Repository 로 운영중인 블로그에 비개발자도 쉽게 포스트를 작성하는 방법에 대해 이야기해보려고 합니다. 본 포스트는 `Mac OSX Mohave` 를 기준으로 작성 되었습니다.
+최근 IT기업들을 중심으로 자신들의 이야기 또는 기술에 대한 블로그를 운영하는 곳이 과거보다 훨씬 빠르게 증가하고 있습니다. 너드팩토리도 이러한 추세에 따라 우리의 이야기를 담은 블로그를 운영하기로 했습니다. 기성 블로그를 활용하기에는 우리의 괴짜같은 성향을 충분히 담고 있지 못했고 너드팩토리의 구성원 대부분이 IT기술자 임을 고려해 우리에게 편리한 마크다운을 활용해 블로그 글을 작성하고 관리하기로 했습니다. 그리고 이러한 글들을 담을 블로그는 특별히 관리에 큰 노력을 기울이지 않더라도 효율적으로 작동되며 가볍게 최소한의 기능을 충족시켜주는 프레임워크로 결정하기로 했습니다. 생각보다 긴 시간 고민한 끝에 우리는 [github.io](http://github.io){:target="_blank"}{:.markdown-link-body} 에서 공식적으로 지원하는 Jekyll 을 도입하기로 했습니다. 이번 포스트는 Github Repository 로 운영중인 블로그에 비개발자도 쉽게 포스트를 작성하는 방법에 대해 이야기해보려고 합니다. 본 포스트는 `Mac OSX Mohave` 를 기준으로 작성 되었습니다.
 
 # 마크다운
 
@@ -50,7 +50,7 @@ draft: "no"
 
 # 포스트 작성
 
-비 개발자에게 마크다운 이라는 형식은 매우 생소합니다. 마크다운은 일반 텍스트를 편집하는 일종의 방법론이며 정해진 양식 내에서 빠른 글쓰기를 목표로 합니다. 마크다운 작성 방법은 [링크](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)를 참고해주시기 바립니다. Git 이라는 형상관리 시스템을 이용한다는 특성을 고려하여 아래의 포스트 작성 프로세스를 만들어 보았습니다. 아래 이미지에 기재된 프로세스를 아래에 자세히 서술하겠습니다.
+비 개발자에게 마크다운 이라는 형식은 매우 생소합니다. 마크다운은 일반 텍스트를 편집하는 일종의 방법론이며 정해진 양식 내에서 빠른 글쓰기를 목표로 합니다. 마크다운 작성 방법은 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet){:target="_blank"}{:.markdown-link-body}를 참고해주시기 바립니다. Git 이라는 형상관리 시스템을 이용한다는 특성을 고려하여 아래의 포스트 작성 프로세스를 만들어 보았습니다. 아래 이미지에 기재된 프로세스를 아래에 자세히 서술하겠습니다.
 
 {:.center}
 ![concept.png](/assets/images/posts/writing-post-on-jekyll-based-blog/image-1.png)
@@ -62,7 +62,7 @@ draft: "no"
 
 아래의 사항을 순서대로 진행하여 너드팩토리 블로그 포스트를 작성할 준비를 진행합니다. 마크다운 작성을 위한 에디터 설치/세팅을 진행하게 됩니다.
 
-1. [http://github.com](https://github.com/) 계정 생성하기.
+1. [http://github.com](https://github.com/){:target="_blank"}{:.markdown-link-body} 계정 생성하기.
 2. 너드팩토리 블로그 Repository 관리자(황종택)에게 Git Repository 에 멤버 신청하기
 3. 내 PC 에 GIT 설치
     1. Windows
@@ -84,8 +84,8 @@ draft: "no"
         ```
 5. 마크다운 플러그인 설치
     1. Visual Studio Code
-        - [https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-        - [https://marketplace.visualstudio.com/items?itemName=hbrok.markdown-preview-bitbucket](https://marketplace.visualstudio.com/items?itemName=hbrok.markdown-preview-bitbucket)
+        - [https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint){:target="_blank"}{:.markdown-link-body}
+        - [https://marketplace.visualstudio.com/items?itemName=hbrok.markdown-preview-bitbucket](https://marketplace.visualstudio.com/items?itemName=hbrok.markdown-preview-bitbucket){:target="_blank"}{:.markdown-link-body}
 
 ## Clone Git Repository
 
@@ -273,7 +273,7 @@ post/sam branch 의 변경이 완료되면 해당 branch 를 상위 branch 인 d
 ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin18]
 ```
 
-- ruby가 설치되어 있지 않다면 ruby website의 안내를 통해 ruby를 설치합니다. [Ruby Installation Page Link](https://www.ruby-lang.org/en/documentation/installation/)
+- ruby가 설치되어 있지 않다면 ruby website의 안내를 통해 ruby를 설치합니다. [Ruby Installation Page Link](https://www.ruby-lang.org/en/documentation/installation/){:target="_blank"}{:.markdown-link-body}
 
 - nerdfactory.github.io 가 clone 된 디렉토리로 이동하여 gem bundler 를 설치합니다.
 

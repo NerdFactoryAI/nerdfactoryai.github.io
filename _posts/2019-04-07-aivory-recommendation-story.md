@@ -26,7 +26,7 @@ draft: "no"
 
 # Concept
 
-초기 연구를 위해 선행연구를 조사하던 중 당시 학계에서 큰 관심을 불러모았던 [아타리 게임을 하는 심층 강화 학습(Deep Reinforcement Learning)](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf) [^1]컨셉을 차용하려고 노력했습니다. 그러다보니 자연스럽게 '보상'이라는 개념에 더 집중하게 되었고 해당 콘텐츠에 대한 가점을 부여하기 위한 알고리즘을 만들려고 했습니다. 물론 이 배점 시스템은 보편적인 시스템에 적용되기 위해 특정 시스템에서만 작동하는 것이 아닌 General한 수준으로 접근할 필요가 있어 Parameter로 시스템 관리자가 설정할 수 있게끔 구성하였습니다. 그리고 이 배점들을 토대로 특정 콘텐츠의 우선 순위를 메기는 기준을 삼았습니다. 그리고 콘텐츠 상호 인용과 참조로 연결된 임의의 묶음에 적용하는 PageRank[^2]와 달리 상호 인용과 참조가 없는 대부분의 콘텐츠를 고려한 특수한 전제조건을 수립하기 위한 연구를 시작했습니다.
+초기 연구를 위해 선행연구를 조사하던 중 당시 학계에서 큰 관심을 불러모았던 [아타리 게임을 하는 심층 강화 학습(Deep Reinforcement Learning)](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf){:target="_blank"}{:.markdown-link-body} [^1]컨셉을 차용하려고 노력했습니다. 그러다보니 자연스럽게 '보상'이라는 개념에 더 집중하게 되었고 해당 콘텐츠에 대한 가점을 부여하기 위한 알고리즘을 만들려고 했습니다. 물론 이 배점 시스템은 보편적인 시스템에 적용되기 위해 특정 시스템에서만 작동하는 것이 아닌 General한 수준으로 접근할 필요가 있어 Parameter로 시스템 관리자가 설정할 수 있게끔 구성하였습니다. 그리고 이 배점들을 토대로 특정 콘텐츠의 우선 순위를 메기는 기준을 삼았습니다. 그리고 콘텐츠 상호 인용과 참조로 연결된 임의의 묶음에 적용하는 PageRank[^2]와 달리 상호 인용과 참조가 없는 대부분의 콘텐츠를 고려한 특수한 전제조건을 수립하기 위한 연구를 시작했습니다.
 
 추천은 결국 유사한 문서나 비슷한 주제를 갖는 콘텐츠 중심이 아닌 사용자 중심(User centered)의 추천이 되어야 한다고 생각했고 이를 위해 사용자를 중심으로 콘텐츠를 연결시키고 네트워크를 구성하여 추천하는 로직(Logic)을 만들어보기로 했습니다. 이를 위해 저희는 복잡계 네트워크[^3]에 대해 공부하기 시작했으며 사물이 아닌 콘텐츠를 중심으로 네트워크를 연결하고 규칙성을 찾기 위한 연구를 시작했습니다. 
 
@@ -40,7 +40,7 @@ draft: "no"
 ![img3](/assets/images/posts/aivory-recommendation-story/3.png)
 *네이버 길찾기 실시간 교통상황 화면*
 
-제품화를 진행하며 추가 고도화를 위해 유사한 패턴을 가지는 사람을 찾는 것을 넘어 집단의 멘토가 될 만한 사람을 찾는 일을 하게끔 하는 실험을 하게 되었고 군집 간의 중심을 찾기 위해 [GAN을 이용한 군집화 기술](https://blog.nerdfactory.ai/2019/02/20/evolution-of-aivory-recommendation.html)을 구현하는 것에 이르게 됩니다. 그리고 우리는 중심이 되는 사용자를 멘토라고 칭하고 멘토의 패턴에 따라 멘티에게 콘텐츠를 추천하는 기술로 AIVORY를 더욱 부드럽고 신박한 추천이 가능하도록 하였습니다. (고도화 부분은 [AIVORY 추천 엔진의 진화](https://blog.nerdfactory.ai/2019/02/20/evolution-of-aivory-recommendation.html)를 참고해주세요.)
+제품화를 진행하며 추가 고도화를 위해 유사한 패턴을 가지는 사람을 찾는 것을 넘어 집단의 멘토가 될 만한 사람을 찾는 일을 하게끔 하는 실험을 하게 되었고 군집 간의 중심을 찾기 위해 [GAN을 이용한 군집화 기술](https://blog.nerdfactory.ai/2019/02/20/evolution-of-aivory-recommendation.html){:target="_blank"}{:.markdown-link-body}을 구현하는 것에 이르게 됩니다. 그리고 우리는 중심이 되는 사용자를 멘토라고 칭하고 멘토의 패턴에 따라 멘티에게 콘텐츠를 추천하는 기술로 AIVORY를 더욱 부드럽고 신박한 추천이 가능하도록 하였습니다. (고도화 부분은 [AIVORY 추천 엔진의 진화](https://blog.nerdfactory.ai/2019/02/20/evolution-of-aivory-recommendation.html){:target="_blank"}{:.markdown-link-body}를 참고해주세요.)
 
 이렇게 구현된 엔진은 결과적으로 '사람(멘티)-콘텐츠-주제-사람(멘토)-콘텐츠'의 형태로 연결되는 추천 엔진이 되었으며 이는 결과적으로 가장 뛰어난 사람의 경험을 모방하고 추천하는 것으로 마치 멘토가 멘티에게 멘토링을 해주는 것과 같은 컨셉을 갖게 됩니다. 조금 더 자세하게는 아래와 같은 흐름을 갖게 됩니다.
 
@@ -56,7 +56,7 @@ draft: "no"
 
 # Result
 
-기술 블로그에 기고하는 글이라 비즈니스 관점에서의 특장점 소개 등은 AIVORY를 소개한 글(<http://nerdfactory.ai/aivory-introduction>)을 참고해주시길 바랍니다. 이 밖에 기술적인 특장점으로는 AIVORY는 서비스 초기 단계인 콜드 스타트에서도 곧바로 추천이 가능한 알고리즘입니다. 서비스 접근 초기 단계에서부터 바로 멘토를 찾기위한 알고리즘이 작동하므로 기존보다 훨씬 빠른 시간 내에 추천 알고리즘이 작동합니다. 물론 고객의 기초 정보를 설문하거나 입력받지 않아도 됩니다. 이렇게 콜드 스타트를 극복하기 위한 노력을 한다는 것은 빅데이터가 갖춰지지 않았어도 바로 기술 도입이 가능하며 장기적인 축적이 가능하다는 의미이며 오랜 시간동안 운영을 해왔던 서비스부터 이제 곧 런칭하는 서비스까지 다양한 서비스에 적용 가능하다는 장점이 있습니다.
+기술 블로그에 기고하는 글이라 비즈니스 관점에서의 특장점 소개 등은 [AIVORY를 소개한 글](http://nerdfactory.ai/aivory-introduction){:target="_blank"}{:.markdown-link-body}을 참고해주시길 바랍니다. 이 밖에 기술적인 특장점으로는 AIVORY는 서비스 초기 단계인 콜드 스타트에서도 곧바로 추천이 가능한 알고리즘입니다. 서비스 접근 초기 단계에서부터 바로 멘토를 찾기위한 알고리즘이 작동하므로 기존보다 훨씬 빠른 시간 내에 추천 알고리즘이 작동합니다. 물론 고객의 기초 정보를 설문하거나 입력받지 않아도 됩니다. 이렇게 콜드 스타트를 극복하기 위한 노력을 한다는 것은 빅데이터가 갖춰지지 않았어도 바로 기술 도입이 가능하며 장기적인 축적이 가능하다는 의미이며 오랜 시간동안 운영을 해왔던 서비스부터 이제 곧 런칭하는 서비스까지 다양한 서비스에 적용 가능하다는 장점이 있습니다.
 
 또한 사람과 콘텐츠를 연결하여 다시 콘텐츠를 추천하는 지금의 방식은 초기 데이터 분석을 위한 심층 학습 기술 외에는 학습 데이터를 사용하지 않아도 되는 장점이 있어 워크스테이션급의 장비를 필요로 하거나 데이터 학습을 위한 트래픽 부하를 걱정하지 않아도 됩니다. 또한 실시간으로 학습을 지속하고 있기 때문에 방금 작성한 글이 바로 검색되거나 추천될 수 있는 장점을 갖고 있습니다. 
 
@@ -69,4 +69,4 @@ draft: "no"
 [1] Mnih, Volodymyr, et al. "Playing atari with deep reinforcement learning." *arXiv preprint arXiv:1312.5602*(2013). <br/>
 [2] Page, Lawrence, et al. *The PageRank citation ranking: Bringing order to the web*. Stanford InfoLab, 1999. <br/>
 [3] Visualising Information for Advocacy, Mushon Zer-Aviv, “If everything is a network, nothing is a network”, January 8, 2016 <br/>
-[4] (주)플랜아이, 디지털 정보 제공 시스템 및 방법(System and Method for providing digital information),  1018561150000, filed March 23, 2017, and issued May 02, 2018. <br/>
+[4] (주)플랜아이, 디지털 정보 제공 시스템 및 방법(System and Method for providing digital information),  1018561150000, filed March 23, 2017, and issued May 02, 2018.

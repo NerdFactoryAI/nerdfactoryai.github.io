@@ -20,7 +20,7 @@ Google Colab은 제한적이지만 무료로 GPU와 TPU를 제공해 기계학�
 Colab은 현재 64비트 기반 우분투 18.04 버전을 사용하고 있으며, Python2,3을 모두 지원 합니다. 또한 딥러닝 라이브러리(keras, tensorflow, pytorch 등)과 데이터분석 패키지가 기본으로 설치되어 있습니다.
 추가적인 Colab 환경 정보는 아래 링크를 참조해 주시기 바랍니다.
 
-* [https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE#scrollTo=PYUoUDZlPvsN](https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE#scrollTo=PYUoUDZlPvsN)
+[https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE#scrollTo=PYUoUDZlPvsN](https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE#scrollTo=PYUoUDZlPvsN){:target="_blank"}{:.markdown-link-body}
 
 # KorQuAD
 
@@ -35,11 +35,12 @@ Colab은 현재 64비트 기반 우분투 18.04 버전을 사용하고 있으며
 시작하기에 앞서 아래 깃허브 주소에서 Bert Model과 Pre-trained Model을 다운받습니다. 필요한 Bert 파일은 modeling.py, optimization.py, run_squad.py, tokenization.py이며, Pre-trained Model은 BERT-Base Multilingual Cased로 여러 국가의 언어로 pre-train된 모델입니다. BERT는 학습 권장 GPU 메모리가 최소 12g를 요구하는 큰 모델입니다. 
 추가적인 정보는 아래 BERT 깃 허브 페이지 SQuAD 1.1란을 확인하시기 바랍니다.
 
-* BERT 모델: [https://github.com/google-research/bert](https://github.com/google-research/bert) **[`BERT-Base, Multilingual Cased (New, recommended)`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip)**
+[BERT 모델](https://github.com/google-research/bert){:target="_blank"}{:.markdown-link-body} <br />
+[BERT-Base, Multilingual Cased (New, recommended)](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip){:target="_blank"}{:.markdown-link-body}
 
 이번에 사용할 Train, dev 데이터는 KorQuAD로 질의응답과 관련된 task입니다. 아무것도 하지 않은 기본 상태에서 학습 후 평가까지 진행해보도록 하겠습니다. 아래 주소에서 TRAINING SET(37MB), DEV SET(3.9MB), EVALUATION SCRIPT를 다운받습니다.
 
-* KorQuAD 데이터셋: [https://korquad.github.io/](https://korquad.github.io/)  
+[KorQuAD 데이터셋](https://korquad.github.io/){:target="_blank"}{:.markdown-link-body}
 
 # 학습
 
@@ -212,7 +213,8 @@ GPU 학습과 마찬가지로 구글 드라이브 또한 이용하기 때문에,
 
  > "On Cloud TPUs, the pretrained model and the output directory will need to be on Google Cloud Storage."
 
-* [https://github.com/google-research/bert](https://github.com/google-research/bert%20Fine-tuning%20with%20Cloud%20TPUs) Fine-tuning with Cloud TPUs 부분을 참조해 주시기 바랍니다.
+[https://github.com/google-research/bert](https://github.com/google-research/bert%20Fine-tuning%20with%20Cloud%20TPUs){:target="_blank"}{:.markdown-link-body}
+Fine-tuning with Cloud TPUs 부분을 참조해 주시기 바랍니다.
  
  pretrained model 파일과 output 경로가 Google Cloud Storage에 있어야 합니다. 그래서 구글 드라이브와 구글 클라우드 스토리지 두 개를 혼합해 사용하겠습니다.
 
@@ -394,8 +396,8 @@ GPU, TPU를 잘 이용한다면, 많은 시간을 아낄 수 있어 12시간의 
 추가로, fine-tuning으로 성능을 높여 Kor_QuAD 리더보드 갱신에 도전해보시기 바랍니다.
 
 # References
-[1] [https://github.com/google-research/bert](https://github.com/google-research/bert) <br/>
-[2] [https://korquad.github.io](https://korquad.github.io/) <br/>
-[3] [https://zzsza.github.io/data/2018/08/30/google-colab/](https://zzsza.github.io/data/2018/08/30/google-colab/#%EA%B5%AC%EA%B8%80-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%99%80-colab-%EC%97%B0%EB%8F%99)  <br/>
-[4] [https://noanswercode.tistory.com/24](https://noanswercode.tistory.com/24)  <br/>
-[5] [https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE](https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE)  <br/>
+[1] [https://github.com/google-research/bert](https://github.com/google-research/bert){:target="_blank"}{:.markdown-link-body} <br/>
+[2] [https://korquad.github.io](https://korquad.github.io/){:target="_blank"}{:.markdown-link-body} <br/>
+[3] [https://zzsza.github.io/data/2018/08/30/google-colab/](https://zzsza.github.io/data/2018/08/30/google-colab/#%EA%B5%AC%EA%B8%80-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%99%80-colab-%EC%97%B0%EB%8F%99){:target="_blank"}{:.markdown-link-body}  <br/>
+[4] [https://noanswercode.tistory.com/24](https://noanswercode.tistory.com/24){:target="_blank"}{:.markdown-link-body}  <br/>
+[5] [https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE](https://colab.research.google.com/drive/0B2Op0f7i-jUEem1NUWVaRDlwVVE){:target="_blank"}{:.markdown-link-body}

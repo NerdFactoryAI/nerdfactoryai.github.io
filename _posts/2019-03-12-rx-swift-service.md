@@ -15,13 +15,13 @@ draft: "no"
 
 # Abstract
 
-이전 저의 포스트인 [RxSwift를 활용한 iOS Reactive 네트워크 환경 구성](https://blog.nerdfactory.ai/2019/02/06/rx-swift.html) 에서 언급했듯이 이번에는 RxCocoa를 활용해 RxSwift를 UIView에도 적용하는 작업을 수행했습니다. 요즘은 swift와 관련된 컨퍼런스나 행사에서 ReactiveX를 다루지 않는 세션을 찾는게 더 어려워지고 있는 것 같습니다. 이러한 흐름에 따라 저희 서비스인 i-Checker에도 선별적으로 Rx를 적용하고 있으며 (저의 실력이 닿는데까지) 그 활용도를 점점 높여나갈 예정입니다. 물론 아직 그 수준이 높지는 않지만 RxCocoa를 활용해 간단한 TableView를 구현하고 데이터를 바인딩하는 부분까지 함께 해보도록 하겠습니다.
+이전 저의 포스트인 [RxSwift를 활용한 iOS Reactive 네트워크 환경 구성](https://blog.nerdfactory.ai/2019/02/06/rx-swift.html){:target="_blank"}{:.markdown-link-body} 에서 언급했듯이 이번에는 RxCocoa를 활용해 RxSwift를 UIView에도 적용하는 작업을 수행했습니다. 요즘은 swift와 관련된 컨퍼런스나 행사에서 ReactiveX를 다루지 않는 세션을 찾는게 더 어려워지고 있는 것 같습니다. 이러한 흐름에 따라 저희 서비스인 i-Checker에도 선별적으로 Rx를 적용하고 있으며 (저의 실력이 닿는데까지) 그 활용도를 점점 높여나갈 예정입니다. 물론 아직 그 수준이 높지는 않지만 RxCocoa를 활용해 간단한 TableView를 구현하고 데이터를 바인딩하는 부분까지 함께 해보도록 하겠습니다.
 
 
 
 # RxCocoa 
 
-RxCocoa는 UIKit 컴포넌트에 Rx로 랩핑된 확장 익스텐션으로 실질적으로 '좋다'고 느끼던 Rx를 본격적으로 view에서도 활용할 수 있게 도와주는 라이브러리입니다. 사실 이 Rx를 두고 여전히 논란이 되는 이유는 높은 러닝커브와 예제만 따라해서는 그 극적인 효과를 보기 어렵다는 것 때문입니다. 그래서 관련 커뮤니티에서도 갑론을박은 있으나 그럼에도 불구하고 '써보자'라는 추세이긴 합니다. 이미 Rx에 대해서는 앞선 [RxSwift를 활용한 iOS Reactive 네트워크 환경 구성](https://blog.nerdfactory.ai/2019/02/06/rx-swift.html) 에서도 다루었으니 참고 부탁드리며 더 자세한 내용은 곰튀김님의 [‘RxSwift 4시간 안에 끝내기’ 라는 유튜브 강의](https://youtu.be/w5Qmie-GbiA)를 꼭 한번 들어보시길 강력 추천합니다.
+RxCocoa는 UIKit 컴포넌트에 Rx로 랩핑된 확장 익스텐션으로 실질적으로 '좋다'고 느끼던 Rx를 본격적으로 view에서도 활용할 수 있게 도와주는 라이브러리입니다. 사실 이 Rx를 두고 여전히 논란이 되는 이유는 높은 러닝커브와 예제만 따라해서는 그 극적인 효과를 보기 어렵다는 것 때문입니다. 그래서 관련 커뮤니티에서도 갑론을박은 있으나 그럼에도 불구하고 '써보자'라는 추세이긴 합니다. 이미 Rx에 대해서는 앞선 [RxSwift를 활용한 iOS Reactive 네트워크 환경 구성](https://blog.nerdfactory.ai/2019/02/06/rx-swift.html){:target="_blank"}{:.markdown-link-body} 에서도 다루었으니 참고 부탁드리며 더 자세한 내용은 곰튀김님의 [‘RxSwift 4시간 안에 끝내기’ 라는 유튜브 강의](https://youtu.be/w5Qmie-GbiA){:target="_blank"}{:.markdown-link-body}를 꼭 한번 들어보시길 강력 추천합니다.
 
 
 
