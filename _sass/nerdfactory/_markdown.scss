@@ -173,6 +173,7 @@
   outline-width: 0;
   background-color: transparent;
   color: #36a5cc !important;
+  text-decoration: none;
 }
 
 .markdown-body a:link {
@@ -188,13 +189,13 @@
 .markdown-body a:hover {
   outline-width: 0;
   color: #36a5cc !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .markdown-body a:active {
   outline-width: 0;
   color: #36a5cc !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .markdown-body strong {
