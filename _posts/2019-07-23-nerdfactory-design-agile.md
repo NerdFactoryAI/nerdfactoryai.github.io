@@ -19,7 +19,7 @@ draft: "no"
 
 {:.center}
 ![img1](/assets/images/posts/nerdfactory-design-agile/1.jpg)
-*이미지 출처: ([copyblogger](https://www.copyblogger.com/iterative-loop/){:target="_blank"}{:.markdown-link-caption})*
+*이미지 출처: [copyblogger](https://www.copyblogger.com/iterative-loop/){:target="_blank"}{:.markdown-link-caption}*
 
 그래서 우리는 가설을 세우고 이 문제가 해결되는지 확인하기 위해 보다 가볍고 빠른 반복을 통한 검증을 필요로 했고 SKETCH와 같은 보다 가벼운 프로토타이핑 겸 디자인 도구를 적극적으로 활용하고 있습니다. ([Sketch와 Photoshop의 Zeplin활용](https://blog.nerdfactory.ai/2019/04/12/sketch-photoshop-zeplin.html){:target="_blank"}{:.markdown-link-body}) 물론 여기서 너드팩토리의 AIVORY는 무형의 SW엔진(또는 솔루션)인데 왜 디자인이 필요한가? 라는 의구심이 생길 수 있습니다. 너드팩토리는 기술을 기반으로 사람과 정보의 보다 가치있는 연결을 추구합니다. 그리고 여기서 기술은 한 분야의 너드들인 우리가 좋아하고 잘 하는 기술을 뜻하며 인공지능 기술을 넘어 사람과 우리가 제공하는 엔진과의 상호작용(Interaction)을 극대화하고 최적화하는 것 역시 중요하다고 여기고 있습니다. 그래서 실제 도입 전 체험이 어려웠던 AIVORY를 체험할 수 있는 공간을 디자인하기로 결정하고 고객 서비스에 AIVORY가 설치되어 작동될 때 우리의 연구 결과 중 하나인 사용자 경험도 함께 제공할 수 있도록 계획하고 있습니다. 물론 이터레이션 경험은 다른 서비스들을 연구 개발하며 쌓여있었던 터라 적용의 어려움은 적은 편이었습니다.
 
