@@ -86,7 +86,7 @@ Python ES API를 이용하면 Elasticsearch를 편하게 사용할 수 있기 �
 pip install elasticsearch==6.3.1
 ```
 
-#### * Python ES API를 사용하실 때 공식 메뉴얼([https://elasticsearch-py.readthedocs.io/en/master/api.html](https://elasticsearch-py.readthedocs.io/en/master/api.html))을 참고하시면 도움이 많이 됩니다.
+Python ES API를 사용하실 때 공식 메뉴얼([https://elasticsearch-py.readthedocs.io/en/master/api.html](https://elasticsearch-py.readthedocs.io/en/master/api.html){:target="_blank"}{:.markdown-link-body})을 참고하시면 도움이 많이 됩니다.
 
 Elastic에서 개발한 한국어 형태소 분석기 nori를 이용하기 위해 elasticsearch-plugin 설치를 해줍니다.
 
@@ -251,7 +251,7 @@ urlpatterns = [
 ]
 ```
 
-이제 Django는 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)로 들어오는 모든 접속 요청을 search_app.urls로 전송해 추가 명령을 찾을 것입니다.
+이제 Django는 `http://127.0.0.1:8000/`로 들어오는 모든 접속 요청을 search_app.urls로 전송해 추가 명령을 찾을 것입니다.
 
 `search_app` 디렉터리에 `urls.py` 파일을 생성하고 url 패턴을 추가해줍니다.
 
@@ -355,7 +355,7 @@ Elasticsearch의 `config` 디렉터리에 저장합니다.
 파라미터로 검색어를 전달해서 백과사전을 검색하는 간단한 검색엔진을 구축해보았습니다. 그리고 `사용자 사전`을 적용하여 기본 nori 형태소 분석기가 토크나이징하지 못하는 고유명사나 신조어를 사용자의 의도대로 토크나이징하여 원하는 검색 결과를 얻을 수 있도록 하는 방법에 대해서도 알아보았습니다. 언어는 고정불변의 것이 아니라, 시대에 따라 생성, 변화, 사멸합니다. 빠르게 변화하는 시대 속에서 이와 같은 `사용자 사전`기능은 더욱 중요해질 것입니다.
 
 # References
-[1] [https://tutorial.djangogirls.org/ko/](https://tutorial.djangogirls.org/ko/) <br/>
-[2] [https://www.django-rest-framework.org/](https://www.django-rest-framework.org/)<br/>
-[3] [https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html)<br/>
-[4] [https://elasticsearch-py.readthedocs.io/en/master/api.html](https://elasticsearch-py.readthedocs.io/en/master/api.html)
+[1] [https://tutorial.djangogirls.org/ko/](https://tutorial.djangogirls.org/ko/){:target="_blank"}{:.markdown-link-body} <br/>
+[2] [https://www.django-rest-framework.org/](https://www.django-rest-framework.org/){:target="_blank"}{:.markdown-link-body}<br/>
+[3] [https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html){:target="_blank"}{:.markdown-link-body}<br/>
+[4] [https://elasticsearch-py.readthedocs.io/en/master/api.html](https://elasticsearch-py.readthedocs.io/en/master/api.html){:target="_blank"}{:.markdown-link-body}
