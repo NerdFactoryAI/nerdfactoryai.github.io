@@ -56,7 +56,7 @@ nvidia-driver를 설치한 후 CUDA를 설치하여야 합니다. 이 또한 nvi
 먼저 nvidia 홈페이지에서 ubuntu16.04, cuda10.0에 맞는 설치파일을 다운로드합니다.
 
 {:.center}
-![image1.png](/image/image1.png)
+![image1.png](/assets/images/posts/how-to-install-tensorflow-gpu-in-ubuntu16.04/image1.png)
 
 다음 해당 파일 `cuda-repo-ubuntu1604-10-0-local-10.0.130-410.48_1.0-1_amd64.deb`를 설치한 경로에서 아래의 커맨트를 입력하여 `cuda`를 설치합니다.
 
@@ -105,7 +105,7 @@ CUDNN 설치파일을 다운받을 때에는 주의할 점이 있습니다.
 우리는 `cuda 10.0`을 설치하였고 OS는 `ubuntu 16.04`입니다. 그렇기 때문에 아래의 그림처럼 다운로드를 합니다.
 
 {:.center}
-![image2.png](/image/image2.png)
+![image2.png](/assets/images/posts/how-to-install-tensorflow-gpu-in-ubuntu16.04/image2.png)
 
 압축파일이 생성되며 이 압축을 풀어줍니다.
 
