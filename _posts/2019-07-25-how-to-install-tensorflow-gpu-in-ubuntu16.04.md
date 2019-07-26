@@ -12,7 +12,11 @@ draft: "no"
 {:.center}
 ![image1.png](/assets/images/posts/how-to-install-tensorflow-gpu-in-ubuntu16.04/image3.png)
 
-# Ubuntu 16.04에 nvidia-driver 설치
+# Background
+
+딥러닝을 공부할 때 모든 분들이 겪는 첫 고통 환경설치입니다. 수시로 변하는 cuda 버전, cudnn 버전 그리고 많은 종류의 gpu 들에 따라서 설치를 하는데에 많은 분들이 고통을 받고 있습니다. 물론 저도 환경을 구성하는데 있어 매번 블로그를 찾아가며 잊었던 기억을 더듬으면서 설치를 하고 있습니다. 매번 설치할 때마다 파편적으로 흩어져 있는 글을 찾아가며 설치하기 때문에 자료를 찾는 시간이 설치하는 시간보다 훨씬 많이 차지합니다. 이를 정리하는 용도도 있으며 이런 고충은 저만 느끼는 것이 아닌 다른 분들도 똑같이 느낄 것으로 생각되어 글을 공유하게 되었습니다. 저희가 사용하는 워크스테이션의 사양은 `TITAN Xp` 2개 이며 모두 12G의 용량을 가지고 있습니다. 보통 nvidia-driver는 최신 버전일수록 대부분의 gpu를 구동할 수 있도록 되어있지만 gpu의 종류에 맞게 드라이버를 설치해야한다는 점 주의하셔야 합니다. 이 글을 통해서 많은 분들이 설치에 쏟는 시간을 절약하여 딥러닝 공부하는데 사용했으면 좋겠습니다.
+
+# Install nvidia-driver on Ubuntu 16.04
 
 가장 흔히 사용되는 OS인 `Ubuntu16.04`에 nvidia-driver를 설치합니다. 추후 nvidia-docker에도 사용될 nvidia-driver이니 2019.07.25 시점으로 가장 최신 버전인 418을 설치합니다.
 
@@ -45,14 +49,14 @@ Fri Jul 26 01:17:36 2019
 +-----------------------------------------------------------------------------+
 ```
 
-# CUDA 10.0 설치
+# Install CUDA 10.0
 
 nvidia-driver를 설치한 후 CUDA를 설치하여야 합니다. 이 또한 nvidia-docker에 사용될 예정이니 nvidia-docker와 호환되는 버전인 10.0을 설치합니다.
 
 먼저 nvidia 홈페이지에서 ubuntu16.04, cuda10.0에 맞는 설치파일을 다운로드합니다.
 
 {:.center}
-![image1.png](/assets/images/posts/how-to-install-tensorflow-gpu-in-ubuntu16.04/image1.png)
+![image1.png](/image/image1.png)
 
 다음 해당 파일 `cuda-repo-ubuntu1604-10-0-local-10.0.130-410.48_1.0-1_amd64.deb`를 설치한 경로에서 아래의 커맨트를 입력하여 `cuda`를 설치합니다.
 
@@ -91,7 +95,7 @@ Cuda compilation tools, release 10.1, V10.1.168
 /usr/local/cuda10.1
 ```
 
-# CUDNN 설치
+# Install CUDNN
 
 CUDNN 설치파일을 다운받을 때에는 주의할 점이 있습니다.
 
@@ -101,7 +105,7 @@ CUDNN 설치파일을 다운받을 때에는 주의할 점이 있습니다.
 우리는 `cuda 10.0`을 설치하였고 OS는 `ubuntu 16.04`입니다. 그렇기 때문에 아래의 그림처럼 다운로드를 합니다.
 
 {:.center}
-![image2.png](/assets/images/posts/how-to-install-tensorflow-gpu-in-ubuntu16.04/image2.png)
+![image2.png](/image/image2.png)
 
 압축파일이 생성되며 이 압축을 풀어줍니다.
 
@@ -127,7 +131,7 @@ xxx@xxxx:~$ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 #define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
 ```
 
-# tensorflow-gpu 설치
+# Install tensorflow-gpu 1.14.0
 
 현재 가장 안정적인 버전이라고 볼 수 있는 1.14.0 gpu 버전을 설치합니다.
 
