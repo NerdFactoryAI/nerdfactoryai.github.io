@@ -56,8 +56,8 @@ draft: "no"
 # 관리자 페이지
 
 {:.center}
-![img3]((/assets/images/posts/cnu2019intern/3.png
-*[관리자 페이지 메인]*
+![img3](/assets/images/posts/cnu2019intern/3.png)
+*관리자 페이지 메인*
 
 관리자 페이지의 목적은 한 사람의 담당자가 데이터 수집 상태와 실제 들어가 있는 데이터를 실시간으로 확인하는 데 있습니다. 이러한 목적을 달성하기 위한 중요 기능은 다음과 같습니다.
 
