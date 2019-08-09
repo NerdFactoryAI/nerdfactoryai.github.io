@@ -82,3 +82,24 @@ luke:
   tag: ["Software Assistant"]
   email: "luke.nerdfactory@gmail.com"
   photo: "/assets/images/authors/luke.png"
+cnu_dexter:
+  kor-name: "유영근"
+  eng-name: "Dexter"
+  graduate: "충남대학교 재학"
+  tag: ["Software Assistant"]
+  email: "yykwen0109@gmail.com"
+  photo: "/assets/images/authors/cnu_dexter.jpg"
+cnu_june:
+  kor-name: "윤지승"
+  eng-name: "June"
+  graduate: "충남대학교 재학"
+  tag: ["Software Assistant"]
+  email: "wltmd1231@gmail.com"
+  photo: "/assets/images/authors/cnu_june.jpg"
+cnu_salmon:
+  kor-name: "김진수"
+  eng-name: "Salmon"
+  graduate: "충남대학교 재학"
+  tag: ["Software Assistant"]
+  email: "zxc293@naver.com"
+  photo: "/assets/images/authors/cnu_salmon.jpg"

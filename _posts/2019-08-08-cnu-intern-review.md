@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spring MVC 웹 기반의 크롤러 개발"
-author: ["황종택"]
+author: ["cnu_june", "cnu_salmon", "cnu_dexter"]
 date:   2019-08-08 14:00:00 -0600
 abstract: "본 게시글은 지난 6월 19일부터 진행된 백마인턴십 과정 중, June, Dexter, Salmon 세 명의 어시스턴트가 함께 진행한 프로젝트에 대한 간략한 설명과 개발 과정에서의 느낀 점, 후기를 담고 있습니다."
 tags: ["white_horse", “intern”]
@@ -11,7 +11,7 @@ draft: "no"
 
 {:.center}
 ![img0](/assets/images/posts/cnu2019intern/0.png)
-*[백마인턴십 어시스턴트들]*
+*[백마인턴십 어시스턴트 단체사진]*
 
 # Abstract
 
