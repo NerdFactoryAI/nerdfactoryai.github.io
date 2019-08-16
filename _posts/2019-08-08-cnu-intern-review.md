@@ -4,9 +4,9 @@ title:  "Spring MVC 웹 기반의 크롤러 개발"
 author: ["cnu_june", "cnu_salmon", "cnu_dexter"]
 date:   2019-08-08 14:00:00 -0600
 abstract: "본 게시글은 지난 6월 19일부터 진행된 백마인턴십 과정 중, June, Dexter, Salmon 세 명의 어시스턴트가 함께 진행한 프로젝트에 대한 간략한 설명과 개발 과정에서의 느낀 점, 후기를 담고 있습니다."
-tags: ["white_horse", “intern”]
+tags: ["Crawler", "Spring_MVC", "Ajax", "Bootstrap"]
 image: /assets/images/posts/cnu2019intern/0.png
-draft: "no"   
+draft: "no"
 ---
 
 {:.center}
@@ -29,14 +29,11 @@ draft: "no"
 
 ## Spring MVC Web Project 
 
-먼저, 특이한 점을 뽑자면, 웹 크롤러를 웹 프로젝트로 만들었다는 것입니다.
+먼저, 특이한 점을 뽑자면, 웹 크롤러를 웹 프로젝트로 만들었다는 것입니다. 크롤러는 JAVA로 개발되었지만, Spring MVC 패턴을 따른 구조로 웹 프로젝트를 만들고, 웹 프로젝트에 탑재하기 위해 일반적으로 Spring에서 Service라 부르는 형태의 클래스가 되었습니다.
 
 {:.center}
 ![img2](/assets/images/posts/cnu2019intern/2.png)
-*Spring*
- 
-
-크롤러는 JAVA로 개발되었지만, Spring MVC 패턴을 따른 구조로 웹 프로젝트를 만들고, 웹 프로젝트에 탑재하기 위해 일반적으로 Spring에서 Service라 부르는 형태의 클래스가 되었습니다.
+*Spring Framework 의 로고*
 
 ## @Async
 
@@ -48,9 +45,7 @@ draft: "no"
 
 ## ScheduledThread
 
-(데이터 수집을 지속적으로 하려면?)
-
-저희 프로젝트는 자바의 ScheduledThread를 사용하여 일정 주기마다 함수를 실행해서 쓰레드의 상태를 확인하고, 작업이 완료된 크롤러만 찾아 재가동시키는 등의 작업이 가능합니다.
+크롤러가 지속적이며 미리 정해진 일정에 따라 데이터를 지속적으로 수집해야 했습니다. 이를 위해 저희 프로젝트는 자바의 ScheduledThread를 사용하여 일정 주기마다 함수를 실행해서 쓰레드의 상태를 확인하고, 작업이 완료된 크롤러만 찾아 재가동시키는 등의 작업이 가능합니다.
 
 ## Future
 
@@ -58,13 +53,13 @@ draft: "no"
 
 ## Result
 
-이러한 과정 끝에, 저희 프로젝트는 Tomcat 서버가 실행되면 자동으로 데이터 수집을 시작하고, 데이터 수집 중 언제든지 서버의 URL을 통해 관리자 페이지
+이러한 과정 끝에, 저희 프로젝트는 Tomcat 서버가 실행되면 자동으로 데이터 수집을 시작하고, 데이터 수집 중 언제든지 서버의 URL을 통해 관리자 페이지로 접근하여 실시간으로 데이터 수집 정보를 확인할 수 있는 웹 프로젝트가 되었습니다.
 
 # 관리자 페이지
 
 {:.center}
 ![img3](/assets/images/posts/cnu2019intern/3.png)
-*관리자 페이지 메인*
+*관리자 페이지 메인화면 스크린샷*
 
 관리자 페이지의 목적은 한 사람의 담당자가 데이터 수집 상태와 실제 들어가 있는 데이터를 실시간으로 확인하는 데 있습니다. 이러한 목적을 달성하기 위한 중요 기능은 다음과 같습니다.
 
@@ -76,11 +71,19 @@ draft: "no"
 
 ## AJAX – JACKSON
 
+{:.center}
+![img4](/assets/images/posts/cnu2019intern/4.png)
+*Ajax 의 로고*
+
 중요 기능을 구현하기 위해서는 데이터베이스의 정보와 JAVA 크롤러의 정보를 실시간으로 가져와 View에 출력하는 것이 핵심이었는데요, 이를 AJAX를 통해 구현할 수 있었습니다.
 
 Spring Mapping URL을 통해 AJAX로 접근하고, 컨트롤러에서 모델을 통해 처리한 데이터를 JSON 방식으로 가져와 View에서 출력하는 방식입니다. 이와 같은 AJAX 연결로 인해 View에서의 자바스크립트 코딩으로 컨트롤러에 접근할 수 있어 개발에 상당히 용이했습니다.
 
 ## Bootstrap
+
+{:.center}
+![img5](/assets/images/posts/cnu2019intern/5.png)
+*Bootstrap 의 로고*
 
 관리자 페이지의 모든 View는 부트스트랩 탬플릿을 사용하여 구현하였습니다. CSS 프레임워크 부트스트랩을 사용하면 좋은 템플릿 디자인을 쉽게 구할 수 있고 반응형 웹페이지를 쉽게 구현할 수 있어, 기능개발에 좀 더 집중할 수 있었습니다. 또한 부트스트랩의 확장인 animate, notify, datatables등도 사용하여 View의 퀄리티를 향상시킬 수 있었습니다.
 
