@@ -5,12 +5,12 @@ author: ["이지훈"]
 date:   2019-08-17
 abstract: "너드팩토리에서 백엔드 개발을 맡고 있는 앨런입니다. 이번 해 열린 PyCon Korea 2019 행사에서 8월 17일부터 18일까지 총 2일간 컨퍼런스를 참관했습니다. 지금부터 PyCon 행사에서 느끼고 배웠던 것들에 대해서 얘기해볼까 합니다."
 tags: ["PyCon", "PyCon2019", "Python", "async", "dsl", "logging", "test-technique"]
-image: /assets/images/posts/PyCon-korea-2019-first-day/0.png
+image: /assets/images/posts/pycon-korea-2019-first-day/0.png
 draft: "no"	
 ---
 
 {:.center}
-![img0](/assets/images/posts/PyCon-korea-2019-first-day/0.png)
+![img0](/assets/images/posts/pycon-korea-2019-first-day/0.png)
 *PyCon 홈페이지에서 발췌*
 
 너드팩토리에서 백엔드 개발을 맡고 있는 앨런입니다. 이번 해 열린 PyCon Korea 2019 행사에서 8월 17일부터 18일까지 총 2일간 컨퍼런스를 참관했습니다. 지금부터 PyCon 행사에서 느끼고 배웠던 것들에 대해서 얘기해볼까 합니다.
@@ -22,17 +22,17 @@ draft: "no"
 # 행사분위기
 
 {:.center}
-![img1](/assets/images/posts/PyCon-korea-2019-first-day/1.jpg)
+![img1](/assets/images/posts/pycon-korea-2019-first-day/1.jpg)
 *굿즈를 받으러 가는 길*
 
 {:.center}
-![img2](/assets/images/posts/PyCon-korea-2019-first-day/2.jpg)
+![img2](/assets/images/posts/pycon-korea-2019-first-day/2.jpg)
 *2층에서 찍어본 행사장 모습*
 
 주말인데도 불구하고 정말 많은 사람들이 와 있었습니다. 오히려 평일에는 이런 행사에 참여하기 어려우니 주말에 더 붐비는 걸지도 모르겠네요. 많은 기업들이 와서 행사장을 채우고 있었고 각 부스마다 경품을 걸고 행사를 진행하는 모습도 볼 수 있었습니다. 뱅크샐러드는 이번 메인 스폰서인만큼 가장 큰 부스를 차지하고 있었구요. 부스앞에 사람도 압도적으로 많았던 거 같았습니다. 뱅크샐러드에서 주최하는 게임이 있었는데(사람이 너무 많아서 못갔어요. 무슨 게임인지도 모르겠네요..) 줄이 너무 길어서 할 엄두도 못냈네요.
 
 {:.center}
-![img3](/assets/images/posts/PyCon-korea-2019-first-day/3.jpg)
+![img3](/assets/images/posts/pycon-korea-2019-first-day/3.jpg)
 *다들 게임하려고 서 계시는겁니다..*
 
 # Session
