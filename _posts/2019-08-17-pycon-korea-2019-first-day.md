@@ -72,7 +72,7 @@ exec, eval 또는 Builtins 등을 통해 DSL형태의 코드를 만들어 낼 �
 
 구영민님이 발표해주신 세션입니다. 전체적으로 테스트를 어떻게하면 효율적이고 빠르게 할 수 있는지에 대해서 말씀해주셨습니다. 이 기술들에 대해서 말씀하실 때 'trick이다' 라고 종종 말씀하셨는데 제가 생각하기엔 수많은 테스트 경험에서 나오는 노하우들이 아닌가 라는 생각이 많이 들었습니다. 그리고 TestCase와 TransactionTestCase의 차이에 대해서 자세히 알려주셔서 많은 도움이 되었습니다.
 
-[[PyCon KR 2019] 테스트에 걸리는 시간을 *92%* 줄이기](https://speakerdeck.com/youngminkoo/PyCon-kr-2019-teseuteue-geolrineun-siganeul-star-92-percent-star-juligi){:target="_blank"}{:.markdown-link-body}
+[[PyCon KR 2019] 테스트에 걸리는 시간을 *92%* 줄이기](https://speakerdeck.com/youngminkoo/pycon-kr-2019-teseuteue-geolrineun-siganeul-star-92-percent-star-juligi){:target="_blank"}{:.markdown-link-body}
 
 ## 8월 18일 (코엑스 표류 2일차)
 
