@@ -218,43 +218,132 @@
     font-size: 2em;
   }
   .main-subtitle {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+  .nerdfactory-main-nav-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 5px;
+  }
+  .nerdfactory-main-nav-item {
+    font-size: 0.8em;
+  }
+  .main-logo-top {
+    width: 120px;
+  }
+  .main-logo-title-div {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  .spinner-master {
+    display: block;
+  }
+  .nav-pc { 
+    display: none;
+  }
+  .nav-mobile { 
+    display: none;
+  }
+  .main-logo-text {
+    margin-top: 17px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {   
   .main-background {
-    height: 400px;
+    height: 380px;
     background-size: auto 100%;
   }
   .main-background-mask {
-    height: 400px;
+    height: 380px;
   }
   .main-background-container {
-    padding-top: 180px;
+    padding-top: 135px;
+  }
+  .main-background-separator {
+    margin-top: 20px; 
+    margin-bottom: 20px;
   }
   .main-title {
-    font-size: 3em;
+    font-size: 2em;
   }
   .main-subtitle {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+  .nerdfactory-main-nav-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 5px;
+  }
+  .nerdfactory-main-nav-item {
+    font-size: 0.8em;
+  }
+  .main-logo-top {
+    width: 120px;
+  }
+  .main-logo-title-div {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  .spinner-master {
+    display: block;
+  }
+  .nav-pc { 
+    display: none;
+  }
+  .nav-mobile { 
+    display: none;
+  }
+  .main-logo-text {
+    margin-top: 17px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {   
   .main-background {
-    height: 585px;
+    height: 380px;
     background-size: auto 100%;
   }
   .main-background-mask {
-    height: 585px;
+    height: 380px;
   }
   .main-background-container {
-    padding-top: 250px;
+    padding-top: 135px;
+  }
+  .main-background-separator {
+    margin-top: 20px; 
+    margin-bottom: 20px;
   }
   .main-title {
-    font-size: 5em;
+    font-size: 2em;
   }
   .main-subtitle {
-    font-size: 1.8em;
+    font-size: 1.4em;
+  }
+  .nerdfactory-main-nav-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 5px;
+  }
+  .nerdfactory-main-nav-item {
+    font-size: 0.8em;
+  }
+  .main-logo-top {
+    width: 120px;
+  }
+  .main-logo-title-div {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  .spinner-master {
+    display: block;
+  }
+  .nav-pc { 
+    display: none;
+  }
+  .nav-mobile { 
+    display: none;
+  }
+  .main-logo-text {
+    margin-top: 17px;
   }
 }
 @media (min-width: 1200px) {   
