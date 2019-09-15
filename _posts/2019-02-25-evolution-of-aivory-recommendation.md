@@ -278,8 +278,8 @@ $$
 
 # Reference
 
-[1] [Collaborative Filtering](https://ko.wikipedia.org/wiki/%ED%98%91%EC%97%85_%ED%95%84%ED%84%B0%EB%A7%81){:target="_blank"}{:.markdown-link-body}<br>
-[2] [Cosine Similarity](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84){:target="_blank"}{:.markdown-link-body}<br>
-[3] [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf){:target="_blank"}{:.markdown-link-body}<br>
-[4] [Word2Vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/){:target="_blank"}{:.markdown-link-body}<br>
-[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/minimax-method-to-find-the-number-of-center-of-clustering.html){:target="_blank"}{:.markdown-link-body}
+[1] [Collaborative Filtering](https://ko.wikipedia.org/wiki/%ED%98%91%EC%97%85_%ED%95%84%ED%84%B0%EB%A7%81){:target="_blank"}{:.markdown-link-reference}<br>
+[2] [Cosine Similarity](https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84){:target="_blank"}{:.markdown-link-reference}<br>
+[3] [Deep Neural Networks for Youtube Recommendations](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf){:target="_blank"}{:.markdown-link-reference}<br>
+[4] [Word2Vec](https://shuuki4.wordpress.com/2016/01/27/word2vec-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EB%A1%A0-%EC%A0%95%EB%A6%AC/){:target="_blank"}{:.markdown-link-reference}<br>
+[5] [Auto K-means 알고리즘](https://blog.nerdfactory.ai/2018/12/24/minimax-method-to-find-the-number-of-center-of-clustering.html){:target="_blank"}{:.markdown-link-reference}
