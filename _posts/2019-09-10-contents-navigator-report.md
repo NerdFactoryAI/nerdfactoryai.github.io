@@ -20,13 +20,13 @@ draft: "no"
 
 스마트폰과 같은 IT 기술이 빠르게 발전하면서 사람들이 정보에 쉽게 접근할 수 있을 뿐만 아니라 생산하기도 하면서 많은 정보들이 축적되고 있습니다. 많은 전문가들은 이를 빅데이터라고 일컫었으며 사람들이 필요한 정보를 더 신속하게 얻을 수 있을 것이라고 기대 했습니다. 하지만 역설적으로 정보가 많이 축적되면서 필요한 정보에 접근하는 시간이 더 오래 걸리는 현상이 일어나고 있습니다.
 
-위와 같은 문제가 발생하면서 연구자들은 사용자들에게 개인화된, 특성화된 정보를 제공하기 위한 추천 시스템에 대한 연구를 진행했습니다. 여기서 추천 시스템이란 사용자의 정보를 반영하여 개인이 관심을 가질 수 있는데 도움을 주는 것입니다[1]. 최근들어, 딥러닝과 같은 기계학습이 추천 시스템을 구성하는데에 중요한 역할을 하고 있습니다. 또한 많은 서비스에서 Goldbert에 의해 제안된 협업필터링(Collaborative Filtering 이하 CF)이라는 알고리즘을 추천 시스템에 사용하고 있습니다[2]. 하지만 CF에는 문제점이 있습니다. 사용자의 정보가 충분하지 않는 단계인 cold start stage에서는 추천 성능을 충분히 보장할 수 없습니다. 또한 CF는 많은 수학적 계산을 토대로 이루어지기 때문에 필요한 연산량이 많다고 할 수 있습니다. 위의 문제점을 보완하기 위해서 많은 data featuring에 대한 연구를 하고 있지만 이는 알고리즘 그 자체의 문제점을 보완한다고 할 수 없습니다[3].
+위와 같은 문제가 발생하면서 연구자들은 사용자들에게 개인화된, 특성화된 정보를 제공하기 위한 추천 시스템에 대한 연구를 진행했습니다. 여기서 추천 시스템이란 사용자의 정보를 반영하여 개인이 관심을 가질 수 있는데 도움을 주는 것입니다[^1]. 최근들어, 딥러닝과 같은 기계학습이 추천 시스템을 구성하는데에 중요한 역할을 하고 있습니다. 또한 많은 서비스에서 Goldbert에 의해 제안된 협업필터링(Collaborative Filtering 이하 CF)이라는 알고리즘을 추천 시스템에 사용하고 있습니다[^2]. 하지만 CF에는 문제점이 있습니다. 사용자의 정보가 충분하지 않는 단계인 cold start stage에서는 추천 성능을 충분히 보장할 수 없습니다. 또한 CF는 많은 수학적 계산을 토대로 이루어지기 때문에 필요한 연산량이 많다고 할 수 있습니다. 위의 문제점을 보완하기 위해서 많은 data featuring에 대한 연구를 하고 있지만 이는 알고리즘 그 자체의 문제점을 보완한다고 할 수 없습니다[^3].
 
 이 글에서는 다른 추천 알고리즘인 Contents Navigator(이하 CN)이라는 알고리즘을 제안하며 이 성능을 같은 데이터를 사용하여 CF와 비교합니다.
 
 # Contents Navigator & Complex System Network
 
-먼저 CF와의 성능 비교를 하기 전 CN에 대해서 설명하려고 합니다. CF의 문제점을 보완하기 위해 우리는 사람과 정보, 정보와 사람이 어떻게 연결되어 있는지에 대해 생각했으며 이를 복잡계 네트워크에서 찾았습니다. 복잡계 네트워크의 특성 중 우리가 관심이 있었던 것은 사람과 사물이 특정한 관계를 가지고 있고 모든 것이 연결되어 있다는 것입니다[5]. 또한 인터넷에는 데이터 전송 속도, 무선 네트워크의 승객 수, 소셜 네트워크의 인식 수준 및 대사의 응답 속도와 같은 가중치를 고려해야하는 많은 네트워크가 있습니다. 이 가중치 네트워크는 우리가 네트워크 특성을 정량적으로 이해하는 데 도움이 됩니다[6]. 1998년, Watts와 Strogatz의 'Small-world network'[7]와 Jeong과 Barabasi의 'scale-free network'[8]을 시작으로 복잡계 네트워크에 대한 논문이 쏟아지기 시작했습니다. 현재는 사회학, 경제학, 물리학, 컴퓨터공학, 생물학 등 많은 분야에서 복잡계 네트워크를 활용해 연구 결과들이 도출되고 있습니다.
+먼저 CF와의 성능 비교를 하기 전 CN에 대해서 설명하려고 합니다. CF의 문제점을 보완하기 위해 우리는 사람과 정보, 정보와 사람이 어떻게 연결되어 있는지에 대해 생각했으며 이를 복잡계 네트워크에서 찾았습니다. 복잡계 네트워크의 특성 중 우리가 관심이 있었던 것은 사람과 사물이 특정한 관계를 가지고 있고 모든 것이 연결되어 있다는 것입니다[^5]. 또한 인터넷에는 데이터 전송 속도, 무선 네트워크의 승객 수, 소셜 네트워크의 인식 수준 및 대사의 응답 속도와 같은 가중치를 고려해야하는 많은 네트워크가 있습니다. 이 가중치 네트워크는 우리가 네트워크 특성을 정량적으로 이해하는 데 도움이 됩니다[^6]. 1998년, Watts와 Strogatz의 'Small-world network'[^7]와 Jeong과 Barabasi의 'scale-free network'[^8]을 시작으로 복잡계 네트워크에 대한 논문이 쏟아지기 시작했습니다. 현재는 사회학, 경제학, 물리학, 컴퓨터공학, 생물학 등 많은 분야에서 복잡계 네트워크를 활용해 연구 결과들이 도출되고 있습니다.
 
 {:.center}
 ![img8](/assets/images/posts/contents-navigator-report/STAT_Social_Network.png)
@@ -47,7 +47,7 @@ draft: "no"
 
 # Motivation and Related Work
 
-먼저 CF와 CN은 비교하기 위해서 LastFM에서 제공하는 데이터셋을 사용하였습니다. 이는 다른 논문들에서 이미 CF를 검증하는데에 쓰였던 것을 사용함으로써 더 공정한 평가를 진행하기 위함입니다[9]. LastFM 중에서도 HetRec2011 데이터셋을 사용하였습니다. HetRec2011은 1,892명의 사용자가 92,800명의 아티스트의 음악을 청취한 것을 기록한 데이터셋입니다. 이 데이터셋은 곡명을 데이터셋화 한 것이 아니라 해당 가수의 이름을 기록하였습니다. 물론 제공하는 모든 정보를 사용하는 것이 더 좋지만 CN의 기능을 고려할 때 사용자의 시간적인 순서를 알아야하므로 데이터셋을 CN에 알맞게 전처리하여 사용하였습니다.
+먼저 CF와 CN은 비교하기 위해서 LastFM에서 제공하는 데이터셋을 사용하였습니다. 이는 다른 논문들에서 이미 CF를 검증하는데에 쓰였던 것을 사용함으로써 더 공정한 평가를 진행하기 위함입니다[^9]. LastFM 중에서도 HetRec2011 데이터셋을 사용하였습니다. HetRec2011은 1,892명의 사용자가 92,800명의 아티스트의 음악을 청취한 것을 기록한 데이터셋입니다. 이 데이터셋은 곡명을 데이터셋화 한 것이 아니라 해당 가수의 이름을 기록하였습니다. 물론 제공하는 모든 정보를 사용하는 것이 더 좋지만 CN의 기능을 고려할 때 사용자의 시간적인 순서를 알아야하므로 데이터셋을 CN에 알맞게 전처리하여 사용하였습니다.
 
 하지만 CF를 학습하고 평가할 때는 음악의 청취 순서 혹은 시간은 중요하지 않기에 HetRec2011에서 제공하는 데이터를 그대로 사용하였습니다.
 
@@ -141,25 +141,25 @@ CF의 경우 약 20개의 정보를 포함할때까지는 성능이 보존되지
 
 # Conclusion
 
-CF는 콘텐츠 혹은 사물과 사용자 간의 상호 작용만 사용하여 사용자 간의 유사성을 측정 한 다음 각 항목의 선호 확률을 찾아서 추천합니다. 그러나 딥 러닝의 자연어 처리에 자주 사용되는 Sequence-to-Sequence [11] 모델에서 볼 수 있듯이 콘텐츠 혹은 사물의 출현 순서를 고려할 가치가 있으며 관계 특성을 고려할 때 추천 성능이 향상됩니다[12].
+CF는 콘텐츠 혹은 사물과 사용자 간의 상호 작용만 사용하여 사용자 간의 유사성을 측정 한 다음 각 항목의 선호 확률을 찾아서 추천합니다. 그러나 딥 러닝의 자연어 처리에 자주 사용되는 Sequence-to-Sequence [^11] 모델에서 볼 수 있듯이 콘텐츠 혹은 사물의 출현 순서를 고려할 가치가 있으며 관계 특성을 고려할 때 추천 성능이 향상됩니다[^12].
 
-콘텐츠와 콘텐츠의 순서 사이의 관계를 반영하려면 다음과 같은 추가 알고리즘이 필요합니다. 예를 들어, Word2Vec [13]은 인접한 토큰(컨텐츠) 사이에 관계가 있음을 나타 내기 위해 사용될 수 있으며 Sequence-to-Sequence 토큰(컨텐츠)의 시간적 특성을 표현하는 데 사용될 수 있습니다. 그러나 온라인 추천 시스템에서 이러한 알고리즘을 사용하려면 계산 능력이 높거나 작동하는 데 시간이 오래 걸립니다 [14].
+콘텐츠와 콘텐츠의 순서 사이의 관계를 반영하려면 다음과 같은 추가 알고리즘이 필요합니다. 예를 들어, Word2Vec [^13]은 인접한 토큰(컨텐츠) 사이에 관계가 있음을 나타 내기 위해 사용될 수 있으며 Sequence-to-Sequence 토큰(컨텐츠)의 시간적 특성을 표현하는 데 사용될 수 있습니다. 그러나 온라인 추천 시스템에서 이러한 알고리즘을 사용하려면 계산 능력이 높거나 작동하는 데 시간이 오래 걸립니다 [^14].
 
 이 문제는 사용자의 특성에 의해 보상 될 수 있습니다. 사용자가 컨텐츠를 소비함에 따라 소비된 컨텐츠의 주제는 점차적으로 변합니다. 그러나 짧은 기간 동안 컨텐츠의 주제에는 변화가 없으며, 짧은 시간에 동시에 소비되는 컨텐츠는 상관 관계가있는 것으로 간주될 수 있습니다. 또한 사용자는 하나의 서비스에서 컨텐츠라는 항목에 연결되므로 모든 사용자가 느슨하게 연결됩니다. 따라서, 추천이 필요한 사람들의 소비 패턴과 유사한 사람들을 검색하고 그 소비 패턴 이후에 나타나는 컨텐츠를 추천함으로써 많은 계산을 요구하지 않고 합리적인 추천을 할 수 있습니다.
 
 # Reference
 
-[1] [RESNICK, P. AND VARIAN, H. R. Recommender systems. Commun. ACM 40, 56-58. 1997.](https://dl.acm.org/citation.cfm?id=245121){:target="_blank"}{:.markdown-link-reference}<br>
-[2] [David Goldberg, David Nichols, Brian M. Oki, and Douglas Terry, "Using collaborative filtering to weave an information Tapestry", 1992](https://dl.acm.org/citation.cfm?id=138867){:target="_blank"}{:.markdown-link-reference}<br>
-[3] [Jian Wei, Jianhua He, Kai Chen, Yi Zhou AND Zuoyin Tang, "Collaborative Filtering and Deep Learning Based Recommendation System For Cold Start Items" Expert Systems with Applications, 2017.](https://research.aston.ac.uk/portal/en/researchoutput/collaborative-filtering-and-deep-learning-based-recommendation-system-for-cold-start-items(6c737b2d-742c-4396-a56e-503478be0c35).html){:target="_blank"}{:.markdown-link-reference}<br>
-[4] [Plani co., Ltd, System and Method for providing digital information, 1018561150000, filed March 23, 2017, and issued May 2, 2018.](http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame){:target="_blank"}{:.markdown-link-reference}<br>
-[5] [Mushon Zer-Aviv, "If everything is a network, nothing is a network", January 8, 2016.](https://fitefuaite.com/journal/comhra/if-everything-is-a-network-nothing-is-a-network/){:target="_blank"}{:.markdown-link-reference}<br>
-[6] [Barrat, M. Barthelemy, R. Pastor-Satorras, and A. Vespignani,Proc. Natl. Acad. Soc. USA 101, 3747 (2004).](https://www.pnas.org/content/101/11/3747){:target="_blank"}{:.markdown-link-reference}<br>
-[7] [D. Watts and S. Strogatz, Nature 393, 440 (1998).](https://www.nature.com/articles/30918){:target="_blank"}{:.markdown-link-reference}<br>
-[8] [R. Albert, H. Jeong and A.-L. Barabasi, Nature 401, 130 (1999).](https://www.nature.com/articles/30918){:target="_blank"}{:.markdown-link-reference}<br>
-[9] [Dongjoo Lee, Sang-keun Lee, Sang-goo Lee (2009). "Considering temporal context in music recommendation based on collaborative filtering" 2009 Korea Computer Congress Vol.36](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&control_no=8eceb3aa056c4391ffe0bdc3ef48d419){:target="_blank"}{:.markdown-link-reference}<br>
-[10] [Stanley Milgram, "The Small-World Problem", Psychology today, 1967](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1464174){:target="_blank"}{:.markdown-link-reference}<br>
-[11] [Sutskever, I., Vinyals, O., & Le, Q. V. (2014). Sequence to sequence learning with neural networks. In Advances in neural information processing systems (pp. 3104-3112).](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf){:target="_blank"}{:.markdown-link-reference}<br>
-[12] [Dong, D., Zheng, X., Zhang, R., & Wang, Y. (2018, July). Recurrent Collaborative Filtering for Unifying General and Sequential Recommender. In IJCAI (pp. 3350-3356).](https://www.ijcai.org/proceedings/2018/0465.pdf){:target="_blank"}{:.markdown-link-reference}<br>
-[13] [Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems (pp. 3111-3119).](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf){:target="_blank"}{:.markdown-link-reference}<br>
-[14] [Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR), 52(1), 5.](https://www.researchgate.net/publication/318671349_Deep_Learning_Based_Recommender_System_A_Survey_and_New_Perspectives){:target="_blank"}{:.markdown-link-reference}<br>
+[^1]: [RESNICK, P. AND VARIAN, H. R. Recommender systems. Commun. ACM 40, 56-58. 1997.](https://dl.acm.org/citation.cfm?id=245121){:target="_blank"}{:.markdown-link-reference}
+[^2]: [David Goldberg, David Nichols, Brian M. Oki, and Douglas Terry, "Using collaborative filtering to weave an information Tapestry", 1992](https://dl.acm.org/citation.cfm?id=138867){:target="_blank"}{:.markdown-link-reference}
+[^3]: [Jian Wei, Jianhua He, Kai Chen, Yi Zhou AND Zuoyin Tang, "Collaborative Filtering and Deep Learning Based Recommendation System For Cold Start Items" Expert Systems with Applications, 2017.](https://research.aston.ac.uk/portal/en/researchoutput/collaborative-filtering-and-deep-learning-based-recommendation-system-for-cold-start-items(6c737b2d-742c-4396-a56e-503478be0c35).html){:target="_blank"}{:.markdown-link-reference}
+[^4]: [Plani co., Ltd, System and Method for providing digital information, 1018561150000, filed March 23, 2017, and issued May 2, 2018.](http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame){:target="_blank"}{:.markdown-link-reference}
+[^5]: [Mushon Zer-Aviv, "If everything is a network, nothing is a network", January 8, 2016.](https://fitefuaite.com/journal/comhra/if-everything-is-a-network-nothing-is-a-network/){:target="_blank"}{:.markdown-link-reference}
+[^6]: [Barrat, M. Barthelemy, R. Pastor-Satorras, and A. Vespignani,Proc. Natl. Acad. Soc. USA 101, 3747 (2004).](https://www.pnas.org/content/101/11/3747){:target="_blank"}{:.markdown-link-reference}
+[^7]: [D. Watts and S. Strogatz, Nature 393, 440 (1998).](https://www.nature.com/articles/30918){:target="_blank"}{:.markdown-link-reference}
+[^8]: [R. Albert, H. Jeong and A.-L. Barabasi, Nature 401, 130 (1999).](https://www.nature.com/articles/30918){:target="_blank"}{:.markdown-link-reference}
+[^9]: [Dongjoo Lee, Sang-keun Lee, Sang-goo Lee (2009). "Considering temporal context in music recommendation based on collaborative filtering" 2009 Korea Computer Congress Vol.36](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&control_no=8eceb3aa056c4391ffe0bdc3ef48d419){:target="_blank"}{:.markdown-link-reference}
+[^10]: [Stanley Milgram, "The Small-World Problem", Psychology today, 1967](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1464174){:target="_blank"}{:.markdown-link-reference}
+[^11]: [Sutskever, I., Vinyals, O., & Le, Q. V. (2014). Sequence to sequence learning with neural networks. In Advances in neural information processing systems (pp. 3104-3112).](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf){:target="_blank"}{:.markdown-link-reference}
+[^12]: [Dong, D., Zheng, X., Zhang, R., & Wang, Y. (2018, July). Recurrent Collaborative Filtering for Unifying General and Sequential Recommender. In IJCAI (pp. 3350-3356).](https://www.ijcai.org/proceedings/2018/0465.pdf){:target="_blank"}{:.markdown-link-reference}
+[^13]: [Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems (pp. 3111-3119).](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf){:target="_blank"}{:.markdown-link-reference}
+[^14]: [Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR), 52(1), 5.](https://www.researchgate.net/publication/318671349_Deep_Learning_Based_Recommender_System_A_Survey_and_New_Perspectives){:target="_blank"}{:.markdown-link-reference}
