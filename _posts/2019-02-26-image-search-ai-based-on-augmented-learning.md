@@ -52,13 +52,13 @@ AIVORY는 너드팩토리에서 개발한 인공지능 추천 검색 솔루션�
 ResNet이 ILSVRC에 출전하기 전부터 분류 성능을 높이기 위해 층이 점점 더 깊은 모델들이 만들어지고 있었습니다. 하지만 층이 깊어질수록 생기는 문제점도 있었습니다. 그중 *gradient vanishing*은 역전파 되는 gradient가 중간에 사라져서 학습이 잘되지 않는 문제점입니다. 그래서 ResNet을 개발한 팀은 gradient가 잘 흐를 수 있도록 일종의 지름길을 만들어 주자는 생각을 하게 되었고, 그 결과 아래와 같은 구조를 가지게 된 것입니다.
 
 {:.center}
-![image](https://drive.google.com/uc?id=1ZUL2tDFolDkz8KsUCYBFbmJPhPQAKhDY)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image2.png)
 *원본 출처: https://arxiv.org/pdf/1512.03385.pdf (가독성을 위해 ResNet 구조 이미지를 회전시켰습니다.)*
 
 지름길이 존재하는 곳을 자세히 살펴보면,
 
 {:.center}
-![image](https://drive.google.com/uc?id=18jP3jITZ12hOlxDWGuSMAyuhE47-LGS-)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image3.png)
 
 위와 같은 형태의 *Residual block*을 볼 수 있습니다.
 
@@ -69,13 +69,13 @@ ResNet이 ILSVRC에 출전하기 전부터 분류 성능을 높이기 위해 층
 ImageNet으로 학습시킨 ResNet이 잘 학습되었는지 확인하기 위해 유사 이미지 검색의 전단계로 같은 물체 찾기를 진행했습니다.
 
 {:.center}
-![image](https://drive.google.com/uc?id=1JhHK80DuHIraDWowrRPXQA2niuI9en3R)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image4.png)
 *업로드한 이미지(좌측 상단) / 같은 물체로 판단된 이미지들(하단)*
 
 가방 사진을 넣으면 가방들이 나오고,
 
 {:.center}
-![image](https://drive.google.com/uc?id=1CHbUkinf5GiUfR1o4LY_gYzsYOsNdA85)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image5.png)
 *업로드한 이미지(좌측 상단) / 같은 물체로 판단된 이미지들(하단)*
 
 핫도그 사진을 넣으면 핫도그들이 나왔습니다. 위 결과를 통해 ResNet이 잘 학습되었음을 알 수 있었습니다.
@@ -93,15 +93,15 @@ feature로 추출한 벡터를 저장하기 위해 처음에는 ElasticSearch를
 처음 시도한 유사 이미지 검색 결과는 아래와 같았습니다.
 
 {:.center}
-![image](https://drive.google.com/uc?id=1kqU2voLeGz6dNhIK-_y6AdQ6RswHDj9y)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image6.png)
 *90장 넣었을 때*
 
 {:.center}
-![image](https://drive.google.com/uc?id=1YoYEhNfGwN_3ShCpNqIHiWmrT3w1jb2W)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image7.png)
 *450장 넣었을 때*
 
 {:.center}
-![image](https://drive.google.com/uc?id=1ez0RymxYU2a5OsxtUKiw1Ay2BeQ4WoWv)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image8.png)
 *900장 넣었을 때*
 
 업로드한 이미지와 유사한 이미지들을 잘 띄워줬지만, 여기에는 치명적인 문제점이 있었습니다.
@@ -152,12 +152,12 @@ feature로 추출한 벡터를 저장하기 위해 처음에는 ElasticSearch를
 ## Result
 
 {:.center}
-![image](https://drive.google.com/uc?id=1ez0RymxYU2a5OsxtUKiw1Ay2BeQ4WoWv)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image9.png)
 
 이랬던 것이
 
 {:.center}
-![image](https://drive.google.com/uc?id=1YWoDTcOP92OlWtyfdwHENPJL65Vf1rta)
+![image](/assets/images/posts/image-search-ai-based-on-augmented-learning/image10.png)
 
 이렇게 바뀌었습니다.
 
