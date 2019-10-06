@@ -41,15 +41,15 @@ draft: "no"
 
 # 설치 과정
 
-매터모스트를 설치하는 과정은 딱히 쓸 것도 없습니다. 온라인 상태라면 도커로 한 줄만 입력해도 설치가 되었기 때문입니다. 설치 가이드(https://docs.mattermost.com/install/docker-local-machine.html#one-line-docker-install)에 따라 정말 아래의 한 줄만 입력하니 설치가 진행되었습니다.
+매터모스트를 설치하는 과정은 딱히 쓸 것도 없습니다. 온라인 상태라면 도커로 한 줄만 입력해도 설치가 되었기 때문입니다. [설치 가이드](https://docs.mattermost.com/install/docker-local-machine.html#one-line-docker-install){:target="_blank"}{:.markdown-link-body}에 따라 정말 아래의 한 줄만 입력하니 설치가 진행되었습니다.
 
 ```
 docker run --name mattermost-preview -d --publish 8065:8065 --add-host dockerhost:127.0.0.1 mattermost/mattermost-preview
 ```
 
-도커 설치 방법도 간단하니 도커 문서를 참고해주시기 바랍니다. (https://docs.docker.com/install/)
+도커 설치 방법도 간단하니 [도커 문서](https://docs.docker.com/install/){:target="_blank"}{:.markdown-link-body}를 참고해주시기 바랍니다.
 
-설치가 끝나고 클라이언트를 다운(https://mattermost.com/download/)받아서 로그인을 하니 슬랙과 정말 흡사한 화면을 만날 수 있었고 슬랙을 써본 경험이 있어서 내부에서 계정 설정이나 관리자 도구를 사용하는 것에 큰 괴리감이 느껴지지 않았습니다. ~~오히려 슬랙보다 관리자 도구는 경험이 더 좋았..~~
+설치가 끝나고 [클라이언트](https://mattermost.com/download/){:target="_blank"}{:.markdown-link-body}를 다운받아서 로그인을 하니 슬랙과 정말 흡사한 화면을 만날 수 있었고 슬랙을 써본 경험이 있어서 내부에서 계정 설정이나 관리자 도구를 사용하는 것에 큰 괴리감이 느껴지지 않았습니다. ~~오히려 슬랙보다 관리자 도구는 경험이 더 좋았..~~
 
 {:.center}
 ![img3](/assets/images/posts/adopt-mattermost/3.png)
