@@ -103,3 +103,17 @@ cnu_salmon:
   tag: ["Software Assistant"]
   email: "zxc293@naver.com"
   photo: "/assets/images/authors/cnu_salmon.jpg"
+ict_june:
+  kor-name: "고지훈"
+  eng-name: "June"
+  graduate: "금오공과대학교 재학"
+  tag: ["Software Assistant"]
+  email: "kityapyap@gmail.com"
+  photo: "/assets/images/authors/ict_june.png"
+ict_daisy:
+  kor-name: "임새미"
+  eng-name: "Daisy"
+  graduate: "건국대학교 글로컬 재학"
+  tag: ["Marketing Assistance"]
+  email: "birdmi97@gmail.com"
+  photo: "/assets/images/authors/ict_daisy.png"
