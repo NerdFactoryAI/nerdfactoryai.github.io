@@ -10,30 +10,11 @@ draft: "no"
 ---
 
 {:.center}
-![img0](/assets/images/posts/react-styled-components/0.png) _이미지 출처: [medium](https://medium.com/@shlee1353/리액트-styled-components-애니메이션-구현-fbbb8aa9e722){:target="\_blank"}{:.markdown-link-caption}_
+![img0](/assets/images/posts/react-styled-components/0.png)
 
 # Overview
 
 '우리아이' 소개페이지를 개발하면서 경험했던 **컴포넌트 스타일링** 방법과 그 중 React 기반의 **'CSS-in-JS'** 방식 중 하나인 **Styled-Components** 라이브러리를 소개하려고 합니다. 그중 조건부 스타일링을 하는 방법으로 기존의 순수 CSS가 어떤 문제를 가졌는지 파악하고 개선하려는 방법으로 **Styled-Components** 라이브러리는 어떠한 방식으로 작동하는지 코드를 통해서 알아보겠습니다. **개발은 React 환경에서 진행되었습니다.**
-
-## 미리보는 Problem
-
-- CSS 작업 시 SASS, LESS 혹은 Webpack을 이용한 구조화 작업에서 시간을 엄청나게 잡아 먹힌 적이 있을 때
-- CSS 파일 새로 만들고, 클래스명 만들고, 컴포넌트에서 CSS 파일을 왔다 갔다 하면서 시간을 날린 적이 있을 때
-- Sass를 좋아하고 Nesting, variable, Mixin을 사용하고 싶을 때
-
-위와 같은 고민을 하고 있다면 Styled-Components를 사용해 볼 것을 추천합니다.
-
-## 미리보는 Proposed Solution
-
-- 위의 문제들을 SASS, LESS 설치 없이, CSS 파일을 만들 필요 없이, 클래스명 없이 CSS 작업을 할 수 있습니다.
-- 클래스 대신 props 사용하여 조건부 스타일링
-- Global 설정
-- & 문자를 사용하여 Sass처럼 자기 자신 선택 가능
-- 네스팅과 믹스인
-- 미디어쿼리
-- 기타..
-- 무료!
 
 # 순수 CSS의 조건부 스타일링
 
@@ -44,58 +25,60 @@ draft: "no"
 
 ## 인라인 형식
 
-```javascript
-    const DropdownContent = ({ show }) => (
-      <div
-        className={
-          show ? "dropdown-content  dropdown-content-visible" 
-      : "dropdown-content"
-        }
-      >
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    );
+```js
+const DropdownContent = ({ show }) => (
+  <div
+    className={
+      show ? "dropdown-content  dropdown-content-visible" : "dropdown-content"
+    }
+  >
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+);
 
-    const App = () => {
-     …
-      return (
-        <>
-          <div className="dropdown">
-            <button className="dropbtn" onClick={toggleDropdown}>
-              Dropdown
-            </button>
-            <DropdownContent show={dropdownVisible} />
-          </div>
-        </>
-      );
-    };
-```
-
-## CSS 클래스 명을 활용한 조건부 스타일링
-
-```javascript
 const App = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
-
   return (
     <>
       <div className="dropdown">
         <button className="dropbtn" onClick={toggleDropdown}>
-                    Dropdown         
+          Dropdown
+        </button>
+        <DropdownContent show={dropdownVisible} />
+      </div>
+    </>
+  );
+};
+```
+
+## CSS 클래스 명을 활용한 조건부 스타일링
+
+```js
+const App = () => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+  return (
+    <>
+      <div className="dropdown">
+        <button className="dropbtn" onClick={toggleDropdown}>
+          Dropdown
         </button>
         <div
           className="dropdown-content"
-          style={{ display: dropdownVisible ? "block" : "none" }}
+          style=\{\{ display: dropdownVisible ? "block" : "none" \}\}
         >
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
       </div>
     </>
@@ -105,7 +88,7 @@ const App = () => {
 
 ## 문제점
 
-가장 대표적인 방법 두 가지를 이용하여 순수 CSS에서 state 변화에 따른 조건부 스타일링은 어떤 방식으로 하는지 보았습니다. 여기서 생기는 문제점은 다음과 같습니다.
+가장 대표적인 방법 두 가지를 이용하여 순수 CSS에서 **state 변화에 따른 조건부 스타일링**은 어떤 방식으로 하는지 보았습니다. 여기서 생기는 문제점은 다음과 같습니다.
 
 1. state 값에 따라 스타일을 바인딩 해야 하는 경우
 2. props가 많아지고 그에 따른 조건부 스타일링도 많아질 때
@@ -117,14 +100,82 @@ const App = () => {
 
 # CSS 전처리기 - Sass
 
-CSS의 언어적 특성과 위의 불편함을 해결하기 위해 중첩, 변수, 믹스인, 확장 및 로직을 스타일시트에 구현한 전처리 엔진 형태의 Sass, Less와 같은 CSS 전처리기가 등장했습니다.
+CSS의 언어적 특성과 위의 불편함을 해결하기 위해 **중첩, 변수, 믹스인, 확장 및 로직**을 스타일시트에 구현한 전처리 엔진 형태의 Sass, Less와 같은 CSS 전처리기가 등장했습니다.
 
-## Sass의 CSS 구조화
+## Sass의 효율적인 CSS 구조 설계
 
-사실 순수 CSS에서 <link/> 태그 혹은 @import 를 사용해서 CSS 파일을 구조화 할 수는 있습니다. 다만 각 CSS의 호출은 매번 새로운 HTTP 요청을 발생시킵니다. 즉 성능이 이슈가 될 수도 있습니다. 그러한 문제를 Sass @import는 개발 환경에서 많은 CSS의 파일이 복잡하게 얽혀있더라도 하나의 스타일시트로 컴파일이 됩니다. 즉 HTTP 요청에 의한 성능 이슈를 해결하였습니다.
+사실 순수 CSS에서 <link/> 태그 혹은 @import 를 사용해서 CSS 파일을 구조화 할 수는 있습니다. 다만 각 CSS 파일 호출이 매번 새로운 HTTP 요청을 발생시키고 성능저하의 원인이 될 수도 있습니다. 그러나 Sass의 @import는 개발 환경에서 많은 CSS 파일이 복잡하게 얽혀있더라도 하나의 스타일시트로 컴파일이 됩니다. 즉 HTTP 요청에 의한 성능 이슈를 해결하였습니다.
 
-{:.center}
-![img2](/assets/images/posts/react-styled-components/2.png)
+결과적으로 CSS의 구조화가 가능해짐에 따라 스타일시트를 한눈에 파악하기 쉬워졌습니다. 협업 관계에서도 스타일시트 구조를 논리적으로 파악할 수 있게 도와줄 수 있습니다.
+
+다음은 Sass를 이용한 스타일시트 구조 트리의 일부분입니다.
+
+```
+│  _bootstrap.scss
+│  _custom.scss
+│  _reset.scss
+│  __core.scss
+│  __pages.scss
+│  __variables.scss
+│
+├─core
+│  │  _animations.scss
+│  │  _components.scss
+│  │  _forms.scss
+│  │  _mixins.scss
+│  │  _utilities.scss
+│  │
+│  ├─animations
+│  │      _animations.scss
+│  │      _base.scss
+│  │      _bubbles.scss
+│  │      _floating.scss
+│  │
+│  ├─components
+│  │      _collapse.scss
+│  │      _lists.scss
+│  │      _nav.scss
+│  │      _navbar.scss
+│  │
+│  ├─forms
+│  │      _buttons.scss
+│  │      _checkbox.scss
+│  │      _form.scss
+│  │      _inputs.scss
+│  │
+│  ├─mixins
+│  │      _animations.scss
+│  │      _arrow-variant.scss
+│  │      _buttons-variant.scss
+│  │      _devices.scss
+│  │      _font-awesome.scss
+│  │      _icons-variant.scss
+│  │      _keyframes.scss
+│  │      _patterns.scss
+│  │      _position.scss
+│  │      _sections.scss
+│  │      _shapes.scss
+│  │
+│  └─utilities
+│          _background.scss
+│          _border.scss
+│          _brands.scss
+│          _curve-svg-background.scss
+│          _devices.scss
+│          _gradients.scss
+│          _icons.scss
+│          _links.scss
+│          _misc.scss
+│          _mockup.scss
+│          _overlay.scss
+│          _position.scss
+│          _responsive.scss
+│          _shapes.scss
+│          _spacing.scss
+│          _speech-bubble.scss
+│          _text.scss
+│          _type.scss
+```
 
 기타 기능적인 부분은 Styled-Components에서도 지원하기 때문에 Sass를 사용했을 때 문제점만 언급하고 넘어가겠습니다.
 
@@ -138,13 +189,13 @@ CSS의 언어적 특성과 위의 불편함을 해결하기 위해 중첩, 변�
 4. 여전히 CSS 클래스로 조건부 스타일링을 하고 있다.
 
 실제로 CSS 전처리기를 사용하더라도 CSS의 난해함을 정리하기에는 부족합니다.
-이것은 CSS 자체의 문제이기도 합니다. 변수도 없고, 루프문과 함수사용이 불가합니다. 그런데 요소를 쓰던, 클래스나 id를 쓰던 아니면 그 어떤 선택자를 쓰던 다 받아주는 관대함도 있습니다.
+이것은 CSS 자체의 문제이기도 합니다. CSS는 변수도 없고, 루프문과 함수사용이 불가합니다. 그런데 요소를 쓰던, 클래스나 id를 쓰던 아니면 그 어떤 선택자를 쓰던 다 받아주는 관대함도 있습니다.
 
-물론 BEM과 같은 방법론이 있지만, 언어 레벨에서 느끼는 불편함은 사라지지 않습니다.
+물론 BEM과 같은 CSS 클래스 명을 정의하는 방법론 등이 있지만, 언어 레벨에서 느끼는 불편함은 사라지지 않습니다.
 
 # Styled-Components
 
-Styled-Components는 위의 문제를 해결하려는 방법들 중 하나이며 Tagged 템플릿 리터럴을 이용해 스타일 정보를 실제 CSS 코드를 사용하여 자바스크립트 파일 안에 스타일을 선언하는 'CSS-in-JS' 방식 중 하나입니다. 컴포넌트와 스타일 간의 매핑을 제거하고 SASS나 LESS와 같은 전처리기가 제공하는 프로그래밍적 동작 방식도 제공합니다.
+Styled-Components는 위의 문제를 해결하려는 방법들 중 하나이며 Tagged 템플릿 리터럴을 이용해 스타일 정보를 실제 CSS 코드를 사용하여 **자바스크립트 파일 안에 스타일을 선언하는 'CSS-in-JS' 방식 중 하나입니다.** (인라인 방식과는 다릅니다.) **컴포넌트와 스타일 간의 매핑을 제거**하고 SASS나 LESS와 같은 전처리기가 제공하는 **프로그래밍적 동작 방식도 제공합니다**.
 
 ### 라이브러리 설치
 
@@ -156,17 +207,16 @@ Styled-Components는 위의 문제를 해결하려는 방법들 중 하나이며
 
 ### 순수 CSS
 
-{:.center}
-![img3](/assets/images/posts/react-styled-components/3.png)
+![img2](/assets/images/posts/react-styled-components/2.png)
 
 ### Styled-Components
 
-{:.center}
-![img4](/assets/images/posts/react-styled-components/4.png)
+![img3](/assets/images/posts/react-styled-components/3.png)
 
-위의 방식을 보면 그다지 차이가 없다고 느낄 수도 있습니다. 여기서 중요한 점은 Styled-Components를 사용했을 때 CSS 클래스를 사용하지 않는다는 것입니다.
+위의 두 방식을 비교해 보면 그다지 차이가 없다고 느낄 수도 있지만 일단 Styled-Components를 사용했을 때 CSS 클래스를 사용하지 않는다는 것을 중요시 봐야합니다.
 
-사실 CSS는 구조와 스타일을 분리하려는 방법이며 그 구조와 연결고리를 하는 역할인 클래스 계층을 없애 버린다고 말하니 처음 접하는 입장에서는 직관적인 방법이 아니라고 생각이 들 수 있습니다. 그렇지만 스타일과 구조의 분리가 오히려 복잡도의 증가를 일으킬 수 있으며 이러한 문제를 Styled-Components는 자바스크립트의 기능을 이용하여 해결하였습니다.
+우선 CSS는 구조와 스타일을 분리하려는 방법입니다.
+그 구조와 연결고리를 하는 역할인 클래스 계층을 없애 버리는 방식은 처음 접하는 입장에서는 직관적인 방법이 아니라고 생각이 들 수 있습니다. 그렇지만 스타일과 구조의 분리가 오히려 복잡도의 증가를 일으킬 수 있습니다. 그러나 Styled-Components는 이러한 문제를 자바스크립트의 기능을 이용하여 해결하였습니다.
 
 ## Code samples
 
@@ -216,13 +266,13 @@ export default App;
 ```
 
 {:.center}
-![img5](/assets/images/posts/react-styled-components/5.png)
+![img4](/assets/images/posts/react-styled-components/4.png)
 
 ### Global Style
 
-```javascript
-body를 위해서 컴포넌트를 만들 필요가 없습니다.
+- body를 위해서 컴포넌트를 만들 필요가 없습니다.
 
+```javascript
     import React from "react";
     import styled, { createGlobalStyle } from "styled-components";
 
@@ -247,7 +297,7 @@ body를 위해서 컴포넌트를 만들 필요가 없습니다.
 ```
 
 {:.center}
-![img6](/assets/images/posts/react-styled-components/6.png)
+![img5](/assets/images/posts/react-styled-components/5.png)
 
 혹은 전역으로 font-family를 다음과 같이 설정할수도 있습니다.
 
@@ -262,9 +312,8 @@ const GlobalStyles = createGlobalStyle`
 
 ### Extension
 
-컴포넌트를 재활용하면서 추가 html 태그를 부여하고 싶을 때 기존 컴포넌트를 확장해서 새로운 태그를 만들 수 있습니다.
-
-ex) 버튼을 앵커, 링크로 사용하고 싶을 때
+- 컴포넌트를 재활용하면서 추가 html 태그를 부여하고 싶을 때 기존 컴포넌트를 확장해서 새로운 태그를 만들 수 있습니다.
+  ex) 버튼을 앵커, 링크로 사용하고 싶을 때
 
 ```javascript
     import React from "react";
@@ -311,11 +360,9 @@ const Anchor = styled(Button.withComponent("a"))`
 
 ### Animation
 
-keyframes를 import 합니다. CSS3의 keyframes와 같은 기능입니다. 각 프레임의 스타일을 정의하는 것과 동일합니다.
-
-props를 통해 rotateAni일 경우 animation CSS가 작동하도록 하였습니다.
-
-역시 props를 통해 duration과 같은 속성값을 넘겨줄 수 있습니다.
+- keyframes를 import 합니다. CSS3의 keyframes와 같은 기능입니다. 각 프레임의 스타일을 정의하는 것과 동일합니다.
+- props를 통해 rotateAni일 경우 animation CSS가 작동하도록 하였습니다.
+- 역시 props를 통해 duration과 같은 속성값을 넘겨줄 수 있습니다.
 
 ```javascript
     import React from "react";
@@ -370,11 +417,11 @@ props를 통해 rotateAni일 경우 animation CSS가 작동하도록 하였습�
 ```
 
 {:.center}
-![img7](/assets/images/posts/react-styled-components/7.png)
+![img6](/assets/images/posts/react-styled-components/6.png)
 
 ### Extra Attributes
 
-custom attribute를 부여하고 싶을 때 attrs 메소드를 사용합니다.
+- custom attribute를 부여하고 싶을 때 attrs 메소드를 사용합니다.
 
 ```javascript
     import React from "react";
@@ -404,7 +451,7 @@ custom attribute를 부여하고 싶을 때 attrs 메소드를 사용합니다.
 
 ### Nesting
 
-특정 부모 컴포넌트에서 자식 컴포넌트는 스타일 속성을 특정하게 부여받을 수 있습니다.
+- 특정 부모 컴포넌트에서 자식 컴포넌트는 스타일 속성을 특정하게 부여받을 수 있습니다.
 
 ```javascript
     const Card = styled.div`
@@ -423,11 +470,9 @@ custom attribute를 부여하고 싶을 때 attrs 메소드를 사용합니다.
 
 ### Mixin and Group
 
-CSS 그룹을 의미합니다.
-
-다중 상속이 가능하므로 재사용 가능한 스타일들을 유연하게 사용할 수 있습니다.
-
-CSS 키워드로 CSS 블록을 만들고 사용할 컨테이너에서 적용 가능하며 재사용 가능합니다.
+- CSS 그룹을 의미합니다.
+- 다중 상속이 가능하므로 재사용 가능한 스타일들을 유연하게 사용할 수 있습니다.
+- CSS 키워드로 CSS 블록을 만들고 사용할 컨테이너에서 적용 가능하며 재사용 가능합니다.
 
 ```javascript
 const Sticky = css`
@@ -463,7 +508,7 @@ const Navigation = styled.nav`
 실제로 디자이너가 10개의 모양과 색상이 다른 원 모양의 디자인을 주문할 때 순수 CSS라면 많은 CSS 클래스를 만들어야 하지만 Mixin을 이용하면 간단하고 직관적으로 스타일을 할 수가 있습니다.
 
 {:.center}
-![img8](/assets/images/posts/react-styled-components/8.png)
+![img7](/assets/images/posts/react-styled-components/7.png)
 
 ```javascript
 const RingVariant = (radius, stroke = "10") => css`
@@ -498,10 +543,10 @@ const ShapeRing2 = styled.div`
 소개페이지 특성상 원페이지로 작성되고 폼마다 좌우 마진이 일정하고 반복되는 스타일이 많기 때문에 재활용에 가장 큰 이점을 가집니다. 더는 CSS 코드를 컴포넌트별로 불필요하게 생산할 필요가 없습니다.
 
 {:.center}
-![img9](/assets/images/posts/react-styled-components/9.png)
+![img8](/assets/images/posts/react-styled-components/8.png)
 
 {:.center}
-![img10](/assets/images/posts/react-styled-components/10.png)
+![img9](/assets/images/posts/react-styled-components/9.png)
 
 아래 형식으로 스타일된 컴포넌트를 구성하고 랜더링을 하는 컴포넌트들에서 import 하여 사용할수있습니다.
 
@@ -534,17 +579,14 @@ export const FeatureDesc = styled.div`
 아래 코드는 스크롤 위치에 따라 bool 값이 props로 넘어오며 그에 따라 애니메이션을 작동시키는 로직입니다.
 
 {:.center}
-![img11](/assets/images/posts/react-styled-components/11.png)
+![img10](/assets/images/posts/react-styled-components/10.png)
 
 ### Theme
 
-색상 혹은 색상 팔레트를 이용한 글로벌 작업 혹은 글로벌한 정의가 필요한 스타일이 있으면 Redux처럼 사용이 가능합니다.
-
-ThemeProvider를 import 합니다.
-
-모든 컴포넌트를 ThemeProvider에 연결해야합니다.
-
-컴포넌트에 props로 글로벌 정의한 스타일을 가져옵니다.
+- 색상 혹은 색상 팔레트를 이용한 글로벌 작업 혹은 글로벌한 정의가 필요한 스타일이 있으면 Redux처럼 사용이 가능합니다.
+- ThemeProvider를 import 합니다.
+- 모든 컴포넌트를 ThemeProvider에 연결해야합니다.
+- 컴포넌트에 props로 글로벌 정의한 스타일을 가져옵니다.
 
 ```javascript
 theme.js;
@@ -609,8 +651,16 @@ theme을 보다 쉽게 관리할수있는 Styled-Components의 확장 tool입니
 각 모드의 색상을 미리 정의하고 props값 단 하나의 변화로 전역으로 설정된 모든 컴포넌트의 색상이 해당 모드에 맞게 변경됩니다.
 
 {:.center}
-![img12](/assets/images/posts/react-styled-components/12.png)
+![img11](/assets/images/posts/react-styled-components/11.png)
 
 # Result
 
-기존의 모듈을 이용한 스타일 방식 혹은 SASS나 LESS를 이용한 CSS 구조 설계와 같은 방식들은 유용하기는 하지만 CSS 언어 자체의 문제로 인해 제공되는 기능이 꽤 제한적이라고 생각했습니다. 이런 문제를 해결하고자 스타일링의 또 다른 패러다임인 'CSS-in-JS'가 등장했고 리액트를 다루는 개발자라면 Styled-Components는 알아두는 편이 좋다고 생각합니다.
+결과적으로 본문에서 언급한 Sass나 Less를 이용한 CSS 구조 설계와 같은 방식들이 유용하기는 하지만 조건부 스타일링의 방법 등 여전히 제한적인 문제가 있었습니다. 그러나 Styled-Components 라이브러리는 위의 문제들을 해결할 수 있는 방법을 제시하고 있습니다.
+
+다음과 같은 고민을 하고 있는 리액트 개발자라면 Styled-Components를 사용해 볼 것을 추천합니다.
+
+- CSS 작업 시 SASS, LESS 혹은 Webpack을 이용한 구조화 작업에서 시간을 엄청나게 소비한 적이 있을 때
+- CSS 파일 새로 만들고, 클래스명 만들고, 컴포넌트에서 CSS 파일을 왔다 갔다 하면서 시간을 소비한 적이 있을 때
+- Sass를 좋아하고 Nesting, variable, Mixin을 사용하고 싶을 때
+
+마지막으로 CSS의 계속되는 진화로 인해 개발 방법 또한 바뀌고 있습니다. 순수 CSS, Sass, CSS 모듈, Styled-Components 등으로 발전되는 형태에서 무조건 최신의 기술을 사용해야 하는 법은 없습니다. **개발자의 코드에 최적으로 정의된 스타일링 방법을 따라갈 수는 없다고 생각합니다.** 그럼에도 불구하고 개발자라면 최신의 기술을 알고 추구하는 것이 더 나은 개발자가 되는 길이라고 생각합니다.
