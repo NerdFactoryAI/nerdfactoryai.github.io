@@ -49,6 +49,8 @@ draft: "no"
 
 그래도 가족분들의 미소와 손 잡고 응원한다며 내년에도 초대해달라는 멋진 말씀을 들으며 이번 행사 준비하길 정말 잘했다고 혼자 굉장히 뿌듯해 했습니다. 저 뿐만 아니라 너드팩토리의 구성원 모두 즐거움이 가득했으리라 믿으며, 행사 당일 스냅 사진과 하이라이트 영상 방출합니다. (사진과 영상 촬영해준 데이지님, 도로시님 감사드리며 영상은 제일 밑에 있습니다!)
 
+[원본 사진 다운로드](/assets/images/posts/nerdfactory-family-day-2019/NerdFactory_Familyday_2019.zip){:target="_blank"}{:.markdown-link-body}
+
 {:.center}
 ![img4](/assets/images/posts/nerdfactory-family-day-2019/5.jpg)
 
