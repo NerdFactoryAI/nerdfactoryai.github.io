@@ -5,13 +5,13 @@ author: ["백승빈"]
 date:   2019-12-18
 abstract: "너드팩토리가 브랜드로 런칭된 지 3년차를 맞이해 우리에게 가장 소중한, 가족 분들을 모시고 패밀리데이를 진행했습니다. 너드팩토리의 구성원인 가족이 어디에서 어떻게 어떤 일을 하고 있는지 소개하고 만나뵐 수 있는 소중한 시간이었습니다."
 tags: ["패밀리데이", "Nerd Family", "너드팩토리 패밀리데이"]
-image: /assets/images/posts/nerdfactory-family-day-2019/0.jpg
+image: http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/0.jpg
 draft: "no"	
 
 ---
 
 {:.center}
-![img0](/assets/images/posts/nerdfactory-family-day-2019/0.jpg)
+![img0](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/0.jpg)
 
 # 배경
 
@@ -24,7 +24,7 @@ draft: "no"
 사실 갑자기 추진하려다 보니 난제도 많았습니다. 여러 행사와 모임이 있는 연말까지 늦출 수는 없어 이야기가 나온 바로 일주일 뒤에 진행하기로 했고, PT준비부터 다과, 현수막 준비 등 많은 걸 보여드리고 더 풍성한 내용으로 차리고 싶었던 저희의 마음은 급해지기만 했습니다. 다행스럽게도 1층 아로파홀이 연말 준비를 위해 크리스마스 느낌을 내고 있어 우리는 우리 본연의 모습을 보여드리는 것에 집중하고 지금부터 할 수 있는 것에 집중하여 잘 준비하는 것을 목표로 했습니다.
 
 {:.center}
-![img1](/assets/images/posts/nerdfactory-family-day-2019/1.jpg)
+![img1](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/1.jpg)
 
 행사 당일이 되자 떨림과 설렘은 모두 발표자인 제 몫이었고 구성원들은 한껏 들뜬 마음으로 가족들과 연락을 주고 받으며 마지막 준비에 박차를 가했습니다. 가족들의 위치를 묻고, 언제 오는지 연락하며 기대하는 구성원들의 표정을 보며 잘 해야한다는 부담감과 압박감도 느꼈지만 어차피 이렇게 된 것 즐기자는 마음가짐으로 조금씩 부담을 즐기기 시작했습니다.
 
@@ -35,13 +35,13 @@ draft: "no"
 그렇게 준비된 발표가 끝나고 사무실을 구경하며 둘러보실 수 있는 투어가 시작되었습니다. 직접 눈으로 우리 가족이 일하는 사무실을 마주하시자 새롭고 신선한 충격을 받으신 것 같았습니다. 워낙 자유로운 느낌의 회사가 신기하다고 여기시는 분부터 아늑하다는 분까지 다양한 감상평을 남겨주셨습니다.
 
 {:.center}
-![img2](/assets/images/posts/nerdfactory-family-day-2019/2.jpg)
+![img2](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/2.jpg)
 
 {:.center}
-![img3](/assets/images/posts/nerdfactory-family-day-2019/3.jpg)
+![img3](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/3.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/4.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/4.jpg)
 
 # 회고
 
@@ -52,58 +52,58 @@ draft: "no"
 [원본 사진 다운로드](/assets/images/posts/nerdfactory-family-day-2019/NerdFactory_Familyday_2019.zip){:target="_blank"}{:.markdown-link-body}
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/5.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/5.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/6.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/6.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/7.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/7.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/8.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/8.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/9.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/9.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/10.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/10.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/11.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/11.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/12.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/12.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/13.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/13.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/15.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/15.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/16.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/16.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/17.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/17.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/18.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/18.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/19.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/19.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/20.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/20.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/21.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/21.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/22.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/22.jpg)
 
 {:.center}
-![img4](/assets/images/posts/nerdfactory-family-day-2019/23.jpg)
+![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/23.jpg)
 
 {:.center}
 <div class="ytplayer-wrapper">
