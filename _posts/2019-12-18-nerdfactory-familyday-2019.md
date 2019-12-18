@@ -2,7 +2,7 @@
 layout: post
 title:  "2019 패밀리데이"
 author: ["백승빈"]
-date:   2019-12-16 08:07:00 -0600
+date:   2019-12-18
 abstract: "너드팩토리가 브랜드로 런칭된 지 3년차를 맞이해 우리에게 가장 소중한, 가족 분들을 모시고 패밀리데이를 진행했습니다. 너드팩토리의 구성원인 가족이 어디에서 어떻게 어떤 일을 하고 있는지 소개하고 만나뵐 수 있는 소중한 시간이었습니다."
 tags: ["패밀리데이", "Nerd Family", "너드팩토리 패밀리데이"]
 image: /assets/images/posts/nerdfactory-family-day-2019/0.jpg
@@ -103,4 +103,9 @@ draft: "no"
 {:.center}
 ![img4](/assets/images/posts/nerdfactory-family-day-2019/23.jpg)
 
-[![Video Label](http://img.youtube.com/vi/876bnRDgzB8/0.jpg)](https://youtu.be/876bnRDgzB8=0s) 
+{:.center}
+<div class="ytplayer-wrapper">
+  <iframe id="ytplayer" type="text/html"
+    src="https://www.youtube.com/embed/876bnRDgzB8?autoplay=0&origin=https://youtu.be/876bnRDgzB8"
+    frameborder="0"></iframe>
+</div>
