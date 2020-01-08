@@ -3,7 +3,7 @@ layout: post
 title: "ict 인턴십 수기"
 author: ["ict_daisy"]
 date: 2019-12-20
-abstract: "ict 인턴십 기간동안 경험한 것들"
+abstract: "너드팩토리에서 PO(Product Owner) 어시를 맡고있는 데이지 입니다. 제가 ict 인턴십을 통해 너드팩토리에서 4개월 조금 안되는 기간동안 한 경험을 소개해드릴게요! 너드팩토리의 문화에 관심이 있거나 궁금하신 분들이 읽으시면 좋을 것 같습니다."
 tags: ["ict인턴십", "nerdfactory", "daisy"]
 image: /assets/images/posts/digging-ict-internship/0.jpg
 draft: "no"
