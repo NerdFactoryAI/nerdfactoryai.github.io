@@ -240,9 +240,10 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   github-pages
 
 BUNDLED WITH
-   1.17.2
+   2.2.0
