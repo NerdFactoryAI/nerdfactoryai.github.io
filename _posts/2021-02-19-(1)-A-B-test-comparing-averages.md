@@ -2,7 +2,7 @@
 layout: post
 title: "(1) 평균을 비교하는 A/B 테스트"
 author: ["최동희"]
-date: 2021-02-19
+date: 2020-12-24
 abstract: "환경오염 관련 이슈가 핫 했던 90년대 말, 초등학교 방학숙제로 세탁세제가 식물의 성장에 미치는 영향에 대해 실험을 했던 기억이 있습니다. 아마도 세탁세제가 풀린 물에서 자라는 식물과, 생수에서 자라는 식물의 평균 길이를 비교하려 했던 것 같습니다."
 tags: ["A/B test", "statistics"]
 image: /assets/images/posts/(1)ABtesting-comparing-averages/0.png
