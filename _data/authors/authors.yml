@@ -5,24 +5,52 @@
   tag: ["Product Owner"]
   email: "david@nerdfactory.ai"
   photo: "/assets/images/authors/bsb-1.png"
+김인철:
+  kor-name: "김인철"
+  eng-name: "Chris"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "chris@nerdfactory.ai"
+  photo: "/assets/images/authors/chris.png"
 최동희:
   kor-name: "최동희"
   eng-name: "Daniel"
-  graduate: "울산과학기술원 석사"
+  graduate: "-"
   tag: ["Product Owner"]
   email: "dan.choi@nerdfactory.ai"
   photo: "/assets/images/authors/cdh-1.png"
+고지훈:
+  kor-name: "고지훈"
+  eng-name: "June"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "june@nerdfactory.ai"
+  photo: "/assets/images/authors/ict_june.png"
+김기강:
+  kor-name: "김기강"
+  eng-name: "Alton"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "alton15@nerdfactory.ai"
+  photo: "/assets/images/authors/alton.png"
+조은성:
+  kor-name: "조은성"
+  eng-name: "Lucas"
+  graduate: "-"
+  tag: ["AI Recommend System Engineer"]
+  email: "lucas@nerdfactory.ai"
+  photo: "/assets/images/authors/lucas.png"
 황종택:
   kor-name: "황종택"
   eng-name: "Sam"
-  graduate: "충남대학교 석사 수료"
+  graduate: "-"
   tag: ["Software Engineer"]
   email: "sam@nerdfactory.ai"
   photo: "/assets/images/authors/hjt-1.png"
 이지훈:
   kor-name: "이지훈"
   eng-name: "Allen"
-  graduate: "금오공과대학교 학사"
+  graduate: "-"
   tag: ["Software Engineer / Android Developer"]
   email: "jihun3353@nerdfactory.ai"
   photo: "/assets/images/authors/ljh-1.png"
@@ -36,7 +64,7 @@
 차금강:
   kor-name: "차금강"
   eng-name: "Kevin"
-  graduate: "한국과학기술원 박사과정"
+  graduate: "-"
   tag: ["Machine Learning Engineer"]
   email: "chagmgang@nerdfactory.ai"
   photo: "/assets/images/authors/ckg-1.png"
@@ -74,7 +102,7 @@ chris:
   graduate: "전북대학교 재학"
   tag: ["Machine Learning Assistant"]
   email: "chris.lee.jw93@gmail.com"
-  photo: "/assets/images/authors/chris.png"
+  photo: "/assets/images/authors/ict-chris.png"
 jason:
   kor-name: "이정우"
   eng-name: "Jason"
@@ -124,3 +152,24 @@ ict_daisy:
   tag: ["Product Ownership Assistant"]
   email: "birdmi97@gmail.com"
   photo: "/assets/images/authors/ict_daisy.png"
+cnu_buster:
+  kor-name: "오재성"
+  eng-name: "Buster"
+  graduate: "-"
+  tag: ["Machine Learning Assistant"]
+  email: "lojskih@naver.com"
+  photo: "/assets/images/authors/cnu_buster.png"
+cnu_jo:
+  kor-name: "조윤혁"
+  eng-name: "Jo"
+  graduate: "-"
+  tag: ["Machine Learning Assistant"]
+  email: "whfprl10@gmail.com"
+  photo: "/assets/images/authors/cnu_jo.png"
+cnu_hobbs:
+  kor-name: "김민중"
+  eng-name: "Hobbs"
+  graduate: "-"
+  tag: ["Backend Assistant"]
+  email: "mjmj1025@naver.com"
+  photo: "/assets/images/authors/cnu_hobbs.png"
