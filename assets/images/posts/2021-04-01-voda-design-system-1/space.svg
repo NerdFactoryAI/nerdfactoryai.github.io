@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="141" viewBox="0 0 350 141">
+  <g id="space" transform="translate(-703 -281)">
+    <rect id="사각형_1029" data-name="사각형 1029" width="350" height="1" rx="0.5" transform="translate(703 311)" fill="#f5f5f5"/>
+    <text id="space-2" data-name="space" transform="translate(703 297)" fill="#424242" font-size="14" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Space</tspan></text>
+    <g id="그룹_20" data-name="그룹 20">
+      <rect id="사각형_1044" data-name="사각형 1044" width="4" height="4" transform="translate(703 378)" fill="#616161"/>
+      <text id="xxs" transform="translate(703 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">xxs</tspan></text>
+      <text id="_4px" data-name="4px" transform="translate(703 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">4px</tspan></text>
+    </g>
+    <g id="그룹_19" data-name="그룹 19" transform="translate(12)">
+      <rect id="사각형_1045" data-name="사각형 1045" width="8" height="8" transform="translate(742 374)" fill="#616161"/>
+      <text id="XS" transform="translate(742 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">xs</tspan></text>
+      <text id="_8px" data-name="8px" transform="translate(742 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">8px</tspan></text>
+    </g>
+    <g id="그룹_18" data-name="그룹 18" transform="translate(24)">
+      <rect id="사각형_1046" data-name="사각형 1046" width="16" height="16" transform="translate(781 366)" fill="#616161"/>
+      <text id="sm" transform="translate(781 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">sm</tspan></text>
+      <text id="_16px" data-name="16px" transform="translate(781 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">16px</tspan></text>
+    </g>
+    <g id="그룹_17" data-name="그룹 17" transform="translate(36)">
+      <rect id="사각형_1047" data-name="사각형 1047" width="20" height="20" transform="translate(827 362)" fill="#616161"/>
+      <text id="Md" transform="translate(827 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">md</tspan></text>
+      <text id="_20px" data-name="20px" transform="translate(827 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">20px</tspan></text>
+    </g>
+    <g id="그룹_21" data-name="그룹 21" transform="translate(48)">
+      <text id="lg" transform="translate(873 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">lg</tspan></text>
+      <rect id="사각형_1048" data-name="사각형 1048" width="40" height="40" transform="translate(873 342)" fill="#616161"/>
+      <text id="_40px" data-name="40px" transform="translate(873 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">40px</tspan></text>
+    </g>
+    <g id="그룹_15" data-name="그룹 15">
+      <rect id="사각형_1049" data-name="사각형 1049" width="60" height="60" transform="translate(993 322)" fill="#616161"/>
+      <text id="xl" transform="translate(993 403)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">xl</tspan></text>
+      <text id="_60px" data-name="60px" transform="translate(993 419)" fill="#757575" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">60px</tspan></text>
+    </g>
+  </g>
+</svg>

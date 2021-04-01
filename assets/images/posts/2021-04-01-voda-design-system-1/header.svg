@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="603" height="419" viewBox="0 0 603 419">
+  <g id="header" transform="translate(-40 -178)">
+    <rect id="사각형_2" data-name="사각형 2" width="603" height="87" rx="8" transform="translate(40 219)" fill="#f5f5f5"/>
+    <rect id="사각형_14" data-name="사각형 14" width="600" height="1" rx="0.5" transform="translate(40 208)" fill="#f5f5f5"/>
+    <text id="Header_1" data-name="Header 1" transform="translate(60 275)" fill="#424242" font-size="32" font-family="NotoSansKR-Black, Noto Sans KR" font-weight="800"><tspan x="0" y="0">Header 1</tspan></text>
+    <text id="Header-2" data-name="Header" transform="translate(40 194)" fill="#424242" font-size="14" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Header</tspan></text>
+    <text id="Noto_sans_kr_block_32px" data-name="Noto sans kr / block/ 32px" transform="translate(220 275)" fill="#424242" font-size="32" font-family="NotoSansKR-Black, Noto Sans KR" font-weight="800"><tspan x="0" y="0">Noto Sans Kr / Block/ 32px</tspan></text>
+    <rect id="사각형_3" data-name="사각형 3" width="603" height="87" rx="8" transform="translate(40 316)" fill="#f5f5f5"/>
+    <text id="Header_2" data-name="Header 2" transform="translate(60 369)" fill="#424242" font-size="24" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Header 2</tspan></text>
+    <text id="Noto_sans_kr_bold_24px" data-name="Noto sans kr / bold / 24px" transform="translate(220 369)" fill="#424242" font-size="24" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Noto Sans Kr / Bold / 24px</tspan></text>
+    <rect id="사각형_4" data-name="사각형 4" width="603" height="87" rx="8" transform="translate(40 413)" fill="#f5f5f5"/>
+    <text id="Header_3" data-name="Header 3" transform="translate(60 464)" fill="#424242" font-size="20" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Header 3</tspan></text>
+    <text id="Noto_sans_kr_bold_20px" data-name="Noto sans kr / bold / 20px" transform="translate(220 464)" fill="#424242" font-size="20" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Noto Sans Kr / Bold / 20px</tspan></text>
+    <rect id="사각형_5" data-name="사각형 5" width="603" height="87" rx="8" transform="translate(40 510)" fill="#f5f5f5"/>
+    <text id="Header_4" data-name="Header 4" transform="translate(60 560)" fill="#424242" font-size="16" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Header 4</tspan></text>
+    <text id="Noto_sans_kr_bold_16px" data-name="Noto sans kr / bold / 16px" transform="translate(220 560)" fill="#424242" font-size="16" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Noto sans kr / bold / 16px</tspan></text>
+  </g>
+</svg>

@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "2019 패밀리데이"
+title: "2019 패밀리데이"
 author: ["백승빈"]
-date:   2019-12-18
+date: 2019-12-18
 abstract: "너드팩토리가 브랜드로 런칭된 지 3년차를 맞이해 우리에게 가장 소중한, 가족 분들을 모시고 패밀리데이를 진행했습니다. 너드팩토리의 구성원인 가족이 어디에서 어떻게 어떤 일을 하고 있는지 소개하고 만나뵐 수 있는 소중한 시간이었습니다."
 tags: ["패밀리데이", "Nerd Family", "너드팩토리 패밀리데이"]
 image: http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/0.jpg
-draft: "no"	
-
+draft: "no"
 ---
 
 {:.center}
@@ -16,8 +15,6 @@ draft: "no"
 # 배경
 
 너드팩토리는 독특한 이름을 가지고 있습니다. 특히 가족분들은 '너드'라는 단어가 생소하고 그 뜻이 이해하기 힘든 난해함을 가지고 있어 구성원들이 우리를 가족들에게 소개하기 어렵다는 문제를 토로해왔습니다. 사실 가족이란 구성원 개인 삶의 원동력인 만큼 너드팩토리는 이 문제가 그냥 지나칠 문제가 아니라고 생각하고 어떻게 이 문제를 해결할 수 있을지 고민했습니다. 사실 어떤 솔루션이 제시되어도 결국 '백문이불여일견'이라는 것에 모두가 동의하고 2019년 송년회는 가족과 함께 우리를 보여주자는 이야기에 모두 동의했습니다.
-
-
 
 # 패밀리 데이
 
@@ -49,10 +46,7 @@ draft: "no"
 
 그래도 가족분들의 미소와 손 잡고 응원한다며 내년에도 초대해달라는 멋진 말씀을 들으며 이번 행사 준비하길 정말 잘했다고 혼자 굉장히 뿌듯해 했습니다. 저 뿐만 아니라 너드팩토리의 구성원 모두 즐거움이 가득했으리라 믿으며, 행사 당일 스냅 사진과 하이라이트 영상 방출합니다. (사진과 영상 촬영해준 데이지님, 도로시님 감사드리며 영상은 제일 밑에 있습니다!)
 
-[원본 사진 다운로드](/assets/images/posts/nerdfactory-family-day-2019/NerdFactory_Familyday_2019.zip){:target="_blank"}{:.markdown-link-body}
-
-{:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/5.jpg)
+[원본 사진 다운로드](/assets/images/posts/nerdfactory-family-day-2019/NerdFactory_Familyday_2019.zip){:target="\_blank"}{:.markdown-link-body}
 
 {:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/6.jpg)
@@ -67,19 +61,10 @@ draft: "no"
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/9.jpg)
 
 {:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/10.jpg)
-
-{:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/11.jpg)
 
 {:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/12.jpg)
-
-{:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/13.jpg)
-
-{:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/15.jpg)
 
 {:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/16.jpg)
@@ -94,20 +79,7 @@ draft: "no"
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/19.jpg)
 
 {:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/20.jpg)
-
-{:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/21.jpg)
 
 {:.center}
 ![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/22.jpg)
-
-{:.center}
-![img4](http://demo-media.nerdfactory.ai/blog-images/nerdfactory-familyday-2019/23.jpg)
-
-{:.center}
-<div class="ytplayer-wrapper">
-  <iframe id="ytplayer" type="text/html"
-    src="https://www.youtube.com/embed/876bnRDgzB8?autoplay=0&origin=https://youtu.be/876bnRDgzB8"
-    frameborder="0"></iframe>
-</div>

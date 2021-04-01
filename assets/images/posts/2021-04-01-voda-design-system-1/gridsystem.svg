@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="201" viewBox="0 0 350 201">
+  <g id="그리드_시스템" data-name="그리드 시스템" transform="translate(-1280 -798)">
+    <rect id="사각형_1029" data-name="사각형 1029" width="350" height="1" rx="0.5" transform="translate(1280 828)" fill="#f5f5f5"/>
+    <text id="grid_system" data-name="grid system" transform="translate(1280 814)" fill="#424242" font-size="14" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Grid System</tspan></text>
+    <g id="그룹_11" data-name="그룹 11" transform="translate(-50)">
+      <rect id="사각형_1031" data-name="사각형 1031" width="20" height="160" transform="translate(1330 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-2" data-name="사각형 1031" width="20" height="160" transform="translate(1360 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-3" data-name="사각형 1031" width="20" height="160" transform="translate(1390 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-4" data-name="사각형 1031" width="20" height="160" transform="translate(1420 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-5" data-name="사각형 1031" width="20" height="160" transform="translate(1450 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-6" data-name="사각형 1031" width="20" height="160" transform="translate(1480 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-7" data-name="사각형 1031" width="20" height="160" transform="translate(1510 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-8" data-name="사각형 1031" width="20" height="160" transform="translate(1540 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-9" data-name="사각형 1031" width="20" height="160" transform="translate(1570 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-10" data-name="사각형 1031" width="20" height="160" transform="translate(1600 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-11" data-name="사각형 1031" width="20" height="160" transform="translate(1630 839)" fill="#f16464" opacity="0.4"/>
+      <rect id="사각형_1031-12" data-name="사각형 1031" width="20" height="160" transform="translate(1660 839)" fill="#f16464" opacity="0.4"/>
+    </g>
+    <g id="그룹_12" data-name="그룹 12" transform="translate(-58)">
+      <rect id="사각형_1032" data-name="사각형 1032" width="80" height="24" transform="translate(1338 847)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1033" data-name="사각형 1033" width="80" height="24" transform="translate(1338 943)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1034" data-name="사각형 1034" width="110" height="24" transform="translate(1338 879)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1035" data-name="사각형 1035" width="170" height="24" transform="translate(1338 911)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1036" data-name="사각형 1036" width="260" height="24" transform="translate(1428 943)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1037" data-name="사각형 1037" width="350" height="24" transform="translate(1338 975)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1038" data-name="사각형 1038" width="170" height="24" transform="translate(1518 911)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1039" data-name="사각형 1039" width="110" height="24" transform="translate(1458 879)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1040" data-name="사각형 1040" width="110" height="24" transform="translate(1578 879)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1041" data-name="사각형 1041" width="80" height="24" transform="translate(1428 847)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1042" data-name="사각형 1042" width="80" height="24" transform="translate(1518 847)" fill="#1da0e1" opacity="0.3"/>
+      <rect id="사각형_1043" data-name="사각형 1043" width="80" height="24" transform="translate(1608 847)" fill="#1da0e1" opacity="0.3"/>
+      <text id="_25_" data-name="25%" transform="translate(1369 863)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">25%</tspan></text>
+      <text id="_25_2" data-name="25%" transform="translate(1369 959)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">25%</tspan></text>
+      <text id="_33_" data-name="33%" transform="translate(1384 895)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">33%</tspan></text>
+      <text id="_50_" data-name="50%" transform="translate(1414 927)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">50%</tspan></text>
+      <text id="_50_2" data-name="50%" transform="translate(1594 927)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">50%</tspan></text>
+      <text id="_75_" data-name="75%" transform="translate(1549 959)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">75%</tspan></text>
+      <text id="_100_" data-name="100%" transform="translate(1501 991)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">100%</tspan></text>
+      <text id="_33_2" data-name="33%" transform="translate(1502 895)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">33%</tspan></text>
+      <text id="_33_3" data-name="33%" transform="translate(1622 895)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">33%</tspan></text>
+      <text id="_25_3" data-name="25%" transform="translate(1459 863)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">25%</tspan></text>
+      <text id="_25_4" data-name="25%" transform="translate(1547 863)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">25%</tspan></text>
+      <text id="_25_5" data-name="25%" transform="translate(1639 863)" fill="#424242" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">25%</tspan></text>
+    </g>
+  </g>
+</svg>

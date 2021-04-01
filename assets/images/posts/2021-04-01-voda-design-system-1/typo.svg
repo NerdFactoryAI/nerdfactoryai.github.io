@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="603" height="105" viewBox="0 0 603 105">
+  <g id="typo" transform="translate(-40 -40)">
+    <text id="가" transform="translate(42 86)" fill="#424242" font-size="10" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_10" data-name="10" transform="translate(40 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">10</tspan></text>
+    <text id="가-2" data-name="가" transform="translate(117 86)" fill="#424242" font-size="12" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_12" data-name="12" transform="translate(116 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">12</tspan></text>
+    <text id="_14" data-name="14" transform="translate(193 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">14</tspan></text>
+    <text id="가-3" data-name="가" transform="translate(193 86)" fill="#424242" font-size="14" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_16" data-name="16" transform="translate(270 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">16</tspan></text>
+    <text id="가-4" data-name="가" transform="translate(269 86)" fill="#424242" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_20" data-name="20" transform="translate(350 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">20</tspan></text>
+    <text id="가-5" data-name="가" transform="translate(347 86)" fill="#424242" font-size="20" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_24" data-name="24" transform="translate(433 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">24</tspan></text>
+    <text id="가-6" data-name="가" transform="translate(428 86)" fill="#424242" font-size="24" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_32" data-name="32" transform="translate(522 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">32</tspan></text>
+    <text id="가-7" data-name="가" transform="translate(514 86)" fill="#424242" font-size="32" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <text id="_40" data-name="40" transform="translate(618 119)" fill="#9e9e9e" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">40</tspan></text>
+    <text id="가-8" data-name="가" transform="translate(606 86)" fill="#424242" font-size="40" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">가</tspan></text>
+    <rect id="사각형_1" data-name="사각형 1" width="603" height="1" transform="translate(40 93)" fill="#e0e0e0"/>
+    <rect id="사각형_2" data-name="사각형 2" width="103" height="1" transform="translate(40 138)" fill="#e0e0e0"/>
+    <rect id="사각형_3" data-name="사각형 3" width="103" height="1" transform="translate(173 138)" fill="#e0e0e0"/>
+    <rect id="사각형_11" data-name="사각형 11" width="66" height="1" transform="translate(277 138)" fill="#e0e0e0"/>
+    <rect id="사각형_4" data-name="사각형 4" width="66" height="1" transform="translate(373 138)" fill="#e0e0e0"/>
+    <rect id="사각형_5" data-name="사각형 5" width="87" height="1" transform="translate(556 138)" fill="#e0e0e0"/>
+    <rect id="사각형_12" data-name="사각형 12" width="86" height="1" transform="translate(440 138)" fill="#e0e0e0"/>
+    <text id="_2px" data-name="+2px" transform="translate(147 142)" fill="#9e9e9e" font-size="10" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">+2px</tspan></text>
+    <text id="_4px" data-name="+4px" transform="translate(347 142)" fill="#9e9e9e" font-size="10" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">+4px</tspan></text>
+    <text id="_8px" data-name="+8px" transform="translate(530 142)" fill="#9e9e9e" font-size="10" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">+8px</tspan></text>
+    <rect id="사각형_6" data-name="사각형 6" width="1" height="5" transform="translate(40 136)" fill="#e0e0e0"/>
+    <rect id="사각형_9" data-name="사각형 9" width="1" height="5" transform="translate(276 136)" fill="#e0e0e0"/>
+    <rect id="사각형_10" data-name="사각형 10" width="1" height="5" transform="translate(439 136)" fill="#e0e0e0"/>
+    <rect id="사각형_13" data-name="사각형 13" width="1" height="5" transform="translate(642 136)" fill="#e0e0e0"/>
+  </g>
+</svg>

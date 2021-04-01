@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="353" height="92" viewBox="0 0 353 92">
+  <g id="브레이크포인트" transform="translate(-1280 -648)">
+    <g id="그룹_23" data-name="그룹 23">
+      <g id="icon_desktop" transform="translate(1291 689)">
+        <rect id="사각형_1016" data-name="사각형 1016" width="24" height="24" fill="none"/>
+        <path id="패스_734" data-name="패스 734" d="M22.818,2H3.182A2.2,2.2,0,0,0,1,4.2V17.4a2.2,2.2,0,0,0,2.182,2.2h7.636L8.636,22.9V24h8.727V22.9l-2.182-3.3h7.636A2.2,2.2,0,0,0,25,17.4V4.2A2.2,2.2,0,0,0,22.818,2Zm0,13.2H3.182V4.2H22.818Z" transform="translate(-1 -1)" fill="#9e9e9e"/>
+      </g>
+      <text id="_1920px" data-name="1920px" transform="translate(1280 736)" fill="#9e9e9e" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">1920px</tspan></text>
+    </g>
+    <g id="그룹_22" data-name="그룹 22" transform="translate(-17)">
+      <g id="icon_desktop-2" data-name="icon_desktop" transform="translate(1461 689)">
+        <rect id="사각형_1016-2" data-name="사각형 1016" width="24" height="24" fill="none"/>
+        <path id="패스_734-2" data-name="패스 734" d="M22.818,2H3.182A2.2,2.2,0,0,0,1,4.2V17.4a2.2,2.2,0,0,0,2.182,2.2h7.636L8.636,22.9V24h8.727V22.9l-2.182-3.3h7.636A2.2,2.2,0,0,0,25,17.4V4.2A2.2,2.2,0,0,0,22.818,2Zm0,13.2H3.182V4.2H22.818Z" transform="translate(-1 -1)" fill="#9e9e9e"/>
+      </g>
+      <text id="_1440px" data-name="1440px" transform="translate(1450 736)" fill="#9e9e9e" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">1440px</tspan></text>
+    </g>
+    <g id="그룹_24" data-name="그룹 24" transform="translate(-114)">
+      <g id="icon_desktop-3" data-name="icon_desktop" transform="translate(1711 689)">
+        <rect id="사각형_1016-3" data-name="사각형 1016" width="24" height="24" fill="none"/>
+        <path id="패스_734-3" data-name="패스 734" d="M22.818,2H3.182A2.2,2.2,0,0,0,1,4.2V17.4a2.2,2.2,0,0,0,2.182,2.2h7.636L8.636,22.9V24h8.727V22.9l-2.182-3.3h7.636A2.2,2.2,0,0,0,25,17.4V4.2A2.2,2.2,0,0,0,22.818,2Zm0,13.2H3.182V4.2H22.818Z" transform="translate(-1 -1)" fill="#9e9e9e"/>
+      </g>
+      <text id="_1280px" data-name="1280px" transform="translate(1700 736)" fill="#9e9e9e" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">1280px</tspan></text>
+    </g>
+    <rect id="사각형_1028" data-name="사각형 1028" width="80" height="1" transform="translate(1339 714)" fill="#9e9e9e"/>
+    <rect id="사각형_1030" data-name="사각형 1030" width="80" height="1" transform="translate(1493 714)" fill="#9e9e9e"/>
+    <rect id="사각형_1029" data-name="사각형 1029" width="352" height="1" rx="0.5" transform="translate(1280 678)" fill="#f5f5f5"/>
+    <text id="Break_point" data-name="Break point" transform="translate(1280 664)" fill="#424242" font-size="14" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Break Point</tspan></text>
+  </g>
+</svg>
