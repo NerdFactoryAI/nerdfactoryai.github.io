@@ -26,6 +26,27 @@
   tag: ["SW Engineering"]
   email: "june@nerdfactory.ai"
   photo: "/assets/images/authors/ict_june.png"
+이유나:
+  kor-name: "이유나"
+  eng-name: "Ella"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "ella@nerdfactory.ai"
+  photo: "/assets/images/authors/Ella.png"
+조현준:
+  kor-name: "조현준"
+  eng-name: "Owen"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "chohj7636@nerdfactory.ai"
+  photo: "/assets/images/authors/Owen.png"
+유예지:
+  kor-name: "유예지"
+  eng-name: "Lizzy"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "lizzy@nerdfactory.ai"
+  photo: "/assets/images/authors/Lizzy.png"
 유보람:
   kor-name: "유보람"
   eng-name: "Allison"
