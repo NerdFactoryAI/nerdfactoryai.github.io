@@ -43,40 +43,40 @@ _`<GANomaly 아키텍처>`_
 
 ```python
 class EncLoss(keras.layers.Layer):
-		def __init__(self, **kwargs):
-        super(EncLoss, self).__init__(**kwargs)
+	def __init__(self, **kwargs):
+		super(EncLoss, self).__init__(**kwargs)
 
-		def call(self, x, mask=None):
-        ori = x[0]
-        gan = x[1]
-				return K.mean(K.square(g_e(ori) - encoder(gan)))
+	def call(self, x, mask=None):
+		ori = x[0]
+		gan = x[1]
+		return K.mean(K.square(g_e(ori) - encoder(gan)))
 
-		def get_output_shape_for(self, input_shape):
-				return (input_shape[0][0], 1)
+	def get_output_shape_for(self, input_shape):
+		return (input_shape[0][0], 1)
 
 class CntLoss(keras.layers.Layer):
-		def __init__(self, **kwargs):
-        super(CntLoss, self).__init__(**kwargs)
+	def __init__(self, **kwargs):
+		super(CntLoss, self).__init__(**kwargs)
 
-		def call(self, x, mask=None):
-        ori = x[0]
-        gan = x[1]
-				return K.mean(K.abs(ori - gan))
+	def call(self, x, mask=None):
+		ori = x[0]
+		gan = x[1]
+		return K.mean(K.abs(ori - gan))
 
-		def get_output_shape_for(self, input_shape):
-				return (input_shape[0][0], 1)
+	def get_output_shape_for(self, input_shape):
+		return (input_shape[0][0], 1)
 
 class AdvLoss(keras.layers.Layer):
-		def __init__(self, **kwargs):
-        super(AdvLoss, self).__init__(**kwargs)
+	def __init__(self, **kwargs):
+		super(AdvLoss, self).__init__(**kwargs)
 
-		def call(self, x, mask=None):
-        ori_feature = feature_extractor(x[0])
-        gan_feature = feature_extractor(x[1])
-				return K.mean(K.square(ori_feature - K.mean(gan_feature, axis=0)))
+	def call(self, x, mask=None):
+		ori_feature = feature_extractor(x[0])
+		gan_feature = feature_extractor(x[1])
+		return K.mean(K.square(ori_feature - K.mean(gan_feature, axis=0)))
 
-		def get_output_shape_for(self, input_shape):
-				return (input_shape[0][0], 1)
+	def get_output_shape_for(self, input_shape):
+		return (input_shape[0][0], 1)
 
 input_layer = layers.Input(name='input', shape=(height, width, channels))
 gan = g(input_layer) # g(x)
@@ -88,12 +88,12 @@ gan_trainer = keras.models.Model(input_layer, [adv_loss, cnt_loss, enc_loss])
 
 # loss function
 def loss(yt, yp):
-		return yp
+	return yp
 
 losses = {
-    'adv_loss': loss,
-    'cnt_loss': loss,
-    'enc_loss': loss,
+	'adv_loss': loss,
+	'cnt_loss': loss,
+	'enc_loss': loss,
 }
 
 lossWeights = {'cnt_loss': 20.0, 'adv_loss': 1.0, 'enc_loss': 1.0}
@@ -106,25 +106,25 @@ Loss 정의 후, 'd'(=Discriminator)를 학습가능하게 설정하고 'train_o
 
 ```python
 for iin range(niter):
-		### get batch x, y ###
-		x, y = train_data_generator.__next__()
+	### get batch x, y ###
+	x, y = train_data_generator.__next__()
 
-		### train disciminator ###
-		d.trainable =True
+	### train disciminator ###
+	d.trainable =True
 
-		fake_x = g.predict(x)
+	fake_x = g.predict(x)
 
-		d_x = np.concatenate([x, fake_x], axis=0)
-		d_y = np.concatenate([np.zeros(len(x)), np.ones(len(fake_x))], axis=0)
+	d_x = np.concatenate([x, fake_x], axis=0)
+	d_y = np.concatenate([np.zeros(len(x)), np.ones(len(fake_x))], axis=0)
 
-		d_loss = d.train_on_batch(d_x, d_y)
+	d_loss = d.train_on_batch(d_x, d_y)
 
-		### train generator ###
-		d.trainable =False
-		g_loss = gan_trainer.train_on_batch(x, y)
+	### train generator ###
+	d.trainable =False
+	g_loss = gan_trainer.train_on_batch(x, y)
 
-		if i % 50 == 0:
-		    print(f'niter:{i+1}, g_loss:{g_loss}, d_loss:{d_loss}')
+	if i % 50 == 0:
+		print(f'niter:{i+1}, g_loss:{g_loss}, d_loss:{d_loss}')
 ```
 
 학습이 끝난 후, 테스트 데이터를 입력하여 각 네트워크 별 예측값을 구하고, 이 예측값들을 이용하여 이상탐지 점수(Anomaly Score)를 구합니다. 이상탐지 점수는 논문에 따라 Encoder Loss에 기반하여 G_E(x)의 예측값과 E(G(x))의 예측값에 대한 SSE로 정의합니다. 그리고, Min-max 정규화를 통해 0부터 1사이 범위로 변환합니다.
