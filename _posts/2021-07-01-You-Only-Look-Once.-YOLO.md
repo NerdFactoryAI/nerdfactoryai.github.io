@@ -5,11 +5,11 @@ author: ["조현준"]
 date: 2021-05-06
 abstract: "흔히 **YOLO(욜로)**라고 하면 **You only Live Once** 의 약자로 '인생은 오직 한번뿐' 이라는 의미로 자유로운 라이프 스타일을 나타냅니다😎 하지만 이 포스팅에서는 조금 다른 YOLO를 다룹니다. 'You Only **Look** Once.' 즉 한번에 보고 바로 처리를 하겠다. 라는 속도가 빠르다는 장점을 내세운 Object Detection 신경망 입니다. YOLO는 yolov1부터 2020년 7월 기준으로 yolov5 까지 공개되어 개발자분들 뿐만 아니라 비전공자들부터 학생들까지, 많은 사람들이 인용하여 활용 및 연구중입니다. 이번 포스팅에서는 YOLOv1부터 YOLOv2까지 모델 구조와 특징들에 대해 차근차근 설명해보려고 합니다."
 tags: ["CNN", "Image-Classification", "Object-Detection"]
-image: /assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/yolo.png
+image: /assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/yolo.png
 draft: "no"
 ---
 
-![yolo](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/yolo.png)
+![yolo](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/yolo.png)
 
 # 머리
 
@@ -39,7 +39,7 @@ YOLO가 등장했을 당시 장점으로 주목을 받았던 내용들입니다.
 
 테두리상자 조정 (Bounding Box Coordinate)과 분류(Classification)를 동일 신경망 구조를 통해 동시에 실행하는 통합인식(Unified Detection)을 구현하는 큰 특징을 가지고 있습니다.
 
-![Untitled](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled.svg)
+![Untitled](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled.png)
 
 1. 이미지를 SxS 의 그리드로 분할합니다. (논문에서는 S = 7로 예시를 두었습니다.)
 2. 이미지 전체를 신경망에 넣고 특징 추출을 통해 예측 텐서(Prediction Tensor) 생성합니다.
@@ -54,9 +54,9 @@ YOLO가 등장했을 당시 장점으로 주목을 받았던 내용들입니다.
 
 ### YOLOv1 Network
 
-![Untitled%201](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%201.png)
+![Untitled%201](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled1.png)
 
-![Untitled%202](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%202.png)
+![Untitled%202](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled2.png)
 
 논문의 YOLO Network
 
@@ -64,7 +64,7 @@ Inception 블럭 대신 단순한 224x224 크기의 ImageNet Classification으�
 
 이제 네트워크의 출력인 Conv Layer, FC Layer를 통과한 Prediction Tensor (7 x 7 x 30) 피쳐맵에 대해서 알아보겠습니다.
 
-![Untitled%203](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%203.png)
+![Untitled%203](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled3.png)
 
 위의 그림에서는 Prediction Tensor가`SxSx(Bx5+C)`와 같이 되어 있습니다. 위에서 알 수 있듯이 YOLO 논문에서는 S의 크기를 7로 명시한 것을 알 수 있습니다. 7x7은 그리드의 숫자를 의미하며 7x7의 그리드 별로 30의 길이를 가지는 값을 의미하게 됩니다.
 
@@ -77,7 +77,7 @@ Inception 블럭 대신 단순한 224x224 크기의 ImageNet Classification으�
 
 ### Loss
 
-![Untitled%204](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%204.png)
+![Untitled%204](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled4.png)
 
 **MULTI Loss
 = Coordinate Loss + Confidence-Score Loss + No-Object Penalties + Classification Loss**
@@ -115,17 +115,17 @@ YOLOv2는 기존의 YOLO에서 성능을 올리기 위해 많은 점을 보완�
     YOLOv2는 앵커박스를 수정하면서 바운딩 박스를 예측합니다. 그렇기 때문에 실제 경계 박스들을 클러스터링 하여 최적의 앵커박스를 찾습니다.
     클러스터링 갯수 k 를 크게 늘릴수록 클러스터링 결과와 라벨과의 IOU가 커져 Recall이 상승합니다. 그러나 k가 커지면 높은 정확도를 얻을 수 있지만 속도가 느려지기 때문에 YOLOv2에서는 k=5라는 값을 사용합니다. (YOLOv2 에서는 앵커 박스를 5개 사용합니다.) 그 결과 recall과 precision 측면에서 성능을 향상시킬 수 있었습니다.
 
-        ![You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%205.png](You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%205.png)
+    ![Untitled5.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled5.png)
 
 5.  **Direct location prediction**
     YOLOv2에서는 앵커 박스에 따라 하나의 셀에서 5차원 벡터로 이루어진 바운딩 박스를 예측하며, 경계 박스가 그리드 셀에서 벗어나지 않도록 제약을 둡니다. 기존의 YOLO가 그리드의 중심점을 예측하였다면 v2에서는 left top 꼭지점으로부터 얼마나 이동하는지 예측하게 됩니다.
 
-        ![You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%206.png](You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%206.png)
+    ![Untitled6.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled6.png)
 
 6.  **Fine-Grained Features**
     위에서 YOLOv2는 13x13 feature map을 출력한다고 설명했었습니다. 하지만 13x13의 크기는 작은 물체 검출에 대해서 약하다는 단점이 있습니다. 이와 같은 문제해결을 위해 상위 레이어의 피쳐맵을 하위 피쳐맵에 합쳐주는 passthrough layer를 도입했습니다. 이전 layer의 26x26 feature map을 가지고 와서 13x13 feature map에 이어 붙입니다. 크기가 달라 그냥 이어붙일 수 없으므로 26x26x512의 feature map을 13x13x(512\*4)의 feature map으로 변환합니다. 26x26 크기의 feature map에 고해상도 특징이 담겨 있기때문에 이를 활용 하는 것입니다.
 
-        ![You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%207.png](You%20Only%20Look%20Once%20YOLO%208e0e3409393242899388472d7b40a88a/Untitled%207.png)
+    ![Untitled7.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled7.png)
 
 7.  **Multi-Scale Training**
     YOLOv2는 작은 물체도 detection 하기 위해 여러 스케일의 이미지를 학습하도록 하였습니다. 10 epoch 마다 {320, 352, ..., 608} 과 같이 32 픽셀 간격으로 입력 이미지의 해상도를 바꿔주며 학습을 진행합니다. 따라서 다양한 입력 크기에도 예측을 잘할 수 있습니다.
@@ -136,21 +136,21 @@ YOLOv2는 기존의 YOLO에서 성능을 올리기 위해 많은 점을 보완�
 
 먼저 YOLOv2 가 더 빨라진 이유는 기존의 YOLO는 VGG-16 신경망을 사용했다면 YOLOv2는 Darknet 19 신경망을 구축하여 이용했습니다. VGG-16 신경망에서 대부분의 가중치가 쓰인 FC layer를 제거하여 가중치 파라미터 수를 낮춰줬기 때문에 훨씬 빠른 속도로 detection이 가능하게 되었습니다.
 
-![Untitled%207](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%207.png)
+![Untitled7.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled7.png)
 
 YOLOv2 Network
 
 위에서 이미 한 번 보고온 네트워크 구조입니다. 기존의 YOLO 구조에서 변경된 점은 위의 **Fine-Grained Features** 에서 설명한 것과 같은 내용과 같습니다. YOLOv1과 YOLOv2의 output 을 비교해보면 v1의 최종 output은 7x7x30 이며 채널 30의 값은 (5xB+C)로 즉, (5x(바운딩박스 수)+(클래스 개수)) 이기 때문이라고 설명했었습니다. 그럼 YOLOv2 의 최종 output은 위에서 `13x13x125` 임을 확인할 수 있습니다. `125`라는 값이 어떻게 나올까요? 보기 쉽게 정리된 그림입니다.
 
-![Untitled%208](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%208.png)
+![Untitled8.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled8.png)
 
 YOLOv2에서 앵커박스를 적용했을 때 각각의 앵커박스에 대해서 classification 정보를 가지고 있습니다. 다시 말해 하나의 anchor box에 대해 prediction을 하는데 각 prediction은 x, y, w, h, confidence, class갯수(20) 이렇게 총 25개를 의미합니다. 따라서 YOLOv2는 총 5개의 anchor box를 가지고 있기때문에`13x13x(Bx(5+C))` 로 `13x13x125` 라는 output이 최종적으로 나오는 것을 확인 할 수 있습니다.
 
 ### YOLOv2 성능 및 결과
 
-![Untitled%209](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%209.png)
+![Untitled9.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled9.png)
 
-![Untitled%2010](/assets/images/posts/2021-07-01-You-Only-Look-Once.-YOLO/Untitled%2010.png)
+![Untitled10.png](/assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/Untitled10.png)
 
 YOLOv2는 상당히 빠르면서도 높은 성능을 보여줍니다. voc 207 과 coco 결과를 보면 voc에서는 SSD 알고리즘 보다 높은 성능을 보이지만, coco에서는 좀더 낮은 성능을 보여줍니다.
 
