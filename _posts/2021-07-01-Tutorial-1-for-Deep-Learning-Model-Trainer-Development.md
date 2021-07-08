@@ -42,6 +42,32 @@ python 3.6 이상, pytorch 1.2.0 이상, torchvision 0.4.0 이상을 권장합�
 먼저 Pytorch 프레임워크와 필요 모듈들을 import 합니다
 
 ```python
+import os# Model 학습
+epochs = 10  # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
+total_step = len(train_loader)
+model.train()  # 모델의 AutoGradient 연산을 활성화하는 학습 모드로 설정
+
+# epoch 루프
+for epoch in range(epochs):
+
+    # step 루프
+    for i, (inputs, targets) in enumerate(train_loader):
+        # MNIST 텐서는 (batch, 28, 28) 의 형태이므로,
+        # 테스트 모델에 적합하도록 (batch, 768) 의 형태로 Reshape 합니다
+        inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
+
+        # 순전파 - 모델의 추론 및 결과의 loss 연산
+        outputs = model(inputs)
+        loss = criterion(outputs, targets)
+
+        # Backward and optimize
+        optimizer.zero_grad()  # optimizer 초기화 (과거 학습 step 의 gradient 영향을 받지 않기 위해 필요)
+        loss.backward()  # loss 의 역전파
+        optimizer.step()  # 모델의 학습
+
+        # 학습 상태 정보 출력
+        print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+              .format(epoch + 1, epochs, i + 1, total_step, loss.item()))
 import torch
 import torch.nn as nn
 import torchvision
@@ -53,12 +79,14 @@ import torchvision.transforms as transforms
 1. Dataset 과 Dataloader 세팅
 
    ```python
+   BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
    # MNIST dataset
-   train_dataset = torchvision.datasets.MNIST(root='/data',
+   train_dataset = torchvision.datasets.MNIST(root=f'{BASE_DIR}/datasets',
                                               train=True,
                                               transform=transforms.ToTensor(),
                                               download=True)
-   eval_dataset = torchvision.datasets.MNIST(root='/data',
+   eval_dataset = torchvision.datasets.MNIST(root=f'{BASE_DIR}/datasets',
                                              train=False,
                                              transform=transforms.ToTensor())
 
@@ -158,7 +186,7 @@ import torchvision.transforms as transforms
 
    ```python
    # Model 학습
-   epochs = 10    # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
+   epochs = 10  # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
    total_step = len(train_loader)
    model.train()  # 모델의 AutoGradient 연산을 활성화하는 학습 모드로 설정
 
@@ -167,23 +195,22 @@ import torchvision.transforms as transforms
 
        # step 루프
        for i, (inputs, targets) in enumerate(train_loader):
-
            # MNIST 텐서는 (batch, 28, 28) 의 형태이므로,
            # 테스트 모델에 적합하도록 (batch, 768) 의 형태로 Reshape 합니다
-           inputs = inputs.reshape(-1, 768)  # 28 * 28 = 784
+           inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
 
            # 순전파 - 모델의 추론 및 결과의 loss 연산
            outputs = model(inputs)
-           loss = criterion(outputs, targets)  # loss 계산
+           loss = criterion(outputs, targets)
 
            # Backward and optimize
            optimizer.zero_grad()  # optimizer 초기화 (과거 학습 step 의 gradient 영향을 받지 않기 위해 필요)
-           loss.backward()        # loss 의 역전파
-           optimizer.step()       # 모델의 학습 (파라미터 수정)
+           loss.backward()  # loss 의 역전파
+           optimizer.step()  # 모델의 학습
 
            # 학습 상태 정보 출력
-           print ('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
-                  .format(epoch+1, num_epochs, i+1, total_step, loss.item()))
+           print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+                 .format(epoch + 1, epochs, i + 1, total_step, loss.item()))
    ```
 
    전체 학습 Dataset 에 대해, Dataloader 로 생성된 iteration 을 돌면서 step 마다 학습을 진행 합니다.
@@ -199,15 +226,14 @@ import torchvision.transforms as transforms
    correct_cnt = 0
    total_cnt = 0
    for (inputs, targets) in eval_loader:
-
        # 학습 step 과 동일하게 추론 및 결과의 loss 연산을 진행
-       inputs = inputs.reshape(-1, 768)  # 28 * 28 = 784
+       inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
        outputs = model(inputs)
        loss = criterion(outputs, targets)
 
        _, predicted = torch.max(outputs.data, 1)  # 가장 큰 값을 갖는 class index 가 모델이 추론한 정답
        total_cnt += targets.size(0)
-       correct_cnt += (predicted == targets).sum()    # 정답과 추론 값이 일치하는 경우 정답으로 count
+       correct_cnt += (predicted == targets).sum()  # 정답과 추론 값이 일치하는 경우 정답으로 count
 
    print('Model Accuracy: {:.2f} %'.format(100 * correct_cnt / total_cnt))
    model.train()  # 평가가 모두 완료되었으므로 다시 학습 모드로 전환
@@ -224,17 +250,22 @@ import torchvision.transforms as transforms
 위의 단계를 토대로 전체 학습기 코드를 작성하면 아래와 같습니다
 
 ```python
+# Trainer-Tutorial-1 의 MNIST 기초 학습기 입니다
+
+import os
 import torch
 import torch.nn as nn
 import torchvision
 import torchvision.transforms as transforms
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # MNIST dataset
-train_dataset = torchvision.datasets.MNIST(root='/data',
+train_dataset = torchvision.datasets.MNIST(root=f'{BASE_DIR}/datasets',
                                            train=True,
                                            transform=transforms.ToTensor(),
                                            download=True)
-eval_dataset = torchvision.datasets.MNIST(root='/data',
+eval_dataset = torchvision.datasets.MNIST(root=f'{BASE_DIR}/datasets',
                                           train=False,
                                           transform=transforms.ToTensor())
 
@@ -242,25 +273,25 @@ eval_dataset = torchvision.datasets.MNIST(root='/data',
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
                                            batch_size=64,  # 임의 지정 batch
                                            shuffle=True)
-eval_loader = torch.utils.data.DataLoader(dataset=test_dataset,
-                                          batch_size=64,   # 임의 지정 batch
+eval_loader = torch.utils.data.DataLoader(dataset=eval_dataset,
+                                          batch_size=64,  # 임의 지정 batch
                                           shuffle=False)
 
 # model
 model = nn.Sequential(
-    nn.Linear(784, 1024),              # 28 * 28 = 784
+    nn.Linear(784, 1024),  # 28 * 28 = 784
     nn.Linear(1024, 10),
 )
 
 # Loss Function & Optimizer
-criterion = nn.CrossEntropyLoss()      # loss fuction
+criterion = nn.CrossEntropyLoss()  # loss function
 optimizer = torch.optim.SGD(
-    model.parameters(),                # 역전파 연산을 할 모델의 파라미터
-    lr=0.003                           # 임의의 learning_rate
+    model.parameters(),  # 역전파 연산을 할 모델의 파라미터
+    lr=0.003  # 임의의 learning_rate
 )
 
 # Model 학습
-epochs = 10    # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
+epochs = 10  # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
 total_step = len(train_loader)
 model.train()  # 모델의 AutoGradient 연산을 활성화하는 학습 모드로 설정
 
@@ -269,10 +300,9 @@ for epoch in range(epochs):
 
     # step 루프
     for i, (inputs, targets) in enumerate(train_loader):
-
         # MNIST 텐서는 (batch, 28, 28) 의 형태이므로,
         # 테스트 모델에 적합하도록 (batch, 768) 의 형태로 Reshape 합니다
-        inputs = inputs.reshape(-1, 768)  # 28 * 28 = 784
+        inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
 
         # 순전파 - 모델의 추론 및 결과의 loss 연산
         outputs = model(inputs)
@@ -280,27 +310,26 @@ for epoch in range(epochs):
 
         # Backward and optimize
         optimizer.zero_grad()  # optimizer 초기화 (과거 학습 step 의 gradient 영향을 받지 않기 위해 필요)
-        loss.backward()        # loss 의 역전파
-        optimizer.step()       # 모델의 학습
+        loss.backward()  # loss 의 역전파
+        optimizer.step()  # 모델의 학습
 
         # 학습 상태 정보 출력
-        print ('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
-               .format(epoch+1, num_epochs, i+1, total_step, loss.item()))
+        print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+              .format(epoch + 1, epochs, i + 1, total_step, loss.item()))
 
     # 한 epoch 가 모두 돈 뒤, Model 평가
     model.eval()  # 모델의 AutoGradient 연산을 비활성화하고 평가 연산 모드로 설정 (메모리 사용 및 연산 효율화를 위해)
     correct_cnt = 0
     total_cnt = 0
     for (inputs, targets) in eval_loader:
-
         # 학습 step 과 동일하게 추론 및 결과의 loss 연산을 진행
-        inputs = inputs.reshape(-1, 768)  # 28 * 28 = 784
+        inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
         outputs = model(inputs)
         loss = criterion(outputs, targets)
 
         _, predicted = torch.max(outputs.data, 1)  # 가장 큰 값을 갖는 class index 가 모델이 추론한 정답
         total_cnt += targets.size(0)
-        correct_cnt += (predicted == targets).sum()    # 정답과 추론 값이 일치하는 경우 정답으로 count
+        correct_cnt += (predicted == targets).sum()  # 정답과 추론 값이 일치하는 경우 정답으로 count
 
     print('Model Accuracy: {:.2f} %'.format(100 * correct_cnt / total_cnt))
     model.train()  # 평가가 모두 완료되었으므로 다시 학습 모드로 전환
