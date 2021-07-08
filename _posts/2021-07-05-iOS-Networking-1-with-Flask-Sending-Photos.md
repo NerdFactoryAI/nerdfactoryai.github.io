@@ -92,7 +92,14 @@ iOS 네트워킹에는 Alamofire, Moya 등 여러 가지 방법들이 있는데,
 
 ![7.png](/assets/images/posts/2021-07-05-iOS-Networking-1-with-Flask-Sending-Photos/7.png)
 
-[GET과 POST 차이](https://www.notion.so/5537f646c55c4e5e847054fcb5bb0820)
+**GET과 POST 차이**
+
+| 구분                   | GET              | POST   |
+| ---------------------- | ---------------- | ------ |
+| 사용                   | Read or Retrieve | Create |
+| URL에 데이터 노출 여부 | O                | X      |
+| 데이터 위치            | Header           | Body   |
+| 캐싱 가능 여부         | O                | X      |
 
 이처럼 HTTP Method의 메소드는 용도와 필요성에 맞게 사용할 수 있습니다. 저는 POST 방식이 가장 적절하다고 판단했습니다. 그렇다면 코드를 작성해보겠습니다!
 

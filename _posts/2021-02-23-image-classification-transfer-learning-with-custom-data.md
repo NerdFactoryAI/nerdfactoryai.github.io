@@ -58,7 +58,14 @@ draft: "no"
 1. 데이터셋의 크기
 2. pretrained된 모델에 사용한 데이터셋과의 유사도
 
-[데이터셋에 따른 4가지 시나리오의 사본](https://www.notion.so/395b75de8ef54163806ff75dbf6c20fc)
+**데이터셋에 따른 4가지 시나리오**
+
+| New Dataset | 크기  | 유사도 | fine-tuning 적용여부                                                                                                                                                                                                                                                       |
+| ----------- | ----- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A Dataset   | small | high   | 데이터셋이 너무 작아 ConvNet의 overfitting문제를 해결하려고 fine-tuning을 하는 것은 좋지 않은 생각이입니다. 원본 데이터셋과 유사도가 높기때문에 higher-level의 feature가 새 데이터셋과 관련이 있을 것으로 예상되며 linear classifier만 train시키는 쪽으로 생각하면 됩니다. |
+| B Dataset   | small | low    | linear classifier만 학습하는 것이 좋은 방법입니다. 또한 데이터셋이 매우 다르기에 후반부의 layer만 fine-tuning하는 것은 좋은 방법이 아니며 초기 layer에서 재학습하는 것이 효과적일 수 있습니다.                                                                             |
+| C Dataset   | big   | high   | 이 경우는 문제가 되는 부분이 없습니다. 다만 fine-tuning만 해주면 overfit하지 않을 것이라는 확신만 있을 뿐입니다.                                                                                                                                                           |
+| D Dataset   | big   | low    | fine-tuning 수행의미가 없다고 생각합니다. 처음 부터 모델링을 만드는 것이나 마찬가지 이기 때문입니다.                                                                                                                                                                       |
 
 실습은 [PyTorch.org](http://pytorch.org/) 사이트에서 전이 학습에 대한 코드를 Colab, Jupyter notebook, GitHub으로 공유하고 있고 이 공유된 코드를 통해 전이학습에 대한 이해를 깊게 할 수 있습니다. → [**실습링크**](http://tutorials.pytorch.kr/beginner/transfer_learning_tutorial.html)
 
