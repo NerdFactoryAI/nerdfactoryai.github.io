@@ -42,32 +42,7 @@ python 3.6 이상, pytorch 1.2.0 이상, torchvision 0.4.0 이상을 권장합�
 먼저 Pytorch 프레임워크와 필요 모듈들을 import 합니다
 
 ```python
-import os# Model 학습
-epochs = 10  # 전체 데이터를 모두 학습하는 epoch 를 몇번 반복할 것인지. 임의 값
-total_step = len(train_loader)
-model.train()  # 모델의 AutoGradient 연산을 활성화하는 학습 모드로 설정
-
-# epoch 루프
-for epoch in range(epochs):
-
-    # step 루프
-    for i, (inputs, targets) in enumerate(train_loader):
-        # MNIST 텐서는 (batch, 28, 28) 의 형태이므로,
-        # 테스트 모델에 적합하도록 (batch, 768) 의 형태로 Reshape 합니다
-        inputs = inputs.reshape(-1, 28 * 28)  # 28 * 28 = 784
-
-        # 순전파 - 모델의 추론 및 결과의 loss 연산
-        outputs = model(inputs)
-        loss = criterion(outputs, targets)
-
-        # Backward and optimize
-        optimizer.zero_grad()  # optimizer 초기화 (과거 학습 step 의 gradient 영향을 받지 않기 위해 필요)
-        loss.backward()  # loss 의 역전파
-        optimizer.step()  # 모델의 학습
-
-        # 학습 상태 정보 출력
-        print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
-              .format(epoch + 1, epochs, i + 1, total_step, loss.item()))
+import os
 import torch
 import torch.nn as nn
 import torchvision
