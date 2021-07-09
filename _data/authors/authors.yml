@@ -26,6 +26,13 @@
   tag: ["SW Engineering"]
   email: "june@nerdfactory.ai"
   photo: "/assets/images/authors/ict_june.png"
+조은성:
+  kor-name: "조은성"
+  eng-name: "Lucas"
+  graduate: "-"
+  tag: ["AI Recommend System Engineer"]
+  email: "lucas@nerdfactory.ai"
+  photo: "/assets/images/authors/lucas.png"
 안정현:
   kor-name: "안정현"
   eng-name: "Richard"
@@ -68,13 +75,13 @@
   tag: ["SW Engineering"]
   email: "alton15@nerdfactory.ai"
   photo: "/assets/images/authors/alton.png"
-조은성:
-  kor-name: "조은성"
-  eng-name: "Lucas"
-  graduate: "-"
-  tag: ["AI Recommend System Engineer"]
-  email: "lucas@nerdfactory.ai"
-  photo: "/assets/images/authors/lucas.png"
+임혜민(intern):
+  kor-name: "임혜민"
+  eng-name: "Maem"
+  graduate: "동국대학교 재학"
+  tag: ["Service Planner Assistant"]
+  email: "mcmaeme2018@gmail.com"
+  photo: "/assets/images/authors/Maem.png"
 황종택:
   kor-name: "황종택"
   eng-name: "Sam"
