@@ -5,7 +5,7 @@ author: ["조현준"]
 date: 2022-06-24
 abstract: "이번 포스팅에서는 Gatsby.js에 대해서 간단히 소개하고 어떻게 적용할 수 있는지, 우리는 어떻게 적용했고 어떻게 사용하려 하는지에 대해서 소개하려고 합니다. 추가로 gatsby 프로젝트에 TypeScript을 사용하기 위한 환경을 구성하는 내용을 담고있습니다."
 tags: ["React", "Typescript", "Gatsby"]
-image: /assets/images/posts/2021-07-01-You-Only-Look-Once-YOLO/yolo.png
+image: /assets/images/posts/2022-09-30-setting-gatsby-with-typescript/gatsby-logo.png
 draft: "no"
 ---
 
@@ -32,7 +32,7 @@ Gatsby는 프론트엔드 라이브러리 React를 기반으로 하며 최근 �
 
 하지만 Jamstack은 모든 데이터를 서버에서 미리 불러와서 화면으로 만들어 놓은 다음, 사용자가 홈페이지에 접속하게 되면 만들어 놓은 화면을 그려줍니다. 그렇기 때문에 빠른 로딩 속도를 장점으로 가지고 갈 수 있습니다.
 
-이와 같은 장점을 가지고 있는 Jam Stack을 기반으로 하는 대표적인 프레임워크로는 많이 다운로드 된 순으로 **Next, Gatsby, Jekyll, Nuxt** 등 \*\*\*\*이 있습니다.
+이와 같은 장점을 가지고 있는 Jam Stack을 기반으로 하는 대표적인 프레임워크로는 많이 다운로드 된 순으로 **Next, Gatsby, Jekyll, Nuxt** 등이 있습니다.
 
 ## 우리는 왜 Gatsby를 사용하려고 하는가
 
@@ -53,7 +53,8 @@ JAM Stack 프레임워크 다운로드 횟수를 보면 Next.js가 가장 많이
 이와 같은 장점을 가지고 있는 Gatsby는 너드팩토리의 **웹사이트의 사용자 행동데이터 분석 도구 서비스 VODA**의 소개페이지에도 적용되어 있습니다.
 
 ![voda](/assets/images/posts/2022-09-30-setting-gatsby-with-typescript/voda-landing-page.png)
-_VODA 서비스 소개페이지 ← 클릭_
+{:.center}
+_[VODA 서비스 소개페이지](https://voda.nerdfactory.ai/) ← 클릭_
 
 ## Gatsby 기술 스택을 어떻게 잘 사용할수 있을까
 
