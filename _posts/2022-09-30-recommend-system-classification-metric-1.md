@@ -30,7 +30,7 @@ draft: "no"
   - 아래 논문에 따르면, Average of Precision@k는 각 추천에 대한 Precision@k에 대한 평균을 의미하고, AP@K는 서로 다른 k에 대한 Precision의 평균을 의미
     ![paper](/assets/images/posts/2022-09-30-recommend-system-classification-metric/paper-precision.png)
 
-### 2. \***\*Recall@k 정의\*\***
+### 2. **Recall@k 정의**
 
 - Recall은 실제 옳은 것 중에서 옳다고 예측한 것의 비율을 의미
   ![recall1](/assets/images/posts/2022-09-30-recommend-system-classification-metric/define-recall.png)
@@ -48,7 +48,7 @@ draft: "no"
 
     ![example](/assets/images/posts/2022-09-30-recommend-system-classification-metric/example.png)
 
-## **Precision@k / Recall@k 구현 코드** 예시
+## **Precision@k / Recall@k 구현 코드 예시**
 
 - 성능 지표 정의 코드
 
