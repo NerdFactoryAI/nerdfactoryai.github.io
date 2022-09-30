@@ -1,3 +1,52 @@
+이지원:
+  kor-name: "이지원"
+  eng-name: "Dorothy"
+  graduate: "한남대학교 학사"
+  tag: ["Designer"]
+  email: "jiwon@nerdfactory.ai"
+  photo: "/assets/images/authors/ljw-1.png"
+장준:
+  kor-name: "장준"
+  eng-name: "Aron"
+  graduate: "-"
+  tag: ["Product Owner"]
+  email: "jiwon@nerdfactory.ai"
+  photo: "/assets/images/authors/aron.png"
+김기강:
+  kor-name: "김기강"
+  eng-name: "Alton"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "alton15@nerdfactory.ai"
+  photo: "/assets/images/authors/alton.png"
+안정현:
+  kor-name: "안정현"
+  eng-name: "Richard"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "richard@nerdfactory.ai"
+  photo: "/assets/images/authors/Richard.jpg"
+이유나:
+  kor-name: "이유나"
+  eng-name: "Ella"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "ella@nerdfactory.ai"
+  photo: "/assets/images/authors/Ella.png"
+조현준:
+  kor-name: "조현준"
+  eng-name: "Owen"
+  graduate: "-"
+  tag: ["AI Engineering"]
+  email: "chohj7636@nerdfactory.ai"
+  photo: "/assets/images/authors/Owen.png"
+김규태:
+  kor-name: "김규태"
+  eng-name: "Sean"
+  graduate: "-"
+  tag: ["Software Architect"]
+  email: "sean.k@nerdfactory.ai"
+  photo: "/assets/images/authors/sean.png"
 백승빈:
   kor-name: "백승빈"
   eng-name: "David"
@@ -33,27 +82,6 @@
   tag: ["AI Recommend System Engineer"]
   email: "lucas@nerdfactory.ai"
   photo: "/assets/images/authors/lucas.png"
-안정현:
-  kor-name: "안정현"
-  eng-name: "Richard"
-  graduate: "-"
-  tag: ["AI Engineering"]
-  email: "richard@nerdfactory.ai"
-  photo: "/assets/images/authors/Richard.jpg"
-이유나:
-  kor-name: "이유나"
-  eng-name: "Ella"
-  graduate: "-"
-  tag: ["AI Engineering"]
-  email: "ella@nerdfactory.ai"
-  photo: "/assets/images/authors/Ella.png"
-조현준:
-  kor-name: "조현준"
-  eng-name: "Owen"
-  graduate: "-"
-  tag: ["AI Engineering"]
-  email: "chohj7636@nerdfactory.ai"
-  photo: "/assets/images/authors/Owen.png"
 유예지:
   kor-name: "유예지"
   eng-name: "Lizzy"
@@ -68,13 +96,6 @@
   tag: ["Product Designer"]
   email: "allison.yu@nerdfactory.ai"
   photo: "/assets/images/authors/allison.png"
-김기강:
-  kor-name: "김기강"
-  eng-name: "Alton"
-  graduate: "-"
-  tag: ["SW Engineering"]
-  email: "alton15@nerdfactory.ai"
-  photo: "/assets/images/authors/alton.png"
 임혜민(intern):
   kor-name: "임혜민"
   eng-name: "Maem"
@@ -96,13 +117,6 @@
   tag: ["Software Engineer / Android Developer"]
   email: "jihun3353@nerdfactory.ai"
   photo: "/assets/images/authors/ljh-1.png"
-이지원:
-  kor-name: "이지원"
-  eng-name: "Dorothy"
-  graduate: "한남대학교 학사"
-  tag: ["Designer"]
-  email: "jiwon@nerdfactory.ai"
-  photo: "/assets/images/authors/ljw-1.png"
 차금강:
   kor-name: "차금강"
   eng-name: "Kevin"
