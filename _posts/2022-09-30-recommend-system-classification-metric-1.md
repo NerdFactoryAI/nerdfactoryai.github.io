@@ -21,7 +21,9 @@ draft: "no"
 ### **1. Precision@k 정의**
 
 - Precision은 예측값 중 옳게 예측한 비율을 의미
+
   ![precision](/assets/images/posts/2022-09-30-recommend-system-classification-metric/define-precision.png)
+
 - 추천 시스템에서 Precision은 모델이 추천한 아이템 중에 사용자가 관심있는 아이템의 비율을 의미
 - Precision@k는 k개 추천 결과에 대한 Precision을 계산한 것으로, 모델이 추천한 아이템 k개 중에 실제 사용자가 관심있는 아이템의 비율을 의미
 - Average of Precision@k는 Precision@k의 평균으로 AP@K와 다름
@@ -40,15 +42,18 @@ draft: "no"
 ### 3. **Precision@K / Recall@K 예시**
 
 - k=5이고, 사용자가 관심있는 아이템 수가 6개일 때,
+
   - Precision@5=0.6 (사용자가 관심있는 추천 아이템 수(=3) / 추천한 아이템 수(=5))
   - Recall@5 =0.5 (사용자가 관심있는 추천 아이템 수(=3) / 사용자가 실제로 관심있는 모든 아이템 수(=6))
+
     ![example](/assets/images/posts/2022-09-30-recommend-system-classification-metric/example.png)
 
-## \***\*Precision@k / Recall@k 구현 코드\*\*** 예시
+## **Precision@k / Recall@k 구현 코드** 예시
 
 - 성능 지표 정의 코드
 
   - 위에서 설명한 Precision@k / Recall@k를 다음과 같이 코드로 구현할 수 있음
+
     1. 모델을 통해 사용자가 어떤 아이템에 관심이 있을지 예측한 데이터인 `predictions`과 예측한 값이 실제로 사용자가 관심있는 아이템인지 확인하기 위한 `targets`, 추천 수 `k`를 파라미터로 받음
     2. 최종적으로 k개만 추천할 것이기 때문에, 예측 데이터 `predictions` 에 대해 k만큼 슬라이싱
     3. Top-k 예측값(`pred`)과 사용자가 실제 관심있는 아이템 리스트(`targets`)의 교집합을 통해 hit 수(`num_hit`)를 구함
@@ -72,6 +77,7 @@ draft: "no"
   ```
 
 - 성능 측정 코드
+
   - 위에서 정의한 성능 지표를 활용하여 Average of Precision@k / Recall@k 값 측정
     1. 학습 모델 객체 `model`, train / test 데이터셋, 추천 수 k를 파라미터로 받음
     2. 각 사용자 별 성능 측정을 하기 위해 반복문 실행
@@ -80,6 +86,7 @@ draft: "no"
     5. 테스트 데이터 중, 사용자의 피드백이 있는 item 인덱스 리스트(`targets`)를 구함
     6. 위에서 정의한 `_compute_precision_recall` 함수를 실행하여 해당 사용자에 대한 Precision@k, Recall@k 값을 구함
     7. 3~6번 까지 반복하여 전체 사용자에 대한 Average of Precision@k / Recall@k 값 구함
+
   ```python
   def evaluate_ranking(model, test, train=None, k=10):
       """
