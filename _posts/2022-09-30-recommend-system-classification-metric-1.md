@@ -85,7 +85,7 @@ draft: "no"
     4. 학습 데이터셋에서 해당 `user_id`의 피드백이 있는 아이템 리스트(`rated`)를 구한 다음, 예측값 중 `rated`에 존재하지 않는(=학습 데이터에 피드백이 없는) 아이템만 예측값으로 할당
     5. 테스트 데이터 중, 사용자의 피드백이 있는 item 인덱스 리스트(`targets`)를 구함
     6. 위에서 정의한 `_compute_precision_recall` 함수를 실행하여 해당 사용자에 대한 Precision@k, Recall@k 값을 구함
-    7. 3~6번 까지 반복하여 전체 사용자에 대한 Average of Precision@k / Recall@k 값 구함
+    7. c~f번 까지 반복하여 전체 사용자에 대한 Average of Precision@k / Recall@k 값 구함
 
   ```python
   def evaluate_ranking(model, test, train=None, k=10):

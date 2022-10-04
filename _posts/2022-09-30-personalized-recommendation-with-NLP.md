@@ -41,7 +41,9 @@ _출처 - 아자몰_
 
 ### 위키 정의
 
-문서 집합의 추상적인 "주제"를 발견하기 위한 통계적 모델 중 하나로, 텍스트 본문의 숨겨진 의미구조를 발견하기 위해 사용되는 텍스트 마이닝 기법 중 하나이다. ([출처 - 위키 백과 토픽모델링](https://ko.wikipedia.org/wiki/%ED%86%A0%ED%94%BD_%EB%AA%A8%EB%8D%B8))
+문서 집합의 추상적인 "주제"를 발견하기 위한 통계적 모델 중 하나로, 텍스트 본문의 숨겨진 의미구조를 발견하기 위해 사용되는 텍스트 마이닝 기법 중 하나이다.
+
+([출처 - 위키 백과 토픽모델링](https://ko.wikipedia.org/wiki/%ED%86%A0%ED%94%BD_%EB%AA%A8%EB%8D%B8))
 
 ### 컨셉
 
@@ -106,7 +108,7 @@ _출처 - 카카오 기술블로그_
 
 다음 포스팅에서는 위와 같은 고민을 덜 수 있도록, 강화학습을 추천 시스템에 이용하는 방법을 소개하겠습니다!
 
-## \***\*Reference\*\***
+## **Reference**
 
 [Probabilistic latent semantic analysis - 위키백과](https://en.wikipedia.org/wiki/Probabilistic_latent_semantic_analysis)
 
