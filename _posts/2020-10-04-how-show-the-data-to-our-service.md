@@ -5,7 +5,7 @@ author: ["이지원"]
 date: 2022-10-04
 abstract: "이것처럼 데이터를 볼 때에는 해당 지표의 숫자 뿐아니라 데이터의 추이, 즉 시각화를 통한 흐름을 보는 것 이 중요합니다. 해서 데이터 시각화에 대해 간단히 보고 우리 서비스에 어떻게 적용했는지를 공유해보려고 합니다."
 tags: ["AdobeXd", "Design", "Data-visualize"]
-image: /assets/images/posts/2022-10-04-apply-tdd-with-python-django/Untitled.png
+image: /assets/images/posts/2020-10-04-how-show-the-data-to-our-service/아트보드–1.png
 draft: "no"
 ---
 
