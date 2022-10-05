@@ -5,13 +5,13 @@ author: ["이지원"]
 date: 2022-10-04
 abstract: "이것처럼 데이터를 볼 때에는 해당 지표의 숫자 뿐아니라 데이터의 추이, 즉 시각화를 통한 흐름을 보는 것 이 중요합니다. 해서 데이터 시각화에 대해 간단히 보고 우리 서비스에 어떻게 적용했는지를 공유해보려고 합니다."
 tags: ["AdobeXd", "Design", "Data-visualize"]
-image: /assets/images/posts/2020-10-04-how-show-the-data-to-our-service/아트보드–1.png
+image: /assets/images/posts/2022-10-04-how-show-the-data-to-our-service/아트보드–1.png
 draft: "no"
 ---
 
 ### **성적이 더 좋은 학생이 누구일까요?**
 
-![Untitled](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/Untitled.png)
+![Untitled](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/Untitled.png)
 
 평균 점수만 놓고 본다면 유지하는 학생이 더 좋지만 성장하는 모습을 보이는 학생도 나쁘다고는 볼 수가 없습니다.
 
@@ -21,11 +21,17 @@ draft: "no"
 
 해서 데이터 시각화에 대해 간단히 보고 우리 서비스에 어떻게 적용했는지를 공유해보려고 합니다.
 
+<br/>
+
+<br/>
+
 # 데이터 시각화란?
 
 - 수많은 데이터 속에서 **유의미한 정보를** 찾고, **시각화** 하는 것
 - 데이터를 **한 눈에 파악하기** 좋게 만드는것
 - 데이터의 패턴, 비교 등을 파악하고, 시각화를 통한 인사이트를 얻을 수 있다
+
+<br/>
 
 ## 데이터 시각화에서 중요한 것
 
@@ -60,6 +66,8 @@ draft: "no"
 
 ➡️ 단순한 데이터 및 시각화 제공보다는 이를 통해 활용할 수 있는 지표를 제공하는게 더 유의미하다고 생각됨
 
+<br/>
+
 ## + 좋은 데이터 시각화라고 한다면?
 
 ```java
@@ -70,6 +78,10 @@ draft: "no"
 - 주제에 따른 필요한 정보만을 보여주도록 하자.
 - 인지를 해치지 않는 적절한 시각적 구성을 가지도록 하자.
 
+<br/>
+
+<br/>
+
 # 시각화에 활용되는 컬러
 
 색을 활용하여 데이터를 구분하거나 값을 표현하고 특정 부분을 강조하기도 합니다.
@@ -78,53 +90,67 @@ draft: "no"
 
 질적 팔레트로 불리기도하고 순서나 우선순위 없이 튀는 색상 없이 서로 동등하게 치부되는 색상(범주에 활용)
 
-![아트보드 – 1.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/아트보드–1.png)
+![아트보드 – 1.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/아트보드–1.png)
 
 → 고객군 비율에 활용하여 현재 쇼핑몰에 분포된 고객 비율을 확인하기
+
+<br/>
 
 ### 2. 순차적 색상 스케일 (sequential color scale)
 
 색에 순서를 부여해서 값의 크기차이 특정한 두 값의 사이 거리를 보여줌(낮은값 → 높은값)
 
-![아트보드 – 2.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/아트보드–2.png)
+![아트보드 – 2.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/아트보드–2.png)
 
 ➡️ 히트맵에 활용할 수 있지만 데이터 차이가 크지 않을 경우 눈에 읽히지 않을수 있을 것 같음
+
+<br/>
 
 ### 3. 발산형 색상 스케일 (diverging color scale)
 
 두개 공통의 중간점을 연결한 것으로 데이터 범위의 양쪽 끝에서 중간 범위 임계값과 극단값을 동일하게 강조
 
-![아트보드 – 3.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/아트보드–3.png)
+![아트보드 – 3.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/아트보드–3.png)
 
 ➡️ 2번 형태의 색상보다는 발산형을 활용하면 보다 데이터 차이를 한눈에 볼 수 있을 것으로 판단됨
 추후 VODA 사용자 시간대별 그래프에 활용하기
+
+<br/>
+
+<br/>
 
 # 그래서 서비스에는 어떻게 적용하면 좋을까?
 
 초기 보리큐 디자인
 
-![AIVORY_Q_Dashboard – 1.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/AIVORY_Q_Dashboard–1.png)
+![AIVORY_Q_Dashboard – 1.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/AIVORY_Q_Dashboard–1.png)
 
 - 대시보드라고 하기엔 다소 단조로운 형태
 - 개인화 추천 리스트를 통해 볼 수 있는 데이터가 한정되어있음
 - 클릭률과 구매율은 이어지는 지표지만 나뉘어있어서 한눈에 지표의 추이가 보이지 않음
 
-![마스크 그룹 225.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/master-225.png)
+<br/>
+
+![마스크 그룹 225.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/master-225.png)
 
 - 추천 분석을 클릭 했을 때 우측 그래프가 바뀐다고 상상이 잘 안됨
 - 카드 외부에 차트가 있기 때문에 연결된 지표라고 보이지 않음
 - 추천 이름, 기본정보, 추천 분석의 디자인이 통일되지 않은 형태
 - 전체적인 색감이 흐릿하여 명확하지 않음 → 자신감이 없어보임
 
+<br/>
+
+<br/>
+
 # QA를 통해 얻은 제안들
 
 ### 디자인 관련
 
-![Untitled](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/design.png)
+![Untitled](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/design.png)
 
 ### 제안하고 싶은 형태
 
-![AIVORY_Q_Dashboard – 4.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/AIVORY_Q_Dashboard–4.png)
+![AIVORY_Q_Dashboard – 4.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/AIVORY_Q_Dashboard–4.png)
 
 - 추천과 고객군을 나누어서 지표를 확인하자
 - 클릭률과 구매율처럼 연결되어 볼 수 있는 지표는 하나의 차트로 확인하자
@@ -146,9 +172,11 @@ draft: "no"
 : 시간에 따른 데이터의 변화를 막대그래프보다 확인하기에 적합함
 ```
 
+<br/>
+
 ### 개인화 추천 관리
 
-![AIVORY_Q_Recommened – 4.png](/assets/images/posts/2020-10-04-how-show-the-data-to-our-service/AIVORY_Q_Recommened–4.png)
+![AIVORY_Q_Recommened – 4.png](/assets/images/posts/2022-10-04-how-show-the-data-to-our-service/AIVORY_Q_Recommened–4.png)
 
 - 드롭다운 형태보다 모달로 안정감있게 보는게 더 중요하다고 판단
 - 마찬가지로 생동감을 함께 넣어주자 → 아이콘 및 색상 변경 부분
