@@ -40,6 +40,20 @@
   tag: ["SW Engineering"]
   email: "chohj7636@nerdfactory.ai"
   photo: "/assets/images/authors/Owen.png"
+나창원:
+  kor-name: "나창원"
+  eng-name: "Noah"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "include_stdio.h@kakao.com"
+  photo: "/assets/images/authors/Noah.png"
+김영신:
+  kor-name: "김영신"
+  eng-name: "Poto"
+  graduate: "-"
+  tag: ["SW Engineering"]
+  email: "kpoto227@gmail.com"
+  photo: "/assets/images/authors/Poto.png"
 김규태:
   kor-name: "김규태"
   eng-name: "Sean"
